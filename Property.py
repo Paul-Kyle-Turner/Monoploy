@@ -1,23 +1,24 @@
 
+from Buyablespace import Buyablespace
+
 DEFAULT_HOUSE_LEVEL = 0
 
 
-class Property:
+class Property(Buyablespace):
 
-    def __init__(self, name, rent, house1, house2, house3, house4, hotel, mortgage):
-        self.name = name
-        self.rent = rent
+    def __init__(self, name, cost, house0, house1, house2, house3, house4, hotel, mortgage):
+        Buyablespace.__init__(name, cost, mortgage)
+        self.house0 = house0
         self.house1 = house1
         self.house2 = house2
         self.house3 = house3
         self.house4 = house4
         self.hotel = hotel
-        self.mortgage = mortgage
         self.house_level = DEFAULT_HOUSE_LEVEL
-
+    
     def rent(self):
         if self.house_level == 0:
-            return self.get_rent()
+            return self.get_house0()
         elif self.house_level == 1:
             return self.house1
         elif self.house_level == 2:
@@ -32,11 +33,8 @@ class Property:
     def change_house_level(self, house_level):
         self.house_level = house_level
 
-    def get_name(self):
-        return self.name
-
-    def get_rent(self):
-        return self.rent
+    def get_house0(self):
+        return self.house0
 
     def get_house1(self):
         return self.house1
@@ -52,7 +50,3 @@ class Property:
 
     def get_hotel(self):
         return self.hotel
-
-    def get_mortgage(self):
-        return self.mortgage
-
