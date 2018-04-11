@@ -7,7 +7,7 @@ UTILITY_TWO_OWNED = 10
 
 class Utility(Buyablespace):
 
-    def __init__(self, name, cost, mortgage, two_owned):
+    def __init__(self, name, cost=150, mortgage=75):
         Buyablespace.__init__(name, cost, mortgage)
         self.two_owned = False
 

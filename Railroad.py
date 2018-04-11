@@ -8,7 +8,7 @@ DEFAULT_RAILROAD_MULTIPLIER = 2
 
 class Railroad(Buyablespace):
 
-    def __init__(self, name, cost, mortgage=100):
+    def __init__(self, name, cost=200, mortgage=100):
         Buyablespace.__init__(name, cost, mortgage)
         self.owned = DEFAULT_OWNED
 

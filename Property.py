@@ -6,7 +6,7 @@ DEFAULT_HOUSE_LEVEL = 0
 
 class Property(Buyablespace):
 
-    def __init__(self, name, cost, house0, house1, house2, house3, house4, hotel, mortgage):
+    def __init__(self, name, cost, house0, house1, house2, house3, house4, hotel, mortgage, house_cost):
         Buyablespace.__init__(name, cost, mortgage)
         self.house0 = house0
         self.house1 = house1
@@ -14,7 +14,11 @@ class Property(Buyablespace):
         self.house3 = house3
         self.house4 = house4
         self.hotel = hotel
+        self.house_cost = house_cost
         self.house_level = DEFAULT_HOUSE_LEVEL
+
+    def prop_cost(self):
+        return self.cost + (self.house_cost * self.house_level)
     
     def rent(self):
         if self.house_level == 0:

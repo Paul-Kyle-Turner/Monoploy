@@ -11,6 +11,12 @@ class Player:
         self.money = DEFAULT_STARTING_MONEY
         self.owned_spaces = []
 
+    def worth(self):
+        worth = self.money
+        for property_temp in self.owned_spaces:
+            worth = worth + property_temp.prop_cost()
+        return worth
+
     def add_funds(self, money):
         self.money = self.money + money
 
