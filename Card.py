@@ -24,7 +24,7 @@ class Collect(Card):
     def action(self, player):
         player.add_funds(self.collect_amount)
 
-class Collectmultiple(Collect)
+class Collectmultiple(Collect):
 
     def action(self, player):
         player.add_funds(self.collect_amount * (Game.get_num_players() - 1))
@@ -41,15 +41,40 @@ class Pay(Card):
     def action(self, player):
         player.remove_funds(self.pay_amount)
 
-DEFAULT_HOUSE_REPAIR = 40
-DEFAULT_HOTEL_REPAIR = 115
 
+class PayMultiple(Pay):
+
+    def action(self, player):
+        player.remove_funds(self.pay_amount * (Game.get_num_players() - 1))
+        for person in Game.players:
+            person.add_funds(self.pay_amount)
+
+DEFAULT_COMMUNITY_HOUSE_REPAIR = 40
+DEFAULT_COMMUNITY_HOTEL_REPAIR = 115
+DEFAULT_CHANCE_HOUSE_REPAIR = 25
+DEFAULT_CHANCE_HOTEL_REPAIR = 100
 
 class PayRepairs(Card):
 
+    def __init__(self, description, chance):
+        Card.__init__(description=description)
+        self.chance = chance
+
     def action(self, player):
         houses, hotels = player.get_num_houses_hotels()
-        player.remove_funds((houses * DEFAULT_HOUSE_REPAIR) + (hotels * DEFAULT_HOTEL_REPAIR))
+        if self.chance:
+            player.remove_funds((houses * DEFAULT_COMMUNITY_HOUSE_REPAIR) + (hotels * DEFAULT_COMMUNITY_HOTEL_REPAIR))
+        else:
+            player.remove_funds((houses * DEFAULT_CHANCE_HOUSE_REPAIR) + (hotels * DEFAULT_CHANCE_HOTEL_REPAIR))
+
+
+class GoBackThree(Card):
+
+    def __init__(self, description):
+        Card.__init__(description=description)
+
+    def action(self, player):
+        player.change_position_to(player.position - 3)
 
 
 class Goto(Card):
@@ -62,27 +87,42 @@ class Goto(Card):
         player.change_position_to(self.position)
 
 
-class GotoNearestRailroad(Goto):
+class GotoNearest(Card):
 
-    def __init__(self, description, position, player):
-        if player.position == 8:
-            position = 16
-        elif player.position == 23
+    def __init__(self, description):
+        Card.__init__(description=description)
+
+    def action(self, player):
+        return
+
+
+class GotoNearestRailroad(GotoNearest):
+
+    def __init__(self, description):
+        GotoNearest.__init__(description=description)
+
+    def action(self, player):
+        if player.position == 7:
+            position = 15
+        elif player.position == 22:
             position = 26
         else:
-            player.
-            position = 6
+            player.add_funds(200)
+            position = 5
+        player.change_position_to(position)
+
+
+class GotoNearestUtility(GotoNearest):
+
+    def __init__(self, description, position):
         Goto.__init__(description=description, position=position)
 
-
-class GotoNearestUtility(Goto):
-
-    def __init__(self, description, position, player):
+    def action(self, player):
         if player.position < 13 or player.position > 29:
             position = 12
         else:
             position = 28
-        Goto.__init__(description=description, position=position)
+        player.change_position_to(position)
 
 
 class GotoPassGo(Goto):
