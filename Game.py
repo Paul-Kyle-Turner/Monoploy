@@ -14,5 +14,10 @@ class Game:
         self.board = Board.__init__()
         self.players = self.create_player()
 
+    def get_players(self):
+        return self.players
+
+    def get_num_players(self):
+        return len(self.players)
 
 main()

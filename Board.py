@@ -15,7 +15,8 @@ class Board:
         self.community_chest = self.create_community_chest()
         self.spaces = self.create_properties()
 
-    def create_properties(self):
+    @staticmethod
+    def create_properties():
         spaces = []
         mediterranean = Property.__init__(name="mediterranean", cost=60, house0=2, house1=10, house2=30,
                                           house3=90, house4=160, hotel=250, mortgage=30, house_cost=50)
@@ -99,6 +100,8 @@ class Board:
         boardwalk = Property.__init__(name="boardwalk", cost=400, house0=50, house1=200, house2=600,
                                       house3=1400, house4=1700, hotel=2000, mortgage=200, house_cost=200)
         spaces.append(boardwalk)
+
+        return spaces
 
     def create_chance(self):
         return []

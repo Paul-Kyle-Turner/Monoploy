@@ -37,6 +37,9 @@ class Property(Buyablespace):
     def change_house_level(self, house_level):
         self.house_level = house_level
 
+    def get_house_level(self):
+        return self.house_level
+
     def get_house0(self):
         return self.house0
 
