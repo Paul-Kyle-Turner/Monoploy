@@ -1,22 +1,21 @@
-from Property import Property
-from Railroad import Railroad
-from Utility import Utility
-from Taxspace import LuxTax, IncomeTax
-from Buyablespace import Buyablespace
+
+from Space import *
+from Deck import CommunityChest, Chance
 
 DEFAULT_BOARD_LENGTH = 28
+
 
 class Board:
 
     def __init__(self):
         self.houses = 32
         self.hotels = 12
-        self.chance = self.create_chance()
-        self.community_chest = self.create_community_chest()
-        self.spaces = self.create_properties()
+        self.chance = Chance.__init__()
+        self.community_chest = CommunityChest.__init__()
+        self.spaces = self.create_board()
 
     @staticmethod
-    def create_properties():
+    def create_board():
         spaces = []
         mediterranean = Property.__init__(name="mediterranean", cost=60, house0=2, house1=10, house2=30,
                                           house3=90, house4=160, hotel=250, mortgage=30, house_cost=50)
@@ -103,5 +102,3 @@ class Board:
 
         return spaces
 
-    def create_chance(self):
-        return []
