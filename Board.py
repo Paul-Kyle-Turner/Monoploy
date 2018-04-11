@@ -14,6 +14,18 @@ class Board:
         self.community_chest = CommunityChest.__init__()
         self.spaces = self.create_board()
 
+    def get_chance_deck(self):
+        return self.chance
+
+    def get_community_chest(self):
+        return self.community_chest
+
+    def set_chance_deck(self, chance):
+        self.chance = chance
+
+    def set_community_chest(self, community):
+        self.community_chest = community
+
     @staticmethod
     def create_board():
         spaces = []

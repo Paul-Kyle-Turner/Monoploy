@@ -12,6 +12,7 @@ class Player:
         self.money = DEFAULT_STARTING_MONEY
         self.owned_spaces = []
         self.position = 0
+        self.get_out_free_cards = []
 
     def get_num_houses_hotels(self):
         houses = 0
@@ -24,6 +25,15 @@ class Player:
                 hotels += 1
 
         return [houses, hotels]
+
+    def add_go_free_card(self, card):
+        self.get_out_free_cards.append(card)
+
+    def return_go_free_card(self,board):
+
+
+    def get_num_go_free_cards(self):
+        return len(self.get_out_free_cards)
 
     def get_position(self):
         return self.position

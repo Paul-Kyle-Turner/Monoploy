@@ -1,6 +1,4 @@
 
-from Player import Player
-
 DEFAULT_LUX_TAX = 100
 DEFAULT_INCOME_TAX = 200
 DEFAULT_HOUSE_LEVEL = 0
@@ -9,6 +7,8 @@ DEFAULT_STARTING_RENT = 25
 DEFAULT_RAILROAD_MULTIPLIER = 2
 DEFAULT_UTILITY_MULTIPLIER = 4
 UTILITY_TWO_OWNED = 10
+DEFAULT_CHANCE_DECK = True
+DEFAULT_COMMUNITY_CHEST_DECK = False
 
 
 class Space:
@@ -20,10 +20,10 @@ class Space:
         return self.name
 
 
-
 class Buyablespace(Space):
 
-    def __init__(self, cost, mortgage):
+    def __init__(self, name, cost, mortgage):
+        Space.__init__(name=name)
         self.cost = cost
         self.mortgage = mortgage
         self.mortgaged = False
@@ -68,6 +68,20 @@ class IncomeTax(Space):
             player.remove_funds(player.worth() / 5)
         else:
             player.remove_funds(DEFAULT_INCOME_TAX)
+
+
+class Drawspace(Space):
+
+    def __init__(self, name, chance):
+        Space.__init__(name=name)
+        self.chance = chance
+
+    def draw_card(self, player, board):
+        if self.chance:
+            deck = board.get_chance_deck()
+        else:
+            deck = board.get_community_chest()
+        return deck[0]
 
 
 class Railroad(Buyablespace):

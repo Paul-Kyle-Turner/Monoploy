@@ -151,4 +151,4 @@ class Get_Out_Of_Jail(Card):
         Card.__init__(description=description)
 
     def action(self, player):
-        player.release()
+        player.add_go_free_card(self)
