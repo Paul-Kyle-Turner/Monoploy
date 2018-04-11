@@ -9,8 +9,8 @@ class Buyablespace(Space):
         self.mortgage = mortgage
         self.mortgaged = False
 
-    def get_rent(self):
-        return self.rent
+    def rent(self):
+        return 0
 
     def get_mortgage(self):
         return self.mortgage
