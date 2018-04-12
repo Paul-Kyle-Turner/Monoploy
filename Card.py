@@ -3,6 +3,12 @@ from Player import Player
 from Game import Game
 from Deck import Deck
 
+DEFAULT_COMMUNITY_HOUSE_REPAIR = 40
+DEFAULT_COMMUNITY_HOTEL_REPAIR = 115
+DEFAULT_CHANCE_HOUSE_REPAIR = 25
+DEFAULT_CHANCE_HOTEL_REPAIR = 100
+
+
 class Card:
 
     def __init__(self, description):
@@ -23,6 +29,7 @@ class Collect(Card):
 
     def action(self, player):
         player.add_funds(self.collect_amount)
+
 
 class Collectmultiple(Collect):
 
@@ -49,10 +56,6 @@ class PayMultiple(Pay):
         for person in Game.players:
             person.add_funds(self.pay_amount)
 
-DEFAULT_COMMUNITY_HOUSE_REPAIR = 40
-DEFAULT_COMMUNITY_HOTEL_REPAIR = 115
-DEFAULT_CHANCE_HOUSE_REPAIR = 25
-DEFAULT_CHANCE_HOTEL_REPAIR = 100
 
 class PayRepairs(Card):
 
@@ -87,19 +90,10 @@ class Goto(Card):
         player.change_position_to(self.position)
 
 
-class GotoNearest(Card):
+class GotoNearestRailroad(Card):
 
     def __init__(self, description):
         Card.__init__(description=description)
-
-    def action(self, player):
-        return
-
-
-class GotoNearestRailroad(GotoNearest):
-
-    def __init__(self, description):
-        GotoNearest.__init__(description=description)
 
     def action(self, player):
         if player.position == 7:
@@ -112,10 +106,10 @@ class GotoNearestRailroad(GotoNearest):
         player.change_position_to(position)
 
 
-class GotoNearestUtility(GotoNearest):
+class GotoNearestUtility(Card):
 
-    def __init__(self, description, position):
-        Goto.__init__(description=description, position=position)
+    def __init__(self, description):
+        Card.__init__(description=description)
 
     def action(self, player):
         if player.position < 13 or player.position > 29:
@@ -145,10 +139,15 @@ class GotoJail(Goto):
         player.jailed()
         player.change_position_to(11)
 
-class Get_Out_Of_Jail(Card):
 
-    def __init__(self, description):
+class GetOutOfJail(Card):
+
+    def __init__(self, chance, description="Get Out of Jail Free"):
         Card.__init__(description=description)
+        self.chance = chance
+
+    def get_chance(self):
+        return self.chance
 
     def action(self, player):
         player.add_go_free_card(self)

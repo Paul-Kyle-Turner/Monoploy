@@ -1,4 +1,5 @@
 import random
+from Deck import Deck
 
 
 DEFAULT_STARTING_MONEY = 1500
@@ -26,10 +27,17 @@ class Player:
 
         return [houses, hotels]
 
-    def add_go_free_card(self, card):
-        self.get_out_free_cards.append(card)
+    def add_go_free_card(self, card, chance):
+        self.get_out_free_cards.append([card, chance])
 
-    def return_go_free_card(self,board):
+    def return_go_free_card(self, board):
+        if len(self.get_out_free_cards) > 0:
+            card = self.get_out_free_cards.pop(0)
+            card.action(self)
+            if card.get_chance():
+                board.get_chance_deck().add_get_out_of_jail()
+            else:
+                board.get_community_chest().add_get_out_of_jail()
 
 
     def get_num_go_free_cards(self):

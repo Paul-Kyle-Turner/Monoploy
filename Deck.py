@@ -1,5 +1,5 @@
 
-from Card import Collect, Pay, Goto, GotoJail, Get_Out_Of_Jail, Collectmultiple, PayRepairs, GotoPassGo
+from Card import Collect, Pay, Goto, GotoJail, GetOutOfJail, Collectmultiple, PayRepairs, GotoPassGo
 from Card import GotoNearestUtility, GotoNearestRailroad, GoBackThree, PayMultiple
 import random
 
@@ -8,6 +8,12 @@ class Deck:
 
     def __init__(self):
         self.cards = []
+
+    def pop_card(self):
+        return self.cards.pop(0)
+
+    def add_get_out_of_jail(self):
+        random.shuffle(self.cards.append(GetOutOfJail))
 
     def add_cards(self, cards):
         self.cards = cards
@@ -24,7 +30,7 @@ class CommunityChest(Deck):
         card02 = Collect(description="Bank error in your favor", collect_amount=200)
         card03 = Pay(description="Doctor's fees – Pay $50", pay_amount=50)
         card04 = Collect(description="From sale of stock you get $50", collect_amount=50)
-        card05 = Get_Out_Of_Jail(description="Get Out of Jail Free")
+        card05 = GetOutOfJail(chance=False)
         card06 = GotoJail(description="Go to Jail", position=11)
         card07 = Collectmultiple(description="Grand Opera Night - Collect $50 "
                                              "from every player for opening night seats", collect_amount=50)
@@ -59,7 +65,7 @@ class Chance(Deck):
                                         " If owned, throw dice and pay owner a total ten times the amount shown.")
         card05 = GotoNearestRailroad(description="Advance token to the nearest Railroad")
         card06 = Collect(description="Bank pays you dividend of $50", collect_amount=50)
-        card07 = Get_Out_Of_Jail(description="Get out of Jail Free")
+        card07 = GetOutOfJail(chance=True)
         card08 = GoBackThree(description="Go Back 3 Spaces")
         card09 = GotoJail(description="Go to Jail – Go directly to Jail – Do not pass Go, do not collect $200")
         card10 = PayRepairs(description="Make general repairs on all your property – "

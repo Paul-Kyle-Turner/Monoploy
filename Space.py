@@ -81,7 +81,8 @@ class Drawspace(Space):
             deck = board.get_chance_deck()
         else:
             deck = board.get_community_chest()
-        return deck[0]
+        card = deck.pop_card()
+        card.action(player)
 
 
 class Railroad(Buyablespace):
