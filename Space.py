@@ -20,10 +20,13 @@ class Space:
         self.name = name
 
     def land_on(self, board, player):
-        return
+        return self
 
     def get_name(self):
         return self.name
+
+    def __str__(self):
+        return "This message should not appear"
 
 
 class GoToJail(Space):
@@ -33,6 +36,9 @@ class GoToJail(Space):
 
     def land_on(self, board, player):
         board.change_position(player=player, position=11)
+
+    def __str__(self):
+        return "You have been sent to jail <( *_* )>"
 
 
 class FreeParking(Space):
@@ -45,6 +51,9 @@ class FreeParking(Space):
             return
         else:
             return board.get_free_parking()
+
+    def __str__(self):
+        return "You have got a free ride this time"
 
 
 class Jail(Space):
@@ -63,9 +72,19 @@ class Jail(Space):
 
     def land_on(self, board, player):
         if DEFAULT_VISITING:
-            return
+            return self
         else:
             self.jail(player)
+
+    def __str__(self):
+        jailed_players = ""
+        if len(self.jail_list) > 0:
+            for player in self.jail_list:
+                jailed_players += player.get_player_number() + " "
+            return "The following players are in jail" + jailed_players
+        else:
+            return "Have a good stay at jail."
+
 
 
 class Go(Space):
@@ -75,8 +94,14 @@ class Go(Space):
 
     def land_on(self, board, player):
         player.add_funds(DEFAULT_GO_FUNDS)
+        return self
+
+    def __str__(self):
+        return "You landed on GO"
 
 
+# buyable spaces need to be able to be purchased if unowned.
+# land on needs to change to check owned.
 class Buyablespace(Space):
 
     def __init__(self, name, cost, mortgage):
@@ -84,6 +109,8 @@ class Buyablespace(Space):
         self.cost = cost
         self.mortgage = mortgage
         self.mortgaged = False
+        self.owned = False
+        self.owner = None
 
     def prop_cost(self):
         if self.mortgaged:
@@ -92,10 +119,21 @@ class Buyablespace(Space):
             return self.mortgage
 
     def land_on(self, board, player):
-        self.rent()
+        if self.get_ownership(player):
+            return self
+        elif self.owned:
+            self.rent()
+        else:
+            return self
 
     def rent(self):
         return 0
+
+    def purchase(self, player):
+        player.remove_funds(self.cost)
+        player.add_owned_space(self)
+        self.owner = player
+        self.owned = True
 
     def get_mortgage(self):
         return self.mortgage
@@ -106,11 +144,21 @@ class Buyablespace(Space):
     def get_cost(self):
         return self.cost
 
+    def get_ownership(self, player):
+        if self.owner == player:
+            return self.owned
+        else:
+            return not self.owned
+
     def fix(self):
         self.mortgaged = False
 
     def mortgaged(self):
         self.mortgaged = True
+
+    def __str__(self):
+        if self.owned:
+            return ""
 
 
 class LuxTax(Space):
@@ -118,9 +166,16 @@ class LuxTax(Space):
     def __init__(self, name="Luxury_tax"):
         Space.__init__(name=name)
 
+    def land_on(self, board, player):
+        self.charge_player(player=player)
+        return self
+
     @staticmethod
     def charge_player(player):
         player.remove_funds(DEFAULT_LUX_TAX)
+
+    def __str__(self):
+        return "You have been taxed because you like nice things"
 
 
 class IncomeTax(Space):
@@ -128,12 +183,20 @@ class IncomeTax(Space):
     def __init__(self, name="Income_tax"):
         Space.__init__(name=name)
 
+    def land_on(self, board, player):
+        self.charge_player(player=player)
+        return self
+
     @staticmethod
-    def charge_player(percent, player):
-        if percent:
-            player.remove_funds(player.worth() / 5)
+    def charge_player(player):
+        player_worth = player.worth()
+        if player_worth < DEFAULT_INCOME_TAX:
+            player.remove_funds(player_worth / 5)
         else:
             player.remove_funds(DEFAULT_INCOME_TAX)
+
+    def __str__(self):
+        return "You have been charged some taxes, the lower amount"
 
 
 class Drawspace(Space):
@@ -141,6 +204,10 @@ class Drawspace(Space):
     def __init__(self, name, chance):
         Space.__init__(name=name)
         self.chance = chance
+
+    def land_on(self, board, player):
+        self.draw_card(player=player, board=board)
+        return self
 
     def draw_card(self, player, board):
         if self.chance:
@@ -150,12 +217,18 @@ class Drawspace(Space):
         card = deck.pop_card()
         card.action(player)
 
+    def __str__(self):
+        return "You draw a card and it is "
+
 
 class Railroad(Buyablespace):
 
     def __init__(self, name, cost=200, mortgage=100):
         Buyablespace.__init__(name, cost, mortgage)
         self.owned = DEFAULT_OWNED
+
+    def land_on(self, board, player):
+        super().land_on(board=board, player=player)
 
     def rent(self):
         rent = DEFAULT_STARTING_RENT
@@ -169,6 +242,9 @@ class Railroad(Buyablespace):
     def lose_stop(self):
         self.owned = self.owned - 1
 
+    def __str__(self):
+        return "CHOOO CHOOO"
+
 
 class Property(Buyablespace):
     def __init__(self, name, cost, house0, house1, house2, house3, house4, hotel, mortgage, house_cost):
@@ -181,6 +257,9 @@ class Property(Buyablespace):
         self.hotel = hotel
         self.house_cost = house_cost
         self.house_level = DEFAULT_HOUSE_LEVEL
+
+    def land_on(self, board, player):
+        super().land_on(board=board, player=player)
 
     def prop_cost(self):
         if self.mortgaged:
@@ -232,6 +311,9 @@ class Utility(Buyablespace):
     def __init__(self, name, cost=150, mortgage=75):
         Buyablespace.__init__(name, cost, mortgage)
         self.two_owned = False
+
+    def land_on(self, board, player):
+        super().land_on(board=board, player=player)
 
     def rent(self, dice_roll):
         if self.two_owned:

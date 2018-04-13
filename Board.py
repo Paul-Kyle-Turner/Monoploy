@@ -16,7 +16,20 @@ class Board:
         self.free_parking = 0
 
     def change_position(self, player, position):
-        return
+        player.change_position_to(position=position)
+        self.spaces[position].land_on()
+
+    #this is jank we can use observer but im lazy right now
+    def change_position_dice(self, player):
+        player.change_position_dice()
+        location = player.get_position
+        space = self.spaces[player.get_position()].land_on(board=self, player=player)
+        location2 = player.get_position
+        if location == location2:
+            return space
+        else:
+            space = self.spaces[player.get_position()].land_on(board=self, player=player)
+            return space
 
     def get_free_parking(self):
         return self.free_parking

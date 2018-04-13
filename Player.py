@@ -8,12 +8,16 @@ DEFAULT_BOARD_SIZE = 40
 
 class Player:
 
-    def __init__(self):
+    def __init__(self, number):
         self.jailed = False
         self.money = DEFAULT_STARTING_MONEY
         self.owned_spaces = []
         self.position = 0
         self.get_out_free_cards = []
+        self.player_number = number
+
+    def get_player_number(self):
+        return self.player_number
 
     def get_num_houses_hotels(self):
         houses = 0
@@ -45,6 +49,9 @@ class Player:
 
     def get_position(self):
         return self.position
+
+    def get_jailed(self):
+        return self.jailed
 
     def change_position_to(self, position):
         self.position = position
