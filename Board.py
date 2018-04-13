@@ -13,6 +13,13 @@ class Board:
         self.chance = Chance.__init__()
         self.community_chest = CommunityChest.__init__()
         self.spaces = self.create_board()
+        self.free_parking = 0
+
+    def change_position(self, player, position):
+        return
+
+    def get_free_parking(self):
+        return self.free_parking
 
     def get_chance_deck(self):
         return self.chance
@@ -29,6 +36,8 @@ class Board:
     @staticmethod
     def create_board():
         spaces = []
+        go = Go()
+        spaces.append(go)
         mediterranean = Property(name="mediterranean", cost=60, house0=2, house1=10, house2=30,
                                           house3=90, house4=160, hotel=250, mortgage=30, house_cost=50)
         spaces.append(mediterranean)
@@ -52,6 +61,8 @@ class Board:
         connectiut = Property(name="connectiut", cost=120, house0=8, house1=40, house2=100,
                                        house3=300, house4=450, hotel=600, mortgage=60, house_cost=50)
         spaces.append(connectiut)
+        jail = Jail()
+        spaces.append(jail)
         st_charles = Property(name="st_charles", cost=140, house0=10, house1=50, house2=150,
                                        house3=450, house4=625, hotel=750, mortgage=70, house_cost=100)
         spaces.append(st_charles)
@@ -75,6 +86,8 @@ class Board:
         new_york = Property(name="new_york", cost=200, house0=16, house1=80, house2=220,
                                      house3=600, house4=800, hotel=1000, mortgage=100, house_cost=100)
         spaces.append(new_york)
+        free_parking = FreeParking()
+        spaces.append(free_parking)
         kentucky = Property(name="kentucky", cost=220, house0=18, house1=90, house2=250,
                                      house3=700, house4=875, hotel=1050, mortgage=110, house_cost=150)
         spaces.append(kentucky)
@@ -98,6 +111,8 @@ class Board:
         marvin_gardens = Property(name="marvin_gardens", cost=280, house0=24, house1=120, house2=360,
                                            house3=850, house4=1025, hotel=1200, mortgage=140, house_cost=150)
         spaces.append(marvin_gardens)
+        go_to_jail = GoToJail()
+        spaces.append(go_to_jail)
         pacific_ave = Property(name="pacific_ave", cost=300, house0=26, house1=130, house2=390,
                                         house3=900, house4=1100, hotel=1275, mortgage=150, house_cost=200)
         spaces.append(pacific_ave)

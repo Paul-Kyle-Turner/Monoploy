@@ -4,6 +4,7 @@ DEFAULT_RULES = {
     ""
 }
 
+
 def main():
     print("")
 
@@ -19,5 +20,6 @@ class Game:
 
     def get_num_players(self):
         return len(self.players)
+
 
 main()

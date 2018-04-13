@@ -9,6 +9,9 @@ DEFAULT_UTILITY_MULTIPLIER = 4
 UTILITY_TWO_OWNED = 10
 DEFAULT_CHANCE_DECK = True
 DEFAULT_COMMUNITY_CHEST_DECK = False
+DEFAULT_GO_FUNDS = 200
+DEFAULT_VISITING = True
+DEFAULT_FREE_PARKING = True
 
 
 class Space:
@@ -16,8 +19,62 @@ class Space:
     def __init__(self, name):
         self.name = name
 
+    def land_on(self, board, player):
+        return
+
     def get_name(self):
         return self.name
+
+
+class GoToJail(Space):
+
+    def __init__(self, name="Go to Jail"):
+        Space.__init__(name=name)
+
+    def land_on(self, board, player):
+        board.change_position(player=player, position=11)
+
+
+class FreeParking(Space):
+
+    def __init__(self, name="Free Parking"):
+        Space.__init__(name=name)
+
+    def land_on(self, board, player):
+        if DEFAULT_FREE_PARKING:
+            return
+        else:
+            return board.get_free_parking()
+
+
+class Jail(Space):
+
+    def __init__(self, name="Jail"):
+        Space.__init__(name=name)
+        self.jail_list = []
+
+    def jail(self, player):
+        player.jailed()
+        self.jail_list.append(player)
+
+    def release(self, player):
+        player.release()
+        del self.jail_list[player]
+
+    def land_on(self, board, player):
+        if DEFAULT_VISITING:
+            return
+        else:
+            self.jail(player)
+
+
+class Go(Space):
+
+    def __init__(self, name="Go"):
+        Space.__init__(name=name)
+
+    def land_on(self, board, player):
+        player.add_funds(DEFAULT_GO_FUNDS)
 
 
 class Buyablespace(Space):
@@ -27,6 +84,15 @@ class Buyablespace(Space):
         self.cost = cost
         self.mortgage = mortgage
         self.mortgaged = False
+
+    def prop_cost(self):
+        if self.mortgaged:
+            return self.cost
+        else:
+            return self.mortgage
+
+    def land_on(self, board, player):
+        self.rent()
 
     def rent(self):
         return 0
@@ -117,7 +183,10 @@ class Property(Buyablespace):
         self.house_level = DEFAULT_HOUSE_LEVEL
 
     def prop_cost(self):
-        return self.cost + (self.house_cost * self.house_level)
+        if self.mortgaged:
+            return self.cost + (self.house_cost * self.house_level)
+        else:
+            return self.mortgage
 
     def rent(self):
         if self.house_level == 0:
