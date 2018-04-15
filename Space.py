@@ -130,8 +130,9 @@ class Buyablespace(Space):
             return self
 
     def rent(self, player):
-        return self
+        return 0
 
+    #make this able to do the monoploy
     def purchase(self, player):
         player.remove_funds(self.cost)
         player.add_owned_space(self)
@@ -148,10 +149,12 @@ class Buyablespace(Space):
         return self.cost
 
     def get_ownership(self, player):
-        if self.owner == player:
+        if self.owner is None:
+            return self.owned
+        elif player.is_equal(self.owner):
             return self.owned
         else:
-            return not self.owned
+            return False
 
     def fix(self):
         self.mortgaged = False
@@ -163,7 +166,7 @@ class Buyablespace(Space):
         if self.owned:
             return "The owner of the property is " + self.owner.get_player_number() + "."
         else:
-            return "You have the chance to buy the property"
+            return "Hope you have a good stay!"
 
 
 class LuxTax(Space):
@@ -248,7 +251,7 @@ class Railroad(Buyablespace):
         self.owned = self.owned - 1
 
     def __str__(self):
-        return "CHOO CHOO, take a ride on the " + self.get_name() + super().__str__()
+        return "CHOO CHOO, take a ride on the " + self.get_name() + ". " + super().__str__()
 
 
 class Property(Buyablespace):
@@ -312,7 +315,7 @@ class Property(Buyablespace):
         return self.hotel
 
     def __str__(self):
-        return "Nice property here in " + self.get_name() + super().__str__()
+        return "Nice property here in " + self.get_name() + ". " + super().__str__()
 
 
 class Utility(Buyablespace):
@@ -337,4 +340,4 @@ class Utility(Buyablespace):
         self.two_owned = False
 
     def __str__(self):
-        return "Water or electric, why not both? " + self.get_name() + super().__str__()
+        return "Water or electric, why not both? " + self.get_name() + ". " + super().__str__()

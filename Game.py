@@ -1,5 +1,6 @@
 from Board import Board
 from Player import Player
+from Space import Buyablespace
 
 DEFAULT_RULES = {
     ""
@@ -26,8 +27,26 @@ class Game:
         return players
 
     def game_round(self):
+        print(self.players)
         for player in self.players:
             space = self.board.change_position_dice(player=player)
+            if isinstance(space, Buyablespace):
+                print(space)
+                if space.get_ownership(player=player):
+                    print("Thanks for visiting sir")
+                elif space.owned:
+                    print("You have been charged" + str(space.rent(player=player)))
+                else:
+                    print("Would you like to purchase?")
+                    if player.funds > space.get_cost():
+                        space.purchase(player=player)
+                        print("Thanks for buying")
+                    else:
+                        #this is where auction should go
+                        print("That's ok")
+            else:
+                print(space)
+            print(player.get_player_number())
 
 
     def get_players(self):

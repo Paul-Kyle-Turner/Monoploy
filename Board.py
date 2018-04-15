@@ -26,7 +26,6 @@ class Board:
         player.change_position_dice()
         location = player.get_position
         space = self.spaces[player.get_position()].land_on(board=self, player=player, game=self.game)
-        print(space)
         location2 = player.get_position
         if location == location2:
             return space
