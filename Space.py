@@ -19,7 +19,7 @@ class Space:
     def __init__(self, name):
         self.name = name
 
-    def land_on(self, board, player):
+    def land_on(self, board, player, game):
         return self
 
     def get_name(self):
@@ -32,9 +32,9 @@ class Space:
 class GoToJail(Space):
 
     def __init__(self, name="Go to Jail"):
-        Space.__init__(name=name)
+        Space.__init__(self, name=name)
 
-    def land_on(self, board, player):
+    def land_on(self, board, player, game):
         board.change_position(player=player, position=11)
 
     def __str__(self):
@@ -44,9 +44,9 @@ class GoToJail(Space):
 class FreeParking(Space):
 
     def __init__(self, name="Free Parking"):
-        Space.__init__(name=name)
+        Space.__init__(self, name=name)
 
-    def land_on(self, board, player):
+    def land_on(self, board, player, game):
         if DEFAULT_FREE_PARKING:
             return
         else:
@@ -59,7 +59,7 @@ class FreeParking(Space):
 class Jail(Space):
 
     def __init__(self, name="Jail"):
-        Space.__init__(name=name)
+        Space.__init__(self, name=name)
         self.jail_list = []
 
     def jail(self, player):
@@ -70,11 +70,12 @@ class Jail(Space):
         player.release()
         del self.jail_list[player]
 
-    def land_on(self, board, player):
+    def land_on(self, board, player, game):
         if DEFAULT_VISITING:
             return self
         else:
             self.jail(player)
+            return self
 
     def __str__(self):
         jailed_players = ""
@@ -90,9 +91,9 @@ class Jail(Space):
 class Go(Space):
 
     def __init__(self, name="Go"):
-        Space.__init__(name=name)
+        Space.__init__(self, name=name)
 
-    def land_on(self, board, player):
+    def land_on(self, board, player, game):
         player.add_funds(DEFAULT_GO_FUNDS)
         return self
 
@@ -105,7 +106,7 @@ class Go(Space):
 class Buyablespace(Space):
 
     def __init__(self, name, cost, mortgage):
-        Space.__init__(name=name)
+        Space.__init__(self, name=name)
         self.cost = cost
         self.mortgage = mortgage
         self.mortgaged = False
@@ -118,16 +119,17 @@ class Buyablespace(Space):
         else:
             return self.mortgage
 
-    def land_on(self, board, player):
+    def land_on(self, board, player, game):
         if self.get_ownership(player):
             return self
         elif self.owned:
-            self.rent()
+            player.remove_funds(self.rent(player=player))
+            return self
         else:
             return self
 
-    def rent(self):
-        return 0
+    def rent(self, player):
+        return self
 
     def purchase(self, player):
         player.remove_funds(self.cost)
@@ -158,15 +160,17 @@ class Buyablespace(Space):
 
     def __str__(self):
         if self.owned:
-            return ""
+            return "The owner of the property is " + self.owner.get_player_number() + "."
+        else:
+            return "You have the chance to buy the property"
 
 
 class LuxTax(Space):
 
     def __init__(self, name="Luxury_tax"):
-        Space.__init__(name=name)
+        Space.__init__(self, name=name)
 
-    def land_on(self, board, player):
+    def land_on(self, board, player, game):
         self.charge_player(player=player)
         return self
 
@@ -181,9 +185,9 @@ class LuxTax(Space):
 class IncomeTax(Space):
 
     def __init__(self, name="Income_tax"):
-        Space.__init__(name=name)
+        Space.__init__(self, name=name)
 
-    def land_on(self, board, player):
+    def land_on(self, board, player, game):
         self.charge_player(player=player)
         return self
 
@@ -202,20 +206,20 @@ class IncomeTax(Space):
 class Drawspace(Space):
 
     def __init__(self, name, chance):
-        Space.__init__(name=name)
+        Space.__init__(self, name=name)
         self.chance = chance
 
-    def land_on(self, board, player):
-        self.draw_card(player=player, board=board)
+    def land_on(self, board, player, game):
+        self.draw_card(player=player, board=board, game=game)
         return self
 
-    def draw_card(self, player, board):
+    def draw_card(self, player, board, game):
         if self.chance:
             deck = board.get_chance_deck()
         else:
             deck = board.get_community_chest()
         card = deck.pop_card()
-        card.action(player)
+        card.action(player, game)
 
     def __str__(self):
         return "You draw a card and it is "
@@ -224,13 +228,12 @@ class Drawspace(Space):
 class Railroad(Buyablespace):
 
     def __init__(self, name, cost=200, mortgage=100):
-        Buyablespace.__init__(name, cost, mortgage)
-        self.owned = DEFAULT_OWNED
+        Buyablespace.__init__(self, name, cost, mortgage)
 
-    def land_on(self, board, player):
-        super().land_on(board=board, player=player)
+    def land_on(self, board, player, game):
+        super().land_on(board=board, player=player, game=game)
 
-    def rent(self):
+    def rent(self, player):
         rent = DEFAULT_STARTING_RENT
         for i in range(self.owned):
             rent = rent * DEFAULT_RAILROAD_MULTIPLIER
@@ -243,12 +246,12 @@ class Railroad(Buyablespace):
         self.owned = self.owned - 1
 
     def __str__(self):
-        return "CHOOO CHOOO"
+        return "CHOO CHOO, take a ride on the " + self.get_name() + super().__str__()
 
 
 class Property(Buyablespace):
     def __init__(self, name, cost, house0, house1, house2, house3, house4, hotel, mortgage, house_cost):
-        Buyablespace.__init__(name, cost, mortgage)
+        Buyablespace.__init__(self, name, cost, mortgage)
         self.house0 = house0
         self.house1 = house1
         self.house2 = house2
@@ -258,8 +261,8 @@ class Property(Buyablespace):
         self.house_cost = house_cost
         self.house_level = DEFAULT_HOUSE_LEVEL
 
-    def land_on(self, board, player):
-        super().land_on(board=board, player=player)
+    def land_on(self, board, player, game):
+        super().land_on(board=board, player=player, game=game)
 
     def prop_cost(self):
         if self.mortgaged:
@@ -267,7 +270,7 @@ class Property(Buyablespace):
         else:
             return self.mortgage
 
-    def rent(self):
+    def rent(self, player):
         if self.house_level == 0:
             return self.get_house0()
         elif self.house_level == 1:
@@ -305,24 +308,30 @@ class Property(Buyablespace):
     def get_hotel(self):
         return self.hotel
 
+    def __str__(self):
+        return "Nice property here in " + self.get_name() + super().__str__()
+
 
 class Utility(Buyablespace):
 
     def __init__(self, name, cost=150, mortgage=75):
-        Buyablespace.__init__(name, cost, mortgage)
+        Buyablespace.__init__(self, name, cost, mortgage)
         self.two_owned = False
 
-    def land_on(self, board, player):
-        super().land_on(board=board, player=player)
+    def land_on(self, board, player, game):
+        super().land_on(board=board, player=player, game=game)
 
-    def rent(self, dice_roll):
+    def rent(self, player):
         if self.two_owned:
-            return UTILITY_TWO_OWNED * dice_roll
+            return UTILITY_TWO_OWNED * player.get_last_roll()
         else:
-            return DEFAULT_UTILITY_MULTIPLIER * dice_roll
+            return DEFAULT_UTILITY_MULTIPLIER * player.get_last_roll()
 
     def two_owned(self):
         self.two_owned = True
 
     def one_owned(self):
         self.two_owned = False
+
+    def __str__(self):
+        return "Water or electric, why not both? " + self.get_name() + super().__str__()

@@ -7,13 +7,15 @@ DEFAULT_BOARD_LENGTH = 28
 
 class Board:
 
-    def __init__(self):
+    def __init__(self, game):
         self.houses = 32
         self.hotels = 12
-        self.chance = Chance.__init__()
-        self.community_chest = CommunityChest.__init__()
-        self.spaces = self.create_board()
+        self.chance = Chance()
+        self.community_chest = CommunityChest()
+        self.spaces = []
         self.free_parking = 0
+        self.game = game
+        self.create_board()
 
     def change_position(self, player, position):
         player.change_position_to(position=position)
@@ -23,7 +25,8 @@ class Board:
     def change_position_dice(self, player):
         player.change_position_dice()
         location = player.get_position
-        space = self.spaces[player.get_position()].land_on(board=self, player=player)
+        space = self.spaces[player.get_position()].land_on(board=self, player=player, game=self.game)
+        print(space)
         location2 = player.get_position
         if location == location2:
             return space
@@ -46,8 +49,7 @@ class Board:
     def set_community_chest(self, community):
         self.community_chest = community
 
-    @staticmethod
-    def create_board():
+    def create_board(self):
         spaces = []
         go = Go()
         spaces.append(go)
@@ -148,5 +150,4 @@ class Board:
                                       house3=1400, house4=1700, hotel=2000, mortgage=200, house_cost=200)
         spaces.append(boardwalk)
 
-        return spaces
-
+        self.spaces = spaces

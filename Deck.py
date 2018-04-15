@@ -6,8 +6,8 @@ import random
 
 class Deck:
 
-    def __init__(self):
-        self.cards = []
+    def __init__(self, cards):
+        self.cards = cards
 
     def pop_card(self):
         return self.cards.pop(0)
@@ -22,10 +22,9 @@ class Deck:
 class CommunityChest(Deck):
 
     def __init__(self):
-        self.cards = self.create_community_chest_cards()
+        Deck.__init__(self, self.create_community_chest_cards())
 
-    @staticmethod
-    def create_community_chest_cards():
+    def create_community_chest_cards(self):
         card01 = Goto(description="Advance to Go", position=0)
         card02 = Collect(description="Bank error in your favor", collect_amount=200)
         card03 = Pay(description="Doctor's fees – Pay $50", pay_amount=50)
@@ -46,8 +45,10 @@ class CommunityChest(Deck):
         card16 = Collect(description="You have won second prize in a beauty contest – Collect $10", collect_amount=10)
         card17 = Collect(description="You inherit $100", collect_amount=100)
 
-        return random.shuffle([card01, card02, card03, card04, card05, card06, card07, card08,
-                card09, card10, card11, card12, card13, card14, card15, card16, card17])
+        self.cards = [card01, card02, card03, card04, card05, card06, card07, card08,
+                      card09, card10, card11, card12, card13, card14, card15, card16, card17]
+
+        return self.cards
 
 
 class Chance(Deck):
@@ -55,8 +56,7 @@ class Chance(Deck):
     def __init__(self):
         self.cards = self.create_chance_cards()
 
-    @staticmethod
-    def create_chance_cards():
+    def create_chance_cards(self):
         card01 = Goto(description="Advance to Go", position=0)
         card02 = GotoPassGo(description="Advance to Illinois Ave. - If you pass Go, collect $200", position=25)
         card03 = GotoPassGo(description="Advance to St. Charles Place – If you pass Go, collect $200", position=12)
@@ -78,5 +78,7 @@ class Chance(Deck):
         card15 = Collect(description="Your building {and} loan matures – Collect $150 ", collect_amount=150)
         card16 = Collect(description="You have won a crossword competition - Collect $100", collect_amount=100)
 
-        return random.shuffle([card01, card02, card03, card04, card05, card06, card07, card08,
-                               card09, card10, card11, card12, card13, card14, card15, card16])
+        self.cards = [card01, card02, card03, card04, card05, card06, card07, card08,
+                      card09, card10, card11, card12, card13, card14, card15, card16]
+
+        return self.cards

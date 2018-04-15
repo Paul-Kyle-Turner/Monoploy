@@ -1,10 +1,8 @@
 import random
-from Deck import Deck
 
 
 DEFAULT_STARTING_MONEY = 1500
 DEFAULT_BOARD_SIZE = 40
-
 
 class Player:
 
@@ -15,6 +13,7 @@ class Player:
         self.position = 0
         self.get_out_free_cards = []
         self.player_number = number
+        self.last_roll = 0
 
     def get_player_number(self):
         return self.player_number
@@ -53,6 +52,9 @@ class Player:
     def get_jailed(self):
         return self.jailed
 
+    def get_last_roll(self):
+        return self.last_roll
+
     def change_position_to(self, position):
         self.position = position
 
@@ -77,10 +79,10 @@ class Player:
     def add_owned_space(self, space):
         self.owned_spaces.append(space)
 
-    @staticmethod
-    def roll_dice():
+    def roll_dice(self):
         dice1 = random.randint(1, 6)
         dice2 = random.randint(1, 6)
+        self.last_roll = dice1 + dice2
         return dice1 + dice2
 
     def jail(self):
