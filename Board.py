@@ -19,7 +19,7 @@ class Board:
 
     def change_position(self, player, position):
         player.change_position_to(position=position)
-        self.spaces[position].land_on()
+        self.spaces[position].land_on(self, player, self.game)
 
     #this is jank we can use observer but im lazy right now
     def change_position_dice(self, player):

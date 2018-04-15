@@ -16,6 +16,9 @@ class Card:
     def action(self, player, game):
         return
 
+    def __str__(self):
+        return self.description
+
 
 class Collect(Card):
 
@@ -146,4 +149,4 @@ class GetOutOfJail(Card):
         return self.chance
 
     def action(self, player, game):
-        player.add_go_free_card(self)
+        player.add_go_free_card(self, chance=self.get_chance())

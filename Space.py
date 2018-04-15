@@ -164,7 +164,7 @@ class Buyablespace(Space):
 
     def __str__(self):
         if self.owned:
-            return "The owner of the property is " + self.owner.get_player_number() + "."
+            return "The owner of the property is " + str(self.owner.get_player_number()) + "."
         else:
             return "Hope you have a good stay!"
 

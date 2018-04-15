@@ -2,19 +2,18 @@ from Board import Board
 from Player import Player
 from Space import Buyablespace
 
-DEFAULT_RULES = {
-    ""
-}
+DEFAULT_ROUNDS_RULE = 20
 
 
 def main():
     game = Game()
-    game.game_round()
+    game.game_play()
 
 
 class Game:
 
     def __init__(self, num_players=4):
+        self.round_count = 0
         self.board = Board(game=self)
         self.players = self.create_players(num_players)
 
@@ -26,8 +25,11 @@ class Game:
             players.append(player)
         return players
 
+    def game_play(self):
+        for round in range(DEFAULT_ROUNDS_RULE):
+            self.game_round()
+
     def game_round(self):
-        print(self.players)
         for player in self.players:
             space = self.board.change_position_dice(player=player)
             if isinstance(space, Buyablespace):
@@ -47,6 +49,10 @@ class Game:
             else:
                 print(space)
             print(player.get_player_number())
+            if player.get_funds() < 0:
+                del self.players[player]
+                print("Player " + player.get_player_number() + " has been eliminated.")
+
 
 
     def get_players(self):
