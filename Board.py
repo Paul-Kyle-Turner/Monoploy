@@ -149,4 +149,5 @@ class Board:
                                       house3=1400, house4=1700, hotel=2000, mortgage=200, house_cost=200)
         spaces.append(boardwalk)
 
+        print(spaces)
         self.spaces = spaces

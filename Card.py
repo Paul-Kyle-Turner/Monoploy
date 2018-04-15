@@ -135,7 +135,7 @@ class GotoJail(Goto):
         Goto.__init__(self, description=description, position=position)
 
     def action(self, player, game):
-        player.jailed()
+        player.jail()
         player.change_position_to(11)
 
 

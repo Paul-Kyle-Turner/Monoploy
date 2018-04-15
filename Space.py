@@ -52,6 +52,7 @@ class FreeParking(Space):
             return self
         else:
             player.add_funds(board.get_free_parking())
+            return self
 
     def __str__(self):
         return "You have got a free ride this time"
@@ -212,6 +213,10 @@ class Drawspace(Space):
     def __init__(self, name, chance):
         Space.__init__(self, name=name)
         self.chance = chance
+        self.last_card = None
+
+    def get_last_card(self):
+        return self.last_card
 
     def land_on(self, board, player, game):
         self.draw_card(player=player, board=board, game=game)
@@ -224,6 +229,8 @@ class Drawspace(Space):
             deck = board.get_community_chest()
         card = deck.pop_card()
         card.action(player, game)
+        self.last_card = card
+        return card
 
     def __str__(self):
         return "You draw a card and it is "
@@ -326,6 +333,7 @@ class Utility(Buyablespace):
 
     def land_on(self, board, player, game):
         super().land_on(board=board, player=player, game=game)
+        return self
 
     def rent(self, player):
         if self.two_owned:

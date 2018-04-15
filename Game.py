@@ -1,6 +1,6 @@
 from Board import Board
 from Player import Player
-from Space import Buyablespace
+from Space import *
 
 DEFAULT_ROUNDS_RULE = 20
 
@@ -46,12 +46,15 @@ class Game:
                     else:
                         #this is where auction should go
                         print("That's ok")
+            elif isinstance(space, Drawspace):
+                print("indraw")
+                print(space.get_last_card())
             else:
                 print(space)
             print(player.get_player_number())
             if player.get_funds() < 0:
-                del self.players[player]
-                print("Player " + player.get_player_number() + " has been eliminated.")
+                self.players.remove(player)
+                print("Player " + str(player.get_player_number()) + " has been eliminated.")
 
 
 
