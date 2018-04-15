@@ -27,8 +27,7 @@ class Game:
 
     def game_round(self):
         for player in self.players:
-            space = self.board.change_position_dice(player=player)  
-            print(space)
+            space = self.board.change_position_dice(player=player)
 
 
     def get_players(self):

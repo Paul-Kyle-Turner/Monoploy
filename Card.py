@@ -121,7 +121,7 @@ class GotoPassGo(Goto):
         Goto.__init__(self, description=description, position=position)
 
     def action(self, player, game):
-        if player.get_position() > self.position():
+        if player.get_position() > self.position:
             player.add_funds(200)
         player.change_position_to(self.position)
 

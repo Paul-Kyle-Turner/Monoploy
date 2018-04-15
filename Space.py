@@ -36,6 +36,7 @@ class GoToJail(Space):
 
     def land_on(self, board, player, game):
         board.change_position(player=player, position=11)
+        return self
 
     def __str__(self):
         return "You have been sent to jail <( *_* )>"
@@ -48,9 +49,9 @@ class FreeParking(Space):
 
     def land_on(self, board, player, game):
         if DEFAULT_FREE_PARKING:
-            return
+            return self
         else:
-            return board.get_free_parking()
+            player.add_funds(board.get_free_parking())
 
     def __str__(self):
         return "You have got a free ride this time"
@@ -232,6 +233,7 @@ class Railroad(Buyablespace):
 
     def land_on(self, board, player, game):
         super().land_on(board=board, player=player, game=game)
+        return self
 
     def rent(self, player):
         rent = DEFAULT_STARTING_RENT
@@ -263,6 +265,7 @@ class Property(Buyablespace):
 
     def land_on(self, board, player, game):
         super().land_on(board=board, player=player, game=game)
+        return self
 
     def prop_cost(self):
         if self.mortgaged:
