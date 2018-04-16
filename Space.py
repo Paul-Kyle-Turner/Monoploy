@@ -269,11 +269,20 @@ class Railroad(Buyablespace):
     def __init__(self, name, cost=200, mortgage=100):
         Buyablespace.__init__(self, name, cost, mortgage)
 
+    def purchase(self, player):
+        super().purchase()
+        railroads = player.get_owned_railroads()
+        for railroad in railroads:
+            railroad.set_stop(railroads.count() + 1)
+
     def rent(self, player):
         rent = DEFAULT_STARTING_RENT
         for i in range(self.owned):
             rent = rent * DEFAULT_RAILROAD_MULTIPLIER
         return rent
+
+    def set_stop(self, num_stops):
+        self.owned = num_stops
 
     def add_stop(self):
         self.owned = self.owned + 1
@@ -286,8 +295,9 @@ class Railroad(Buyablespace):
 
 
 class Property(Buyablespace):
-    def __init__(self, name, cost, house0, house1, house2, house3, house4, hotel, mortgage, house_cost):
+    def __init__(self, name, cost, house0, house1, house2, house3, house4, hotel, mortgage, house_cost, color):
         Buyablespace.__init__(self, name, cost, mortgage)
+        self.color = color
         self.house0 = house0
         self.house1 = house1
         self.house2 = house2
@@ -341,6 +351,9 @@ class Property(Buyablespace):
     def get_hotel(self):
         return self.hotel
 
+    def get_color(self):
+        return self.color
+
     def __str__(self):
         return "Nice property here in " + self.get_name() + ". " + super().__str__()
 
@@ -350,6 +363,12 @@ class Utility(Buyablespace):
     def __init__(self, name, cost=150, mortgage=75):
         Buyablespace.__init__(self, name, cost, mortgage)
         self.two_owned = False
+
+    def purchase(self, player):
+        super().purchase()
+        utilities = player.get_owned_railroads()
+        for utility in utilities:
+            utility.two_owned()
 
     def rent(self, player):
         if self.two_owned:

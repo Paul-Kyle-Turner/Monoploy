@@ -1,5 +1,5 @@
 import random
-from Space import Property
+from Space import Property, Railroad, Utility
 
 
 DEFAULT_STARTING_FUNDS = 1500
@@ -54,6 +54,20 @@ class Player:
             return True
         else:
             return False
+
+    def get_owned_utilities(self):
+        utilities = []
+        for prop in self.owned_spaces:
+            if isinstance(prop, Utility):
+                utilities.append(prop)
+        return utilities
+
+    def get_owned_railroads(self):
+        railroads = []
+        for prop in self.owned_spaces:
+            if isinstance(prop, Railroad):
+                railroads.append(prop)
+        return railroads
 
     def get_player_number(self):
         return self.player_number

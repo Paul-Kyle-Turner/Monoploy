@@ -42,9 +42,12 @@ class Game:
         print(self.board.jail_space.get_jail_list())
         if player.get_jailed():
             if player.get_jail_roll() > 2:
+                print("It is the last day in jail, better pay up!")
                 if player.has_get_out_of_jail_free():
+                    print("You had this card the entire time?")
                     self.board.jail_space.get_out_of_jail_free_release(player)
                 else:
+                    print("Thanks for paying")
                     self.board.jail_space.pay_release()
             else:
                 player_release = player.does_player_release()
