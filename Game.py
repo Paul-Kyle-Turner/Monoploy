@@ -7,20 +7,13 @@ from Space import *
 
 DEFAULT_ROUNDS_RULE = 1000
 
-
-def main():
-    game = Game()
-    print(game.board.jail_space)
-    game.game_play()
-
-
 class Game:
 
     def __init__(self, num_players=4):
         self.round_count = 0
         self.board = Board(game=self)
         self.players = self.create_players(num_players)
-
+        self.game_end = False
 
     @staticmethod
     def create_players(num_players):
@@ -33,11 +26,18 @@ class Game:
     def game_play(self):
         for round in range(DEFAULT_ROUNDS_RULE):
             self.game_round()
+            if self.game_end:
+                return
 
     def game_round(self):
         self.round_count += 1
-        for player in self.players:
-            self.game_turn(player=player)
+        if len(self.players) > 1:
+            for player in self.players:
+                self.game_turn(player=player)
+        else:
+            print("The winner is")
+            print(self.players)
+            self.game_end = True
 
     def game_turn(self, player):
         print("PLAYER " + str(player.get_player_number()) + " TURN")
@@ -104,6 +104,3 @@ class Game:
 
     def get_num_players(self):
         return len(self.players)
-
-
-main()

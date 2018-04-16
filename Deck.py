@@ -18,13 +18,16 @@ class Deck:
             random.shuffle(self.cards)
             self.card_reset = 0
         card = self.cards.pop(0)
-        if not isinstance(card, GetOutOfJail):
+        if isinstance(card, GetOutOfJail):
+            self.card_reset += 1
+        else:
             self.cards.append(card)
-        self.card_reset += 1
+            self.card_reset += 1
         return card
 
-    def add_get_out_of_jail(self):
-        self.cards.append(GetOutOfJail)
+    def add_get_out_of_jail(self, chance):
+        goj = GetOutOfJail(chance=chance)
+        self.cards.append(goj)
         random.shuffle(self.cards)
 
     def add_cards(self, cards):

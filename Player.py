@@ -118,13 +118,14 @@ class Player:
         self.get_out_free_cards.append([card, chance])
 
     def return_go_free_card(self, board, game):
+        print("RETURNING CARD")
         if len(self.get_out_free_cards) > 0:
             card = self.get_out_free_cards.pop(0)
             card[0].action(self, game)
             if card[1]:
-                board.get_chance_deck().add_get_out_of_jail()
+                board.get_chance_deck().add_get_out_of_jail(chance=True)
             else:
-                board.get_community_chest().add_get_out_of_jail()
+                board.get_community_chest().add_get_out_of_jail(chance=False)
 
     def worth(self):
         worth = self.funds
