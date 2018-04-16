@@ -152,7 +152,7 @@ class Board:
         pennsylvania_ave = Property(name="pennsylvania_ave", cost=320, house0=28, house1=150, house2=450,
                                     house3=1000, house4=1200, hotel=1400, mortgage=160, house_cost=200, color=green)
         spaces.append(pennsylvania_ave)
-        short_line = Utility(name="short_line")
+        short_line = Railroad(name="short_line")
         spaces.append(short_line)
         spaces.append(chance1)
         park_place = Property(name="park_place", cost=350, house0=35, house1=175, house2=500,

@@ -16,8 +16,11 @@ class Deck:
         if len(self.cards) == self.card_reset:
             print("IT HAPPENED !!!! ! ! ! ! ! !!  ! ! ! ! ! ! ! ! !#!@#K! #KL#M!M !#OMN !#O!NM@# !@NM#!@")
             random.shuffle(self.cards)
+            self.card_reset = 0
         card = self.cards.pop(0)
-        self.cards.append(card)
+        if not isinstance(card, GetOutOfJail):
+            self.cards.append(card)
+        self.card_reset += 1
         return card
 
     def add_get_out_of_jail(self):
