@@ -1,4 +1,6 @@
 
+# Author Paul Turner
+
 from Card import Collect, Pay, Goto, GotoJail, GetOutOfJail, Collectmultiple, PayRepairs, GotoPassGo
 from Card import GotoNearestUtility, GotoNearestRailroad, GoBackThree, PayMultiple
 import random
@@ -19,7 +21,8 @@ class Deck:
         return card
 
     def add_get_out_of_jail(self):
-        random.shuffle(self.cards.append(GetOutOfJail))
+        self.cards.append(GetOutOfJail)
+        random.shuffle(self.cards)
 
     def add_cards(self, cards):
         self.cards = cards

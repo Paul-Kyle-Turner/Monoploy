@@ -1,4 +1,6 @@
 
+# Author Paul Turner
+
 DEFAULT_LUX_TAX = 100
 DEFAULT_INCOME_TAX = 200
 DEFAULT_HOUSE_LEVEL = 0
@@ -44,7 +46,8 @@ class GoToJail(Space):
 
     def land_on(self, board, player, game):
         self.land()
-        board.change_position(player=player, position=11)
+        game.board.jail_space.jail(player)
+        player.change_position_to(10)
         return self
 
     def __str__(self):
@@ -78,14 +81,16 @@ class Jail(Space):
 
     def jail(self, player):
         player.jail()
+        print("JAIL JAIL JAIL")
         self.jail_list.append(player)
+        print(player.get_jailed())
 
     def release(self, player):
         player.release()
         self.jail_list.remove(player)
 
-    def get_out_of_jail_free_release(self, player):
-        player.return_go_free_card()
+    def get_out_of_jail_free_release(self, player, board, game):
+        player.return_go_free_card(board=board, game=game)
         self.release(player)
 
     def pay_release(self, player):
@@ -96,6 +101,7 @@ class Jail(Space):
         self.land()
         if player.get_jailed():
             self.jail_list.append(player)
+            return self
         if DEFAULT_VISITING:
             return self
         else:
@@ -106,7 +112,7 @@ class Jail(Space):
         jailed_players = ""
         if len(self.jail_list) > 0:
             for player in self.jail_list:
-                jailed_players += player.get_player_number() + " "
+                jailed_players += str(player.get_player_number()) + " "
             return "The following players are in jail" + jailed_players
         else:
             return "Have a good stay at jail."
@@ -256,7 +262,7 @@ class Drawspace(Space):
         else:
             deck = board.get_community_chest()
         card = deck.pop_card()
-        card.action(player, game)
+        card.action(player=player, game=game)
         self.last_card = card
         return card
 
@@ -270,10 +276,10 @@ class Railroad(Buyablespace):
         Buyablespace.__init__(self, name, cost, mortgage)
 
     def purchase(self, player):
-        super().purchase()
+        super().purchase(player=player)
         railroads = player.get_owned_railroads()
         for railroad in railroads:
-            railroad.set_stop(railroads.count() + 1)
+            railroad.set_stop(len(railroads) + 1)
 
     def rent(self, player):
         rent = DEFAULT_STARTING_RENT
@@ -365,10 +371,10 @@ class Utility(Buyablespace):
         self.two_owned = False
 
     def purchase(self, player):
-        super().purchase()
-        utilities = player.get_owned_railroads()
+        super().purchase(player=player)
+        utilities = player.get_owned_utilities()
         for utility in utilities:
-            utility.two_owned()
+            utility.make_two_owned()
 
     def rent(self, player):
         if self.two_owned:
@@ -376,10 +382,10 @@ class Utility(Buyablespace):
         else:
             return DEFAULT_UTILITY_MULTIPLIER * player.get_last_roll()
 
-    def two_owned(self):
+    def make_two_owned(self):
         self.two_owned = True
 
-    def one_owned(self):
+    def make_one_owned(self):
         self.two_owned = False
 
     def __str__(self):

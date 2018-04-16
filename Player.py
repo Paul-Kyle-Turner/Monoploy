@@ -1,3 +1,6 @@
+
+# Author Paul Turner
+
 import random
 from Space import Property, Railroad, Utility
 
@@ -114,11 +117,11 @@ class Player:
     def add_go_free_card(self, card, chance):
         self.get_out_free_cards.append([card, chance])
 
-    def return_go_free_card(self, board):
+    def return_go_free_card(self, board, game):
         if len(self.get_out_free_cards) > 0:
             card = self.get_out_free_cards.pop(0)
-            card.action(self)
-            if card.get_chance():
+            card[0].action(self, game)
+            if card[1]:
                 board.get_chance_deck().add_get_out_of_jail()
             else:
                 board.get_community_chest().add_get_out_of_jail()
@@ -152,6 +155,7 @@ class Player:
         return dice1 + dice2
 
     def jail(self):
+        print("jailing")
         self.jailed = True
 
     def release(self):

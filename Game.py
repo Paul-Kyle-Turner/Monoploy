@@ -1,3 +1,6 @@
+
+# Author Paul Turner
+
 from Board import Board
 from Player import Player
 from Space import *
@@ -52,13 +55,19 @@ class Game:
             else:
                 player_release = player.does_player_release()
                 if player_release == 0:
+                    print("Rolling the dice are you?")
                     player.roll_dice()
                     if player.get_doubles():
+                        print("Congrats... this time")
                         self.board.jail_space.release(player)
+                    else:
+                        print("Stay in there")
                 elif player_release == 1:
+                    print("Paying your way out?")
                     self.board.jail_space.pay_release(player)
                 elif player_release == 2:
-                    self.board.jail_space.get_out_of_jail_free_release(player)
+                    print("I thought I gave you one of these cards")
+                    self.board.jail_space.get_out_of_jail_free_release(player, board=self.board, game=self)
         else:
             space = self.board.change_position_dice(player=player)
             if isinstance(space, Buyablespace):
@@ -86,6 +95,9 @@ class Game:
             print("Player " + str(player.get_player_number()) + " has been eliminated.")
         print(player.get_position())
         print("PLAYER TURN END")
+
+    def get_board(self):
+        return self.board
 
     def get_players(self):
         return self.players

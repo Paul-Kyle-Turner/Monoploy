@@ -1,3 +1,6 @@
+
+# Author Paul Turner
+
 from Color import Color
 from Space import *
 from Deck import CommunityChest, Chance
