@@ -8,9 +8,15 @@ class Deck:
 
     def __init__(self, cards):
         self.cards = cards
+        self.card_reset = 0
 
     def pop_card(self):
-        return self.cards.pop(0)
+        if len(self.cards) == self.card_reset:
+            print("IT HAPPENED !!!! ! ! ! ! ! !!  ! ! ! ! ! ! ! ! !#!@#K! #KL#M!M !#OMN !#O!NM@# !@NM#!@")
+            random.shuffle(self.cards)
+        card = self.cards.pop(0)
+        self.cards.append(card)
+        return card
 
     def add_get_out_of_jail(self):
         random.shuffle(self.cards.append(GetOutOfJail))
@@ -54,7 +60,7 @@ class CommunityChest(Deck):
 class Chance(Deck):
 
     def __init__(self):
-        self.cards = self.create_chance_cards()
+        Deck.__init__(self, self.create_chance_cards())
 
     def create_chance_cards(self):
         card01 = Goto(description="Advance to Go", position=0)

@@ -135,8 +135,8 @@ class GotoJail(Goto):
         Goto.__init__(self, description=description, position=position)
 
     def action(self, player, game):
-        player.jail()
-        player.change_position_to(11)
+        game.board.jail_space.jail(player)
+        player.change_position_to(10)
 
 
 class GetOutOfJail(Card):

@@ -12,16 +12,16 @@ class Board:
         self.hotels = 12
         self.chance = Chance()
         self.community_chest = CommunityChest()
-        self.spaces = []
+        self.spaces = self.create_board()
         self.free_parking = 0
         self.game = game
-        self.create_board()
+        self.jail_space = self.spaces[10]
 
     def change_position(self, player, position):
         player.change_position_to(position=position)
         self.spaces[position].land_on(self, player, self.game)
 
-    #this is jank we can use observer but im lazy right now
+    # this is jank we can use observer but im lazy right now
     def change_position_dice(self, player):
         player.change_position_dice()
         location = player.get_position
@@ -149,5 +149,4 @@ class Board:
                                       house3=1400, house4=1700, hotel=2000, mortgage=200, house_cost=200)
         spaces.append(boardwalk)
 
-        print(spaces)
-        self.spaces = spaces
+        return spaces

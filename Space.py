@@ -18,12 +18,20 @@ class Space:
 
     def __init__(self, name):
         self.name = name
+        self.num_landed_on = 0
 
     def land_on(self, board, player, game):
+        self.land()
         return self
+
+    def get_times_landed(self):
+        return self.num_landed_on
 
     def get_name(self):
         return self.name
+
+    def land(self):
+        self.num_landed_on += 1
 
     def __str__(self):
         return "This message should not appear"
@@ -35,6 +43,7 @@ class GoToJail(Space):
         Space.__init__(self, name=name)
 
     def land_on(self, board, player, game):
+        self.land()
         board.change_position(player=player, position=11)
         return self
 
@@ -64,15 +73,29 @@ class Jail(Space):
         Space.__init__(self, name=name)
         self.jail_list = []
 
+    def get_jail_list(self):
+        return self.jail_list
+
     def jail(self, player):
-        player.jailed()
+        player.jail()
         self.jail_list.append(player)
 
     def release(self, player):
         player.release()
-        del self.jail_list[player]
+        self.jail_list.remove(player)
+
+    def get_out_of_jail_free_release(self, player):
+        player.return_go_free_card()
+        self.release(player)
+
+    def pay_release(self, player):
+        player.remove_funds(50)
+        self.release(player)
 
     def land_on(self, board, player, game):
+        self.land()
+        if player.get_jailed():
+            self.jail_list.append(player)
         if DEFAULT_VISITING:
             return self
         else:
@@ -96,6 +119,7 @@ class Go(Space):
         Space.__init__(self, name=name)
 
     def land_on(self, board, player, game):
+        self.land()
         player.add_funds(DEFAULT_GO_FUNDS)
         return self
 
@@ -122,6 +146,7 @@ class Buyablespace(Space):
             return self.mortgage
 
     def land_on(self, board, player, game):
+        self.land()
         if self.get_ownership(player):
             return self
         elif self.owned:
@@ -176,6 +201,7 @@ class LuxTax(Space):
         Space.__init__(self, name=name)
 
     def land_on(self, board, player, game):
+        self.land()
         self.charge_player(player=player)
         return self
 
@@ -193,6 +219,7 @@ class IncomeTax(Space):
         Space.__init__(self, name=name)
 
     def land_on(self, board, player, game):
+        self.land()
         self.charge_player(player=player)
         return self
 
@@ -219,6 +246,7 @@ class Drawspace(Space):
         return self.last_card
 
     def land_on(self, board, player, game):
+        self.land()
         self.draw_card(player=player, board=board, game=game)
         return self
 
@@ -240,10 +268,6 @@ class Railroad(Buyablespace):
 
     def __init__(self, name, cost=200, mortgage=100):
         Buyablespace.__init__(self, name, cost, mortgage)
-
-    def land_on(self, board, player, game):
-        super().land_on(board=board, player=player, game=game)
-        return self
 
     def rent(self, player):
         rent = DEFAULT_STARTING_RENT
@@ -272,10 +296,6 @@ class Property(Buyablespace):
         self.hotel = hotel
         self.house_cost = house_cost
         self.house_level = DEFAULT_HOUSE_LEVEL
-
-    def land_on(self, board, player, game):
-        super().land_on(board=board, player=player, game=game)
-        return self
 
     def prop_cost(self):
         if self.mortgaged:
@@ -330,10 +350,6 @@ class Utility(Buyablespace):
     def __init__(self, name, cost=150, mortgage=75):
         Buyablespace.__init__(self, name, cost, mortgage)
         self.two_owned = False
-
-    def land_on(self, board, player, game):
-        super().land_on(board=board, player=player, game=game)
-        return self
 
     def rent(self, player):
         if self.two_owned:

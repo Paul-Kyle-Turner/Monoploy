@@ -1,4 +1,5 @@
 import random
+from Space import Property
 
 
 DEFAULT_STARTING_FUNDS = 1500
@@ -15,9 +16,41 @@ class Player:
         self.get_out_free_cards = []
         self.player_number = number
         self.last_roll = 0
+        self.doubles = False
+        self.jail_roll = 0
+
+    def does_player_release(self):
+        release_state = 0
+        if self.has_get_out_of_jail_free():
+            release_state = 3
+        else:
+            release_state = 2
+        states = []
+        for i in range(release_state):
+            states.append(i)
+        return random.choice(states)
+
+    def does_player_use_get_out_of_jail(self):
+        if self.get_out_free_cards.count() > 0:
+            return True
+        else:
+            return False
+
+    def does_player_roll_or_pay(self):
+        if random.random > .5:
+            self.jail_roll += 1
+            return True
+        else:
+            return False
 
     def is_equal(self, player):
         if self.get_player_number() == player.get_player_number():
+            return True
+        else:
+            return False
+
+    def has_get_out_of_jail_free(self):
+        if self.get_num_go_free_cards() > 0:
             return True
         else:
             return False
@@ -40,6 +73,12 @@ class Player:
     def get_funds(self):
         return self.funds
 
+    def get_doubles(self):
+        return self.doubles
+
+    def get_jail_roll(self):
+        return self.jail_roll
+
     def change_position_to(self, position):
         self.position = position
 
@@ -50,12 +89,12 @@ class Player:
         houses = 0
         hotels = 0
         for property_temp in self.owned_spaces:
-            house_level = property_temp.get_house_level()
-            if house_level <= 4:
-                houses += 1
-            else:
-                hotels += 1
-
+            if isinstance(property_temp, Property):
+                house_level = property_temp.get_house_level()
+                if house_level <= 4:
+                    houses += 1
+                else:
+                    hotels += 1
         return [houses, hotels]
 
     def add_go_free_card(self, card, chance):
@@ -91,6 +130,10 @@ class Player:
     def roll_dice(self):
         dice1 = random.randint(1, 6)
         dice2 = random.randint(1, 6)
+        if dice1 == dice2:
+            self.doubles = True
+        else:
+            self.doubles = False
         self.last_roll = dice1 + dice2
         return dice1 + dice2
 
@@ -98,5 +141,6 @@ class Player:
         self.jailed = True
 
     def release(self):
+        self.jail_roll = 0
         self.jailed = False
 
