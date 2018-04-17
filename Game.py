@@ -7,6 +7,7 @@ from Space import *
 
 DEFAULT_ROUNDS_RULE = 1000
 
+
 class Game:
 
     def __init__(self, num_players=4):

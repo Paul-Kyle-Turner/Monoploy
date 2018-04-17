@@ -13,8 +13,9 @@ class Deck:
         self.card_reset = 0
 
     def pop_card(self):
-        if len(self.cards) == self.card_reset:
+        if len(self.cards) < self.card_reset:
             print("IT HAPPENED !!!! ! ! ! ! ! !!  ! ! ! ! ! ! ! ! !#!@#K! #KL#M!M !#OMN !#O!NM@# !@NM#!@")
+            self.reset_deck()
             random.shuffle(self.cards)
             self.card_reset = 0
         card = self.cards.pop(0)
@@ -32,6 +33,9 @@ class Deck:
 
     def add_cards(self, cards):
         self.cards = cards
+
+    def reset_deck(self):
+        return self.cards
 
 
 class CommunityChest(Deck):
@@ -65,6 +69,9 @@ class CommunityChest(Deck):
 
         return self.cards
 
+    def reset_deck(self):
+        return self.create_community_chest_cards()
+
 
 class Chance(Deck):
 
@@ -97,3 +104,6 @@ class Chance(Deck):
                       card09, card10, card11, card12, card13, card14, card15, card16]
 
         return self.cards
+
+    def reset_deck(self):
+        return self.create_chance_cards()
