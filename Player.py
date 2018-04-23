@@ -1,6 +1,5 @@
 
 # Author Paul Turner
-
 import random
 from Space import Property, Railroad, Utility
 
@@ -51,6 +50,22 @@ class Player:
             return True
         else:
             return False
+
+    def has_space(self, space):
+        if space in self.owned_spaces:
+            return True
+        else:
+            return False
+
+    def has_monopoly(self, space):
+        color = space.get_color()
+        spaces = color.get_color_set()
+        for space in spaces:
+            if not self.has_space(space):
+                return False
+        for space in spaces:
+            space.to_monoploy()
+        return True
 
     def has_get_out_of_jail_free(self):
         if self.get_num_go_free_cards() > 0:

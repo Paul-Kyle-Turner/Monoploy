@@ -14,6 +14,7 @@ DEFAULT_COMMUNITY_CHEST_DECK = False
 DEFAULT_GO_FUNDS = 200
 DEFAULT_VISITING = True
 DEFAULT_FREE_PARKING = True
+DEFAULT_MONOPOLY_MULTIPLIER = 2
 
 
 class Space:
@@ -279,7 +280,7 @@ class Railroad(Buyablespace):
         super().purchase(player=player)
         railroads = player.get_owned_railroads()
         for railroad in railroads:
-            railroad.set_stop(len(railroads) + 1)
+            railroad.set_stop(len(railroads))
 
     def rent(self, player):
         rent = DEFAULT_STARTING_RENT
@@ -312,6 +313,9 @@ class Property(Buyablespace):
         self.hotel = hotel
         self.house_cost = house_cost
         self.house_level = DEFAULT_HOUSE_LEVEL
+
+    def to_monoploy(self):
+        self.house0 = self.house0 * DEFAULT_MONOPOLY_MULTIPLIER
 
     def prop_cost(self):
         if self.mortgaged:

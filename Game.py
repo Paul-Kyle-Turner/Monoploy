@@ -42,7 +42,6 @@ class Game:
 
     def game_turn(self, player):
         print("PLAYER " + str(player.get_player_number()) + " TURN")
-        print(player.get_position())
         print(self.board.jail_space.get_jail_list())
         if player.get_jailed():
             if player.get_jail_roll() > 2:
@@ -82,19 +81,20 @@ class Game:
                     if player.funds > space.get_cost():
                         space.purchase(player=player)
                         print("Thanks for buying")
+                        if isinstance(space, Property):
+                            if(player.has_monopoly(space=space)):
+                                print("You bought a monoploy, great job!")
                     else:
                         # this is where auction should go
                         print("That's ok")
             elif isinstance(space, Drawspace):
-                print("indraw")
                 print(space)
                 print(space.get_last_card())
             else:
                 print(space)
-        if player.get_funds() < 0:
+        if player.get_funds() <= 0:
             self.players.remove(player)
             print("Player " + str(player.get_player_number()) + " has been eliminated.")
-        print(player.get_position())
         print("PLAYER TURN END")
 
     def get_board(self):
