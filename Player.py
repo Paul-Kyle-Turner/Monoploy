@@ -20,6 +20,47 @@ class Player:
         self.last_roll = 0
         self.doubles = False
         self.jail_roll = 0
+        self.player_random = random.random()
+
+    def get_lowest_value_house(self):
+        
+
+    def get_property_of_lowest_value(self):
+        lowest_value_space = self.owned_spaces[0]
+        for space in self.owned_spaces:
+            if lowest_value_space.get_mortgage() > space.get_mortage():
+                lowest_value_space = space
+        return lowest_value_space
+
+    def player_random_move(self):
+        if self.player_random >= random.random():
+            return True
+        else:
+            return False
+
+    def get_total_house_value(self):
+        total_house_value = 0
+        for space in self.owned_spaces:
+            if isinstance(space, Property):
+                total_house_value += space.get_house_level()
+        return total_house_value
+
+    def mortgage_till_value(self, value):
+        mortgage = 0
+        while value > mortgage:
+            mortgage += self.get_property_of_lowest_value().mortgaged()
+
+    def does_player_mortgage_or_sell_house(self, value):
+        if len(self.owned_spaces > 0):
+            if self.get_total_house_value() > 0:
+                if self.player_random_move(): # player mortgages the lowest value house or houses that match the value
+                    return False # sell house
+                else:
+                    return True # mortgage property
+            else:
+                return True
+        else:
+            return None
 
     def does_player_release(self):
         release_state = 0
@@ -39,7 +80,7 @@ class Player:
             return False
 
     def does_player_roll_or_pay(self):
-        if random.random > .5:
+        if self.player_random > random.random():
             self.jail_roll += 1
             return True
         else:

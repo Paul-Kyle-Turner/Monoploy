@@ -194,6 +194,7 @@ class Buyablespace(Space):
 
     def mortgaged(self):
         self.mortgaged = True
+        return self.mortgage
 
     def __str__(self):
         if self.owned:

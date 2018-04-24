@@ -1,10 +1,13 @@
 
 from Game import Game
-
+from time import time
 
 def main():
+    time_start = time()
     sim = Simulator()
-    sim.simulate_for(100)
+    sim.simulate_for(1000)
+    time_final = time()
+    print(time_final-time_start)
 
 
 class Simulator:

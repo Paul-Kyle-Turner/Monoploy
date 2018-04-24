@@ -82,7 +82,7 @@ class Game:
                         space.purchase(player=player)
                         print("Thanks for buying")
                         if isinstance(space, Property):
-                            if(player.has_monopoly(space=space)):
+                            if player.has_monopoly(space=space):
                                 print("You bought a monoploy, great job!")
                     else:
                         # this is where auction should go
@@ -92,9 +92,17 @@ class Game:
                 print(space.get_last_card())
             else:
                 print(space)
-        if player.get_funds() <= 0:
-            self.players.remove(player)
-            print("Player " + str(player.get_player_number()) + " has been eliminated.")
+        funds = player.get_funds()
+        if funds <= 0:
+            difference = abs(funds)
+            choice = player.does_player_mortgage_or_sell_house()
+            if choice is None :
+                self.players.remove(player)
+                print("Player " + str(player.get_player_number()) + " has been eliminated.")
+            elif choice:
+                player.mortgage_till_value(difference)
+            else:
+
         print("PLAYER TURN END")
 
     def get_board(self):
