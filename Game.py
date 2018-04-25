@@ -26,26 +26,29 @@ class Game:
 
     def game_play(self):
         for round in range(DEFAULT_ROUNDS_RULE):
-            self.game_round()
+            if len(self.players) > 1:
+                player = self.game_round()
+            else:
+                print("The winner is")
+                print(self.players)
+                self.game_end = True
             if self.game_end:
                 return
 
     def game_round(self):
         self.round_count += 1
-        if len(self.players) > 1:
-            for player in self.players:
-                if player.jailed():
-                    self.jail_turn(player=player)
-                else:
+        for player in self.players:
+            if player.jailed():
+                self.jail_turn(player=player)
+            else:
+                doubles = self.game_turn(player=player)
+                if doubles:
+                    print("You got doubles, have another turn")
                     doubles = self.game_turn(player=player)
                     if doubles:
-                        doubles = self.game_turn(player=player)
-                        if doubles:
-                            self.board.get_jail_space().jail(player=player)
-        else:
-            print("The winner is")
-            print(self.players)
-            self.game_end = True
+                        print("We clocked him going 26 in a 25")
+                        self.board.get_jail_space().jail(player=player)
+
 
     def jail_turn(self, player):
         if player.get_jail_roll() > 2:
@@ -90,7 +93,7 @@ class Game:
                     space.purchase(player=player)
                     print("Thanks for buying")
                     if isinstance(space, Property):
-                        if player.has_monopoly(space=space):
+                        if player.has_monopoly_from_space(space=space):
                             print("You bought a monoploy, great job!")
                 else:
                     # this is where auction should go
@@ -101,9 +104,6 @@ class Game:
         else:
             print(space)
         funds = player.get_funds()
-        if len(player.get_monoploys()) > 0:
-            if player.player_random_move():
-                color = player.get_random_monoploy()
         if funds <= 0:
             difference = abs(funds)
             choice = player.does_player_mortgage_or_sell_house()
@@ -113,7 +113,9 @@ class Game:
             elif choice:
                 player.mortgage_till_value(difference)
             else:
-
+                #sell house
+        elif player.does_player_purchase_house():
+            self.board.purchase_house(player.random_house_purchase())
         print("PLAYER TURN END")
         return player.get_doubles()
 

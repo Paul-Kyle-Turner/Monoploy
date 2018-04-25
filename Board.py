@@ -6,6 +6,8 @@ from Space import *
 from Deck import CommunityChest, Chance
 
 DEFAULT_BOARD_LENGTH = 28
+DEFAULT_NUM_HOUSES = 32
+DEFAULT_NUM_HOTELS = 12
 
 
 class Board:
@@ -19,6 +21,27 @@ class Board:
         self.free_parking = 0
         self.game = game
         self.jail_space = self.spaces[10]
+
+    # problems can occur
+    def sell_house(self, space):
+        house_level = space.get_house_level()
+        if house_level > 0:
+            space.decrease_house_level()
+            if house_level == 5:
+                self.houses -= 4
+                self.hotels += 1
+            else:
+                self.houses += 1
+
+    def purchase_house(self, space):
+        if self.houses > 0:
+            space.increase_house_level()
+            if space.get_house_level == 5:
+                self.houses += 4
+                self.hotels -= 1
+            else:
+                self.houses -= 1
+        return space.get_house_level()
 
     def change_position(self, player, position):
         player.change_position_to(position=position)
@@ -168,13 +191,13 @@ class Board:
         spaces.append(boardwalk)
 
         # color creation
-        brown.set_color_set([mediterranean,baltic])
-        light_blue.set_color_set([oriental, vermont, connectiut])
-        purple.set_color_set([st_charles, states_ave, virginia])
-        orange.set_color_set([st_james, tennessee, new_york])
+        brown.set_color_set([baltic, mediterranean])
+        light_blue.set_color_set([connectiut, oriental, vermont])
+        purple.set_color_set([virginia, st_charles, states_ave])
+        orange.set_color_set([new_york, st_james, tennessee])
         red.set_color_set([illinois, indiana, kentucky])
         yellow.set_color_set([marvin_gardens, atlantic, ventnor])
-        green.set_color_set([pacific_ave, north_carolina, pennsylvania_ave])
-        blue.set_color_set([park_place,boardwalk])
+        green.set_color_set([pennsylvania_ave, pacific_ave, north_carolina])
+        blue.set_color_set([boardwalk, park_place])
 
         return spaces

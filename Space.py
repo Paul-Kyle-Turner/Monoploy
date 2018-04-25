@@ -339,11 +339,11 @@ class Property(Buyablespace):
             return self.hotel
 
     def increase_house_level(self):
-        self.house_level += 1
+        if self.house_level < 5:
+            self.house_level += 1
 
     def decrease_house_level(self):
         self.house_level -= 1
-
 
     def change_house_level(self, house_level):
         self.house_level = house_level

@@ -13,6 +13,9 @@ class Color:
                 return True
         return False
 
+    def get_property(self, num):
+        return self.color_set[num]
+
     def get_color(self):
         return self.color
 

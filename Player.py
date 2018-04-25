@@ -23,6 +23,31 @@ class Player:
         self.player_random = random.random()
         self.monoploys = []
 
+    def does_player_purchase_house(self):
+        if self.has_monoploy():
+            if self.player_random_move():
+                return True
+            else:
+                return False
+
+    def random_house_purchase(self):
+        monoploy = self.monoploys[random.randint(0, self.get_num_monolpolys())]
+        high = monoploy.get_property(num=0).get_house_level()
+        second = monoploy.get_property(num=1).get_house_level()
+        third = None
+        if len(monoploy) > 2:
+            thrid = monoploy.get_property(num=2).get_house_level()
+        if third is not None:
+            if high <= second or high <= third:
+                return monoploy.get_property(0)
+            else:
+                return monoploy.get_property(random.randint(1, 2))
+        else:
+            if high <= second:
+                return monoploy.get_property(0)
+            else:
+                return monoploy.get_property(1) 
+
     def sell_house_till_value(self, value):
         house_total = 0
         return None # Still working
@@ -66,7 +91,7 @@ class Player:
         return random.choice(states)
 
     def does_player_use_get_out_of_jail(self):
-        if self.get_out_free_cards.count() > 0:
+        if len(self.get_out_free_cards) > 0:
             return True
         else:
             return False
@@ -90,7 +115,10 @@ class Player:
         else:
             return False
 
-    def has_monopoly(self, space):
+    def has_monoploy(self):
+        return len(self.monoploys) > 0
+
+    def has_monopoly_from_space(self, space):
         color = space.get_color()
         spaces = color.get_color_set()
         for space in spaces:
@@ -126,6 +154,9 @@ class Player:
 
     def get_monoploys(self):
         return self.monoploys
+
+    def get_num_monolpolys(self):
+        return len(self.monoploys)
 
     def get_owned_utilities(self):
         utilities = []
