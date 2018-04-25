@@ -39,6 +39,9 @@ class Board:
     def get_free_parking(self):
         return self.free_parking
 
+    def get_jail_space(self):
+        return self.jail_space
+
     def get_chance_deck(self):
         return self.chance
 

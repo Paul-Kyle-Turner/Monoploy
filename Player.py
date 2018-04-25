@@ -21,16 +21,11 @@ class Player:
         self.doubles = False
         self.jail_roll = 0
         self.player_random = random.random()
+        self.monoploys = []
 
-    def get_lowest_value_house(self):
-        
-
-    def get_property_of_lowest_value(self):
-        lowest_value_space = self.owned_spaces[0]
-        for space in self.owned_spaces:
-            if lowest_value_space.get_mortgage() > space.get_mortage():
-                lowest_value_space = space
-        return lowest_value_space
+    def sell_house_till_value(self, value):
+        house_total = 0
+        return None # Still working
 
     def player_random_move(self):
         if self.player_random >= random.random():
@@ -38,20 +33,17 @@ class Player:
         else:
             return False
 
-    def get_total_house_value(self):
-        total_house_value = 0
-        for space in self.owned_spaces:
-            if isinstance(space, Property):
-                total_house_value += space.get_house_level()
-        return total_house_value
-
     def mortgage_till_value(self, value):
         mortgage = 0
         while value > mortgage:
-            mortgage += self.get_property_of_lowest_value().mortgaged()
+            space = self.get_property_of_lowest_value()
+            mortgage += space.mortgaged()
+            for color in self.monoploys:
+                if color.has_property(space=space):
+                    self.monoploys.remove(color)
 
-    def does_player_mortgage_or_sell_house(self, value):
-        if len(self.owned_spaces > 0):
+    def does_player_mortgage_or_sell_house(self):
+        if len(self.owned_spaces) > 0:
             if self.get_total_house_value() > 0:
                 if self.player_random_move(): # player mortgages the lowest value house or houses that match the value
                     return False # sell house
@@ -86,7 +78,7 @@ class Player:
         else:
             return False
 
-    def is_equal(self, player):
+    def is_equal(self, player): # LOL __eq__ <( 'x' )>
         if self.get_player_number() == player.get_player_number():
             return True
         else:
@@ -106,6 +98,7 @@ class Player:
                 return False
         for space in spaces:
             space.to_monoploy()
+        self.monoploys.append(color)
         return True
 
     def has_get_out_of_jail_free(self):
@@ -113,6 +106,26 @@ class Player:
             return True
         else:
             return False
+
+    def get_total_house_value(self):
+        total_house_value = 0
+        for space in self.owned_spaces:
+            if isinstance(space, Property):
+                total_house_value += space.get_house_level()
+        return total_house_value
+
+    def get_random_monoploy(self):
+        return self.monoploys[random.randint(0, len(self.monoploys))]
+
+    def get_property_of_lowest_value(self):
+        lowest_value_space = self.owned_spaces[0]
+        for space in self.owned_spaces:
+            if lowest_value_space.get_mortgage() > space.get_mortage():
+                lowest_value_space = space
+        return lowest_value_space
+
+    def get_monoploys(self):
+        return self.monoploys
 
     def get_owned_utilities(self):
         utilities = []
@@ -155,8 +168,16 @@ class Player:
     def change_position_to(self, position):
         self.position = position
 
+    def change_position_to_pass_go(self, position):
+        if self.position > position:
+            self.add_funds(200)
+        self.position = position
+
     def change_position_dice(self):
+        position = self.position
         self.position = ((self.position + self.roll_dice()) % DEFAULT_BOARD_SIZE)
+        if position > self.position:
+            self.add_funds(200)
 
     def get_num_houses_hotels(self):
         houses = 0

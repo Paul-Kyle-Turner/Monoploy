@@ -7,6 +7,12 @@ class Color:
         self.color = color
         self.color_set = []
 
+    def has_property(self, space):
+        for spacet in self.color_set:
+            if spacet == space:
+                return True
+        return False
+
     def get_color(self):
         return self.color
 

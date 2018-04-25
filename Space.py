@@ -48,7 +48,6 @@ class GoToJail(Space):
     def land_on(self, board, player, game):
         self.land()
         game.board.jail_space.jail(player)
-        player.change_position_to(10)
         return self
 
     def __str__(self):
@@ -82,6 +81,7 @@ class Jail(Space):
 
     def jail(self, player):
         player.jail()
+        player.change_position_to(10)
         print("JAIL JAIL JAIL")
         self.jail_list.append(player)
         print(player.get_jailed())
@@ -165,7 +165,7 @@ class Buyablespace(Space):
     def rent(self, player):
         return 0
 
-    #make this able to do the monoploy
+    # make this able to do the monoploy
     def purchase(self, player):
         player.remove_funds(self.cost)
         player.add_owned_space(self)
@@ -337,6 +337,13 @@ class Property(Buyablespace):
             return self.house4
         elif self.house_level == 5:
             return self.hotel
+
+    def increase_house_level(self):
+        self.house_level += 1
+
+    def decrease_house_level(self):
+        self.house_level -= 1
+
 
     def change_house_level(self, house_level):
         self.house_level = house_level

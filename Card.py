@@ -88,7 +88,7 @@ class Goto(Card):
         self.position = position
 
     def action(self, player, game):
-        player.change_position_to(self.position)
+        player.change_position_to_pass_go(self.position)
 
 
 class GotoNearestRailroad(Card):
@@ -104,7 +104,7 @@ class GotoNearestRailroad(Card):
         else:
             player.add_funds(200)
             position = 5
-        player.change_position_to(position)
+        player.change_position_to_pass_go(position)
 
 
 class GotoNearestUtility(Card):
@@ -117,7 +117,7 @@ class GotoNearestUtility(Card):
             position = 12
         else:
             position = 28
-        player.change_position_to(position)
+        player.change_position_to_pass_go(position)
 
 
 class GotoPassGo(Goto):
@@ -128,7 +128,7 @@ class GotoPassGo(Goto):
     def action(self, player, game):
         if player.get_position() > self.position:
             player.add_funds(200)
-        player.change_position_to(self.position)
+        player.change_position_to_pass_go(self.position)
 
 
 class GotoJail(Goto):
@@ -138,7 +138,6 @@ class GotoJail(Goto):
 
     def action(self, player, game):
         game.board.jail_space.jail(player)
-        player.change_position_to(10)
 
 
 class GetOutOfJail(Card):
