@@ -31,25 +31,39 @@ class Player:
                 return False
 
     def random_house_purchase(self):
-        monoploy = self.monoploys[random.randint(0, self.get_num_monolpolys())]
-        high = monoploy.get_property(0).get_house_level()
-        second = monoploy.get_property(1).get_house_level()
-        third = None
-        if len(monoploy) > 2:
-            third = monoploy.get_property(2).get_house_level()
-        if third is not None:
-            if high <= second or high <= third:
-                return monoploy.get_property(0)
+        if self.get_num_monolpolys() > 0:
+            monoploy = self.monoploys[random.randint(0, self.get_num_monolpolys() - 1)]
+            high = monoploy.get_property(0).get_house_level()
+            second = monoploy.get_property(1).get_house_level()
+            third = None
+            if len(monoploy.get_color_set()) > 2:
+                third = monoploy.get_property(2).get_house_level()
+            if third is not None:
+                if high <= second or high <= third:
+                    return monoploy.get_property(0)
+                else:
+                    return monoploy.get_property(random.randint(1, 2))
             else:
-                return monoploy.get_property(random.randint(1, 2))
-        else:
-            if high <= second:
-                return monoploy.get_property(0)
-            else:
-                return monoploy.get_property(1) 
+                if high <= second:
+                    return monoploy.get_property(0)
+                else:
+                    return monoploy.get_property(1)
 
-    def sell_house_till_value(self, value):
+    def sell_house_till_value(self, value, board):
         house_total = 0
+        numHouses = self.get_num_houses_hotels()
+        for space in self.owned_spaces:
+            if isinstance(space, Property) and space.get_house_level() > 0:
+                while house_total < value and numHouses[0] > 0 and numHouses[1] > 0:
+                    board.sell_house(space)
+                    house_total += space.get_house_cost()
+                    numHouses = self.get_num_houses_hotels()
+        if house_total > value:
+            self.add_funds(house_total)
+            return True
+        else:
+            return False
+
         return None # Still working
 
     def player_random_move(self):
@@ -62,10 +76,15 @@ class Player:
         mortgage = 0
         while value > mortgage:
             space = self.get_property_of_lowest_value()
-            mortgage += space.mortgaged()
-            for color in self.monoploys:
-                if color.has_property(space=space):
-                    self.monoploys.remove(color)
+            if space is not None:
+                mortgage += space.set_mortgaged()
+                for color in self.monoploys:
+                    if color.has_property(space=space):
+                        self.monoploys.remove(color)
+            else:
+                return False
+        self.add_funds(mortgage)
+        return True
 
     def does_player_mortgage_or_sell_house(self):
         if len(self.owned_spaces) > 0:
@@ -148,15 +167,17 @@ class Player:
     def get_property_of_lowest_value(self):
         lowest_value_space = self.owned_spaces[0]
         for space in self.owned_spaces:
-            if lowest_value_space.get_mortgage() > space.get_mortgage():
-                lowest_value_space = space
+            if not space.get_mortgaged():
+                if lowest_value_space.get_mortgage() > space.get_mortgage():
+                    lowest_value_space = space
         return lowest_value_space
 
     def get_property_of_highest_value(self):
-        lowest_value_space = self.owned_spaces[0]
+        lowest_value_space = None
         for space in self.owned_spaces:
-            if lowest_value_space.get_mortgage() < space.get_mortgage():
-                lowest_value_space = space
+            if not space.get_mortgaged():
+                if lowest_value_space.get_mortgage() < space.get_mortgage():
+                    lowest_value_space = space
         return lowest_value_space
 
     def get_monoploys(self):

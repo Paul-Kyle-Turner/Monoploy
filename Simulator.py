@@ -20,7 +20,7 @@ class Simulator:
     def simulate(self):
         self.game.game_play()
 
-    def simulate_for(self, num_games=100):
+    def simulate_for(self, num_games=1):
         for i in range(num_games):
             self.create_game()
             self.simulate()
