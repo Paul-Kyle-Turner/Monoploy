@@ -148,14 +148,14 @@ class Player:
     def get_property_of_lowest_value(self):
         lowest_value_space = self.owned_spaces[0]
         for space in self.owned_spaces:
-            if lowest_value_space.get_mortgage() > space.get_mortage():
+            if lowest_value_space.get_mortgage() > space.get_mortgage():
                 lowest_value_space = space
         return lowest_value_space
 
     def get_property_of_highest_value(self):
         lowest_value_space = self.owned_spaces[0]
         for space in self.owned_spaces:
-            if lowest_value_space.get_mortgage() < space.get_mortage():
+            if lowest_value_space.get_mortgage() < space.get_mortgage():
                 lowest_value_space = space
         return lowest_value_space
 

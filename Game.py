@@ -160,13 +160,27 @@ class Game:
                 offeredAmount = 0;
                 for space in spacesOffered:
                     offeredAmount += space.get_mortgage()
-                moneyOffered = 0
+                moneyOffered = random.randint(0, player1.get_funds())
+                offeredAmount += moneyOffered
+                offeredAmount = random.randint(0, offeredAmount)
+                wantedAmount = random.randint(0, wantedAmount)
                 if offeredAmount > wantedAmount:
-                    highest = spacesOffered[0]
-                    for space in spacesOffered:
-                        if space.get_mortgage() > highest.get_mortgage():
-                            highest = space
-                    spacesOffered.remove(highest)
+                    while offeredAmount > wantedAmount and len(spacesOffered) > 0:
+                        highest = spacesOffered[0]
+                        for space in spacesOffered:
+                            if space.get_mortgage() > highest.get_mortgage():
+                                highest = space
+                        spacesOffered.remove(highest)
+                        wantedAmount = 0
+                        for space in spacesWanted:
+                            wantedAmount += space.get_mortgage()
+                        offeredAmount = 0;
+                        for space in spacesOffered:
+                            offeredAmount += space.get_mortgage()
+                        moneyOffered = random.randint(0, player1.get_funds())
+                        offeredAmount += moneyOffered
+                        offeredAmount = random.randint(0, offeredAmount)
+                        wantedAmount = random.randint(0, wantedAmount)
                 elif wantedAmount > offeredAmount:
                     moneyOffered = random.randint(0, player1.get_funds())
                     offeredAmount += moneyOffered
