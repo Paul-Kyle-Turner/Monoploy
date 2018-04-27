@@ -27,3 +27,9 @@ class Color:
 
     def add_property_to_color_set(self, property):
         self.color_set.append(property)
+
+    def equals(self, color):
+        if self.color == color.get_color():
+            return True
+        else:
+            return False

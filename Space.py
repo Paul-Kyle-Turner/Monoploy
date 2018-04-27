@@ -189,6 +189,9 @@ class Buyablespace(Space):
         else:
             return False
 
+    def change_owner(self, player):
+        self.owner = player
+
     def fix(self):
         self.mortgaged = False
 

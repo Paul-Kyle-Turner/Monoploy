@@ -32,11 +32,11 @@ class Player:
 
     def random_house_purchase(self):
         monoploy = self.monoploys[random.randint(0, self.get_num_monolpolys())]
-        high = monoploy.get_property(num=0).get_house_level()
-        second = monoploy.get_property(num=1).get_house_level()
+        high = monoploy.get_property(0).get_house_level()
+        second = monoploy.get_property(1).get_house_level()
         third = None
         if len(monoploy) > 2:
-            thrid = monoploy.get_property(num=2).get_house_level()
+            third = monoploy.get_property(2).get_house_level()
         if third is not None:
             if high <= second or high <= third:
                 return monoploy.get_property(0)
@@ -152,6 +152,13 @@ class Player:
                 lowest_value_space = space
         return lowest_value_space
 
+    def get_property_of_highest_value(self):
+        lowest_value_space = self.owned_spaces[0]
+        for space in self.owned_spaces:
+            if lowest_value_space.get_mortgage() < space.get_mortage():
+                lowest_value_space = space
+        return lowest_value_space
+
     def get_monoploys(self):
         return self.monoploys
 
@@ -250,6 +257,9 @@ class Player:
     def remove_space(self, space):
         del self.owned_spaces[space]
 
+    def remove_space(self, space):
+        self.owned_spaces.remove(space)
+
     def add_owned_space(self, space):
         self.owned_spaces.append(space)
 
@@ -271,3 +281,19 @@ class Player:
         self.jail_roll = 0
         self.jailed = False
 
+    def get_owned_spaces(self):
+        return self.owned_spaces
+
+    def trade(self, spacesIn, spacesOut, moneyOffered):
+        amountOffered = moneyOffered
+        for space in spacesIn:
+            amountOffered =+ space.get_mortgage()
+        amountAsked = 0
+        for space in spacesOut:
+            amountAsked += space.get_mortgage()
+        amountAsked = random.randint(0, amountAsked)
+        amountOffered = random.randint(0, amountOffered)
+        if amountAsked < amountOffered:
+            return False
+        else:
+            return True
