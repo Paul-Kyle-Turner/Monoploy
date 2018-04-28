@@ -48,9 +48,10 @@ class Board:
         self.spaces[position].land_on(self, player, self.game)
 
     # this is jank we can use observer but im lazy right now
-    def change_position_dice(self, player):
+    def change_position_dice(self, player, num_space):
         player.change_position_dice()
         location = player.get_position
+        num_space[player.get_position()] += 1
         space = self.spaces[player.get_position()].land_on(board=self, player=player, game=self.game)
         location2 = player.get_position
         if location == location2:

@@ -11,11 +11,17 @@ DEFAULT_ROUNDS_RULE = 1000
 
 class Game:
 
-    def __init__(self, num_players=4):
+    def __init__(self, num_space, num_turns, player_win, space_elim, players_left, win_spaces, num_players=4):
         self.round_count = 0
         self.board = Board(game=self)
         self.players = self.create_players(num_players)
         self.game_end = False
+        self.num_space = num_space
+        self.num_turns = num_turns
+        self.player_win = player_win
+        self.space_elim = space_elim
+        self.players_left = players_left
+        self.win_spaces = win_spaces
 
     @staticmethod
     def create_players(num_players):
@@ -27,12 +33,29 @@ class Game:
 
     def game_play(self):
         for round in range(DEFAULT_ROUNDS_RULE):
+            if round in self.players_left:
+                if len(self.players) in self.players_left[round]:
+                    self.players_left[round][len(self.players)] = self.players_left.get(round).get(len(self.players)) + 1
+                else:
+                    self.players_left[round][len(self.players)] = 1
+            else:
+                self.players_left[round] = {len(self.players): 1}
             if len(self.players) > 1:
                 self.game_round()
             else:
                 print("The winner is")
                 print(self.players)
+                self.player_win[self.players[0].get_player_number()] += 1
                 self.game_end = True
+                for space in self.players[0].get_owned_spaces():
+                    if space.get_name() in self.win_spaces:
+                        self.win_spaces[space.get_name()] = self.win_spaces.get(space.get_name()) + 1
+                    else:
+                        self.win_spaces[space.get_name()] = 1
+                if round in self.num_turns:
+                    self.num_turns[round] = self.num_turns.get(round) + 1
+                else:
+                    self.num_turns[round] = 1
             if self.game_end:
                 return
 
@@ -84,7 +107,7 @@ class Game:
         print("PLAYER " + str(player.get_player_number()) + " TURN $" + str(player.get_funds()))
         print(self.board.get_jail_space().get_jail_list())
         position = player.get_position()
-        space = self.board.change_position_dice(player=player)
+        space = self.board.change_position_dice(player, self.num_space)
         if isinstance(space, Buyablespace):
             print(space)
             if space.get_ownership(player=player):
@@ -117,18 +140,21 @@ class Game:
             if choice is None :
                 self.players.remove(player)
                 print("Player " + str(player.get_player_number()) + " has been eliminated.")
+                self.space_elim[player.get_position()] += 1
                 return False
             elif choice:
                 if not player.mortgage_till_value(difference):
                     if not player.sell_house_till_value(difference, self.board):
                         self.players.remove(player)
                         print("Player " + str(player.get_player_number()) + " has been eliminated.")
+                        self.space_elim[player.get_position()] += 1
                         return False
             else:
                 if not player.sell_house_till_value(difference, self.board):
                     if not player.mortgage_till_value(difference):
                         self.players.remove(player)
                         print("Player " + str(player.get_player_number()) + " has been eliminated.")
+                        self.space_elim[player.get_position()] += 1
                         return False
         elif player.does_player_purchase_house():
             self.board.purchase_house(player.random_house_purchase())
@@ -184,7 +210,7 @@ class Game:
                 for space in spacesOffered:
                     offeredAmount += space.get_mortgage()
                 if player1.get_funds() > 0:
-                    moneyOffered = random.randint(0, player1.get_funds())
+                    moneyOffered = random.randint(0, int(player1.get_funds()))
                 else:
                     moneyOffered = 0
                 offeredAmount += moneyOffered
@@ -192,7 +218,7 @@ class Game:
                 wantedAmount = random.randint(0, wantedAmount)
                 if wantedAmount > offeredAmount:
                     if player1.get_funds() > 0:
-                        moneyOffered = random.randint(0, player1.get_funds())
+                        moneyOffered = random.randint(0, int(player1.get_funds()))
                     else:
                         moneyOffered = 0
                     offeredAmount += moneyOffered
@@ -237,7 +263,7 @@ class Game:
                         for space in spacesOffered:
                             offeredAmount += space.get_mortgage()
                         if player1.get_funds() > 0:
-                            moneyOffered = random.randint(0, player1.get_funds())
+                            moneyOffered = random.randint(0, int(player1.get_funds()))
                         else:
                             moneyOffered = 0
                         offeredAmount += moneyOffered
