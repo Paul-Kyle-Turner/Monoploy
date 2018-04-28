@@ -165,10 +165,12 @@ class Player:
         return self.monoploys[random.randint(0, len(self.monoploys))]
 
     def get_property_of_lowest_value(self):
-        lowest_value_space = self.owned_spaces[0]
+        lowest_value_space = None
         for space in self.owned_spaces:
             if not space.get_mortgaged():
-                if lowest_value_space.get_mortgage() > space.get_mortgage():
+                if lowest_value_space is None:
+                    lowest_value_space = space
+                elif lowest_value_space.get_mortgage() > space.get_mortgage():
                     lowest_value_space = space
         return lowest_value_space
 
@@ -176,7 +178,9 @@ class Player:
         lowest_value_space = None
         for space in self.owned_spaces:
             if not space.get_mortgaged():
-                if lowest_value_space.get_mortgage() < space.get_mortgage():
+                if lowest_value_space is None:
+                    lowest_value_space = space
+                elif lowest_value_space.get_mortgage() < space.get_mortgage():
                     lowest_value_space = space
         return lowest_value_space
 

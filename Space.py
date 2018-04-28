@@ -189,6 +189,9 @@ class Buyablespace(Space):
         else:
             return False
 
+    def get_owner(self):
+        return self.owner
+
     def change_owner(self, player):
         self.owner = player
 

@@ -28,7 +28,7 @@ class Game:
     def game_play(self):
         for round in range(DEFAULT_ROUNDS_RULE):
             if len(self.players) > 1:
-                player = self.game_round()
+                self.game_round()
             else:
                 print("The winner is")
                 print(self.players)
@@ -90,7 +90,10 @@ class Game:
             if space.get_ownership(player=player):
                 print("Thanks for visiting sir")
             elif space.owned:
-                print("You have been charged" + str(space.rent(player=player)))
+                rent = space.rent(player)
+                player.remove_funds(rent)
+                space.get_owner().add_funds(rent)
+                print("You have been charged" + str(rent))
             else:
                 print("Would you like to purchase?")
                 if player.funds > space.get_cost():
@@ -114,17 +117,19 @@ class Game:
             if choice is None :
                 self.players.remove(player)
                 print("Player " + str(player.get_player_number()) + " has been eliminated.")
+                return False
             elif choice:
                 if not player.mortgage_till_value(difference):
                     if not player.sell_house_till_value(difference, self.board):
                         self.players.remove(player)
                         print("Player " + str(player.get_player_number()) + " has been eliminated.")
+                        return False
             else:
-                #sell house
                 if not player.sell_house_till_value(difference, self.board):
                     if not player.mortgage_till_value(difference):
                         self.players.remove(player)
                         print("Player " + str(player.get_player_number()) + " has been eliminated.")
+                        return False
         elif player.does_player_purchase_house():
             self.board.purchase_house(player.random_house_purchase())
         print("PLAYER TURN END")
@@ -175,7 +180,7 @@ class Game:
                 wantedAmount = 0
                 for space in spacesWanted:
                     wantedAmount += space.get_mortgage()
-                offeredAmount = 0;
+                offeredAmount = 0
                 for space in spacesOffered:
                     offeredAmount += space.get_mortgage()
                 if player1.get_funds() > 0:
@@ -228,7 +233,7 @@ class Game:
                         wantedAmount = 0
                         for space in spacesWanted:
                             wantedAmount += space.get_mortgage()
-                        offeredAmount = 0;
+                        offeredAmount = 0
                         for space in spacesOffered:
                             offeredAmount += space.get_mortgage()
                         if player1.get_funds() > 0:
