@@ -19,7 +19,7 @@ def main():
         player_win.append(0)
         j += 1
     sim = Simulator(num_space, num_turns, player_win, space_elim, players_left, win_spaces)
-    sim.simulate_for(10000, num_space, num_turns, player_win, space_elim, players_left, win_spaces)
+    sim.simulate_for(2000000, num_space, num_turns, player_win, space_elim, players_left, win_spaces)
     time_final = time()
     print(time_final-time_start)
     print("Number of times each space was landed on:")
