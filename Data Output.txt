@@ -1,0 +1,4464 @@
+Number of times each space was landed on:
+Space 0: 6338901
+Space 1: 6243363
+Space 2: 6508558
+Space 3: 6761862
+Space 4: 7010229
+Space 5: 7318911
+Space 6: 7702535
+Space 7: 8151511
+Space 8: 7976201
+Space 9: 7743383
+Space 10: 7487035
+Space 11: 7249242
+Space 12: 7507849
+Space 13: 7648608
+Space 14: 8202853
+Space 15: 8995026
+Space 16: 9715280
+Space 17: 10481161
+Space 18: 10242442
+Space 19: 10090226
+Space 20: 9824324
+Space 21: 9490610
+Space 22: 9215118
+Space 23: 8877777
+Space 24: 8842938
+Space 25: 8780718
+Space 26: 8698412
+Space 27: 8565410
+Space 28: 8360185
+Space 29: 8134788
+Space 30: 8244154
+Space 31: 8323545
+Space 32: 8204514
+Space 33: 8004672
+Space 34: 7776698
+Space 35: 7547025
+Space 36: 7108127
+Space 37: 6682880
+Space 38: 6546833
+Space 39: 6447409
+Number of Times Each Player Won:
+Player 0 won 479606 times
+Player 1 won 501854 times
+Player 2 won 510012 times
+Player 3 won 508459 times
+Length of Games:
+Turn 33: 50423
+Turn 58: 26953
+Turn 36: 56714
+Turn 68: 14861
+Turn 54: 34019
+Turn 91: 4050
+Turn 103: 2151
+Turn 45: 51867
+Turn 40: 58470
+Turn 62: 21145
+Turn 66: 16901
+Turn 20: 4302
+Turn 129: 670
+Turn 52: 37769
+Turn 51: 39841
+Turn 67: 15620
+Turn 32: 47656
+Turn 55: 31864
+Turn 47: 47551
+Turn 56: 30282
+Turn 46: 49925
+Turn 50: 41535
+Turn 48: 45849
+Turn 86: 5103
+Turn 49: 43641
+Turn 25: 18357
+Turn 30: 39580
+Turn 73: 11127
+Turn 94: 3423
+Turn 38: 58344
+Turn 26: 22539
+Turn 63: 20105
+Turn 35: 55187
+Turn 31: 43837
+Turn 24: 14670
+Turn 57: 28597
+Turn 61: 22727
+Turn 65: 17999
+Turn 43: 54910
+Turn 44: 53351
+Turn 71: 12610
+Turn 72: 11908
+Turn 292: 11
+Turn 42: 56188
+Turn 59: 25684
+Turn 93: 3518
+Turn 34: 52989
+Turn 41: 57400
+Turn 116: 1217
+Turn 79: 7718
+Turn 70: 13263
+Turn 60: 24010
+Turn 104: 2105
+Turn 119: 1039
+Turn 39: 58521
+Turn 28: 31341
+Turn 53: 35784
+Turn 77: 8645
+Turn 29: 35929
+Turn 82: 6674
+Turn 27: 26915
+Turn 22: 8474
+Turn 87: 4955
+Turn 37: 57805
+Turn 96: 3096
+Turn 64: 18940
+Turn 69: 14024
+Turn 84: 5842
+Turn 23: 11342
+Turn 74: 10500
+Turn 92: 3748
+Turn 75: 9739
+Turn 165: 171
+Turn 81: 6769
+Turn 76: 9227
+Turn 80: 7313
+Turn 85: 5562
+Turn 98: 2742
+Turn 90: 4278
+Turn 102: 2195
+Turn 95: 3307
+Turn 156: 230
+Turn 88: 4674
+Turn 21: 6159
+Turn 106: 1837
+Turn 124: 820
+Turn 264: 12
+Turn 249: 23
+Turn 114: 1224
+Turn 197: 74
+Turn 108: 1692
+Turn 100: 2528
+Turn 99: 2571
+Turn 107: 1711
+Turn 89: 4392
+Turn 170: 138
+Turn 83: 6218
+Turn 105: 1877
+Turn 125: 802
+Turn 136: 497
+Turn 134: 543
+Turn 19: 2958
+Turn 143: 345
+Turn 113: 1292
+Turn 150: 285
+Turn 117: 1140
+Turn 139: 399
+Turn 149: 309
+Turn 122: 964
+Turn 127: 757
+Turn 221: 40
+Turn 110: 1539
+Turn 101: 2381
+Turn 130: 588
+Turn 133: 568
+Turn 146: 341
+Turn 97: 2850
+Turn 111: 1452
+Turn 189: 94
+Turn 145: 350
+Turn 141: 375
+Turn 128: 666
+Turn 109: 1609
+Turn 120: 952
+Turn 112: 1354
+Turn 78: 8155
+Turn 168: 163
+Turn 148: 317
+Turn 257: 17
+Turn 253: 28
+Turn 18: 1820
+Turn 225: 30
+Turn 158: 225
+Turn 115: 1249
+Turn 118: 1092
+Turn 164: 171
+Turn 210: 59
+Turn 121: 921
+Turn 185: 92
+Turn 17: 1107
+Turn 144: 355
+Turn 177: 129
+Turn 174: 119
+Turn 142: 394
+Turn 16: 614
+Turn 280: 12
+Turn 131: 583
+Turn 155: 230
+Turn 135: 542
+Turn 203: 59
+Turn 202: 55
+Turn 132: 574
+Turn 212: 53
+Turn 190: 77
+Turn 123: 777
+Turn 152: 280
+Turn 313: 4
+Turn 278: 16
+Turn 217: 41
+Turn 157: 231
+Turn 137: 519
+Turn 183: 96
+Turn 140: 419
+Turn 161: 186
+Turn 230: 33
+Turn 188: 94
+Turn 476: 2
+Turn 153: 278
+Turn 126: 721
+Turn 147: 309
+Turn 395: 4
+Turn 374: 3
+Turn 181: 92
+Turn 14: 159
+Turn 182: 87
+Turn 166: 154
+Turn 138: 479
+Turn 154: 279
+Turn 251: 16
+Turn 167: 178
+Turn 222: 31
+Turn 248: 21
+Turn 184: 101
+Turn 159: 211
+Turn 163: 169
+Turn 198: 75
+Turn 15: 337
+Turn 262: 17
+Turn 13: 76
+Turn 206: 57
+Turn 331: 7
+Turn 238: 22
+Turn 244: 21
+Turn 204: 40
+Turn 448: 1
+Turn 228: 28
+Turn 260: 18
+Turn 254: 25
+Turn 191: 85
+Turn 239: 27
+Turn 162: 212
+Turn 178: 122
+Turn 194: 73
+Turn 322: 7
+Turn 172: 122
+Turn 340: 7
+Turn 241: 31
+Turn 403: 3
+Turn 279: 9
+Turn 151: 293
+Turn 201: 65
+Turn 171: 152
+Turn 175: 124
+Turn 186: 86
+Turn 234: 28
+Turn 379: 5
+Turn 179: 110
+Turn 214: 46
+Turn 288: 11
+Turn 349: 5
+Turn 173: 135
+Turn 176: 118
+Turn 418: 3
+Turn 215: 49
+Turn 207: 66
+Turn 252: 22
+Turn 180: 103
+Turn 259: 17
+Turn 273: 6
+Turn 232: 33
+Turn 192: 84
+Turn 242: 22
+Turn 541: 1
+Turn 243: 33
+Turn 160: 226
+Turn 268: 17
+Turn 208: 62
+Turn 269: 8
+Turn 195: 63
+Turn 187: 80
+Turn 723: 1
+Turn 219: 40
+Turn 306: 10
+Turn 286: 10
+Turn 350: 5
+Turn 390: 4
+Turn 266: 19
+Turn 213: 41
+Turn 361: 4
+Turn 276: 16
+Turn 245: 25
+Turn 218: 39
+Turn 12: 34
+Turn 240: 20
+Turn 336: 3
+Turn 321: 7
+Turn 348: 2
+Turn 11: 5
+Turn 169: 153
+Turn 246: 20
+Turn 211: 59
+Turn 454: 3
+Turn 519: 1
+Turn 265: 5
+Turn 289: 6
+Turn 237: 35
+Turn 294: 9
+Turn 369: 3
+Turn 459: 3
+Turn 205: 38
+Turn 274: 9
+Turn 414: 1
+Turn 277: 8
+Turn 193: 80
+Turn 315: 3
+Turn 438: 2
+Turn 220: 32
+Turn 453: 1
+Turn 231: 26
+Turn 283: 7
+Turn 297: 5
+Turn 233: 29
+Turn 301: 12
+Turn 236: 21
+Turn 229: 25
+Turn 247: 27
+Turn 470: 1
+Turn 416: 4
+Turn 365: 1
+Turn 637: 1
+Turn 226: 38
+Turn 216: 28
+Turn 258: 15
+Turn 293: 14
+Turn 272: 12
+Turn 786: 1
+Turn 196: 64
+Turn 199: 68
+Turn 554: 1
+Turn 256: 17
+Turn 433: 3
+Turn 457: 3
+Turn 324: 5
+Turn 250: 29
+Turn 300: 2
+Turn 375: 3
+Turn 200: 54
+Turn 520: 1
+Turn 434: 3
+Turn 295: 3
+Turn 707: 1
+Turn 601: 1
+Turn 314: 4
+Turn 309: 7
+Turn 327: 8
+Turn 223: 33
+Turn 389: 2
+Turn 919: 1
+Turn 209: 39
+Turn 270: 15
+Turn 310: 11
+Turn 391: 2
+Turn 291: 9
+Turn 639: 1
+Turn 504: 1
+Turn 333: 4
+Turn 284: 12
+Turn 235: 26
+Turn 559: 1
+Turn 423: 1
+Turn 305: 9
+Turn 296: 6
+Turn 530: 2
+Turn 282: 12
+Turn 303: 8
+Turn 227: 14
+Turn 311: 8
+Turn 353: 6
+Turn 281: 15
+Turn 536: 1
+Turn 408: 4
+Turn 394: 4
+Turn 363: 7
+Turn 308: 9
+Turn 275: 10
+Turn 287: 7
+Turn 473: 1
+Turn 634: 1
+Turn 343: 7
+Turn 334: 7
+Turn 318: 7
+Turn 485: 4
+Turn 302: 9
+Turn 325: 11
+Turn 425: 4
+Turn 330: 3
+Turn 285: 10
+Turn 316: 5
+Turn 367: 4
+Turn 299: 5
+Turn 352: 7
+Turn 462: 1
+Turn 255: 14
+Turn 458: 2
+Turn 455: 1
+Turn 678: 1
+Turn 568: 2
+Turn 332: 11
+Turn 307: 4
+Turn 608: 1
+Turn 357: 2
+Turn 405: 4
+Turn 443: 2
+Turn 879: 1
+Turn 362: 6
+Turn 323: 4
+Turn 224: 28
+Turn 743: 1
+Turn 393: 2
+Turn 407: 1
+Turn 370: 6
+Turn 298: 7
+Turn 412: 3
+Turn 271: 14
+Turn 429: 2
+Turn 335: 8
+Turn 535: 1
+Turn 432: 3
+Turn 384: 4
+Turn 436: 1
+Turn 421: 4
+Turn 261: 9
+Turn 469: 1
+Turn 401: 1
+Turn 339: 6
+Turn 498: 1
+Turn 338: 4
+Turn 267: 11
+Turn 510: 1
+Turn 373: 4
+Turn 495: 2
+Turn 446: 3
+Turn 304: 4
+Turn 694: 2
+Turn 399: 4
+Turn 328: 2
+Turn 441: 2
+Turn 290: 5
+Turn 597: 1
+Turn 380: 4
+Turn 553: 1
+Turn 10: 4
+Turn 995: 1
+Turn 437: 2
+Turn 377: 3
+Turn 383: 3
+Turn 964: 1
+Turn 566: 4
+Turn 703: 2
+Turn 320: 4
+Turn 359: 5
+Turn 479: 3
+Turn 312: 5
+Turn 263: 14
+Turn 355: 3
+Turn 406: 3
+Turn 346: 3
+Turn 360: 4
+Turn 449: 1
+Turn 409: 2
+Turn 388: 3
+Turn 914: 1
+Turn 688: 1
+Turn 876: 1
+Turn 617: 2
+Turn 445: 2
+Turn 496: 2
+Turn 417: 3
+Turn 422: 1
+Turn 598: 1
+Turn 538: 2
+Turn 354: 4
+Turn 677: 1
+Turn 341: 6
+Turn 431: 4
+Turn 544: 1
+Turn 351: 2
+Turn 596: 1
+Turn 347: 2
+Turn 532: 1
+Turn 382: 3
+Turn 514: 1
+Turn 551: 1
+Turn 372: 4
+Turn 465: 2
+Turn 682: 1
+Turn 387: 3
+Turn 752: 2
+Turn 797: 1
+Turn 591: 1
+Turn 543: 2
+Turn 402: 1
+Turn 552: 2
+Turn 461: 2
+Turn 475: 2
+Turn 326: 3
+Turn 460: 2
+Turn 472: 1
+Turn 442: 1
+Turn 444: 1
+Turn 588: 1
+Turn 750: 1
+Turn 342: 2
+Turn 499: 2
+Turn 744: 1
+Turn 772: 1
+Turn 918: 1
+Turn 450: 1
+Turn 670: 1
+Turn 511: 2
+Turn 317: 3
+Turn 951: 1
+Turn 400: 3
+Turn 628: 1
+Turn 791: 1
+Turn 337: 3
+Turn 386: 1
+Turn 501: 1
+Turn 477: 2
+Turn 533: 1
+Turn 381: 3
+Turn 427: 1
+Turn 345: 1
+Turn 722: 1
+Turn 426: 3
+Turn 572: 2
+Turn 860: 1
+Turn 508: 1
+Turn 821: 1
+Turn 760: 1
+Turn 599: 1
+Turn 654: 1
+Turn 413: 2
+Turn 522: 2
+Turn 981: 1
+Turn 366: 4
+Turn 635: 1
+Turn 329: 1
+Turn 564: 1
+Turn 411: 2
+Turn 573: 2
+Turn 430: 1
+Turn 415: 1
+Turn 505: 1
+Turn 371: 2
+Turn 358: 3
+Turn 580: 1
+Turn 523: 1
+Turn 344: 2
+Turn 708: 1
+Turn 726: 1
+Turn 368: 1
+Turn 735: 1
+Turn 491: 1
+Turn 319: 5
+Turn 466: 1
+Turn 440: 2
+Turn 483: 1
+Turn 378: 3
+Turn 398: 2
+Turn 666: 1
+Turn 471: 2
+Turn 979: 1
+Turn 396: 2
+Turn 557: 1
+Turn 420: 2
+Turn 513: 1
+Turn 397: 3
+Turn 846: 1
+Turn 447: 2
+Turn 849: 1
+Turn 484: 1
+Turn 571: 1
+Turn 563: 1
+Turn 410: 1
+Turn 467: 1
+Turn 589: 1
+Turn 474: 1
+Turn 516: 1
+Turn 486: 2
+Turn 999: 1
+Turn 547: 1
+Turn 661: 1
+Turn 439: 2
+Turn 577: 1
+Turn 724: 1
+Turn 680: 1
+Turn 531: 1
+Turn 700: 1
+Turn 794: 1
+Turn 928: 1
+Turn 392: 1
+Turn 615: 1
+Turn 404: 2
+Turn 356: 1
+Turn 456: 1
+Turn 574: 1
+Turn 451: 1
+Turn 463: 1
+Turn 781: 1
+Number of times each space eliminated a player:
+Space 0: 0
+Space 1: 41160
+Space 2: 119
+Space 3: 153549
+Space 4: 3639
+Space 5: 30631
+Space 6: 124324
+Space 7: 3255
+Space 8: 134027
+Space 9: 290575
+Space 10: 1069
+Space 11: 126180
+Space 12: 35979
+Space 13: 149756
+Space 14: 333384
+Space 15: 116387
+Space 16: 259087
+Space 17: 16458
+Space 18: 276762
+Space 19: 526797
+Space 20: 2738
+Space 21: 209706
+Space 22: 16493
+Space 23: 202045
+Space 24: 391981
+Space 25: 145183
+Space 26: 176451
+Space 27: 174428
+Space 28: 84785
+Space 29: 309454
+Space 30: 0
+Space 31: 172096
+Space 32: 170458
+Space 33: 18703
+Space 34: 302220
+Space 35: 146310
+Space 36: 15935
+Space 37: 322509
+Space 38: 72770
+Space 39: 442521
+Number of players left on a given turn:
+Turn 0
+Players 4: 2000000
+Turn 1
+Players 4: 2000000
+Turn 2
+Players 4: 1999999
+Players 3: 1
+Turn 3
+Players 4: 1999981
+Players 3: 19
+Turn 4
+Players 4: 1999893
+Players 3: 107
+Turn 5
+Players 4: 1999634
+Players 3: 366
+Turn 6
+Players 4: 1998923
+Players 3: 1074
+Players 2: 3
+Turn 7
+Players 4: 1997437
+Players 3: 2551
+Players 2: 12
+Turn 8
+Players 4: 1994415
+Players 3: 5547
+Players 2: 38
+Turn 9
+Players 4: 1988599
+Players 3: 11267
+Players 2: 134
+Turn 10
+Players 4: 1978964
+Players 3: 20647
+Players 2: 385
+Players 1: 4
+Turn 11
+Players 4: 1963432
+Players 3: 35650
+Players 2: 909
+Players 1: 5
+Turn 12
+Players 4: 1939360
+Players 3: 58486
+Players 2: 2111
+Players 1: 34
+Turn 13
+Players 4: 1904455
+Players 3: 91009
+Players 2: 4417
+Players 1: 76
+Turn 14
+Players 4: 1856636
+Players 3: 134430
+Players 2: 8656
+Players 1: 159
+Turn 15
+Players 4: 1795682
+Players 3: 188066
+Players 2: 15637
+Players 1: 337
+Turn 16
+Players 2: 26391
+Players 4: 1720760
+Players 3: 251620
+Players 1: 614
+Turn 17
+Players 2: 42162
+Players 4: 1631923
+Players 3: 323579
+Players 1: 1107
+Turn 18
+Players 2: 64033
+Players 4: 1531596
+Players 3: 400215
+Players 1: 1820
+Turn 19
+Players 2: 92871
+Players 4: 1421915
+Players 3: 478100
+Players 1: 2958
+Turn 20
+Players 2: 129021
+Players 4: 1305961
+Players 3: 553602
+Players 1: 4302
+Turn 21
+Players 2: 172828
+Players 4: 1186219
+Players 3: 623378
+Players 1: 6159
+Turn 22
+Players 2: 223475
+Players 4: 1065338
+Players 3: 685138
+Players 1: 8474
+Turn 23
+Players 2: 280788
+Players 4: 946877
+Players 3: 734944
+Players 1: 11342
+Turn 24
+Players 2: 343056
+Players 4: 832843
+Players 3: 772040
+Players 1: 14670
+Turn 25
+Players 2: 408743
+Players 4: 724959
+Players 3: 795880
+Players 1: 18357
+Turn 26
+Players 2: 475833
+Players 4: 626172
+Players 3: 805038
+Players 1: 22539
+Turn 27
+Players 2: 542585
+Players 4: 535792
+Players 3: 801751
+Players 1: 26915
+Turn 28
+Players 2: 607070
+Players 4: 454945
+Players 3: 786772
+Players 1: 31341
+Turn 29
+Players 2: 667472
+Players 4: 383796
+Players 3: 761590
+Players 1: 35929
+Turn 30
+Players 2: 723147
+Players 4: 321904
+Players 3: 728227
+Players 1: 39580
+Turn 31
+Players 2: 772253
+Players 4: 268785
+Players 3: 688403
+Players 1: 43837
+Turn 32
+Players 2: 813351
+Players 4: 223219
+Players 3: 645215
+Players 1: 47656
+Turn 33
+Players 1: 50423
+Players 4: 184165
+Players 2: 847793
+Players 3: 599404
+Turn 34
+Players 4: 151806
+Players 2: 874452
+Players 3: 552115
+Players 1: 52989
+Turn 35
+Players 4: 124796
+Players 2: 892977
+Players 3: 505413
+Players 1: 55187
+Turn 36
+Players 4: 102195
+Players 1: 56714
+Players 3: 460344
+Players 2: 903933
+Turn 37
+Players 4: 83615
+Players 3: 417114
+Players 2: 907938
+Players 1: 57805
+Turn 38
+Players 3: 375702
+Players 2: 906097
+Players 1: 58344
+Players 4: 68524
+Turn 39
+Players 3: 337383
+Players 2: 898241
+Players 4: 56178
+Players 1: 58521
+Turn 40
+Players 3: 302012
+Players 2: 885304
+Players 1: 58470
+Players 4: 46016
+Turn 41
+Players 3: 269666
+Players 2: 868499
+Players 1: 57400
+Players 4: 37767
+Turn 42
+Players 3: 240048
+Players 2: 848686
+Players 1: 56188
+Players 4: 31010
+Turn 43
+Players 3: 213658
+Players 2: 825717
+Players 1: 54910
+Players 4: 25459
+Turn 44
+Players 3: 190008
+Players 2: 800515
+Players 1: 53351
+Players 4: 20960
+Turn 45
+Players 3: 168679
+Players 2: 773656
+Players 1: 51867
+Players 4: 17281
+Turn 46
+Players 3: 149672
+Players 2: 745722
+Players 1: 49925
+Players 4: 14297
+Turn 47
+Players 3: 132833
+Players 2: 717537
+Players 1: 47551
+Players 4: 11770
+Turn 48
+Players 2: 688600
+Players 3: 118005
+Players 1: 45849
+Players 4: 9686
+Turn 49
+Players 2: 659786
+Players 3: 104839
+Players 1: 43641
+Players 4: 8025
+Turn 50
+Players 2: 631235
+Players 3: 93248
+Players 1: 41535
+Players 4: 6632
+Turn 51
+Players 2: 602938
+Players 3: 82870
+Players 1: 39841
+Players 4: 5466
+Turn 52
+Players 2: 575376
+Players 3: 73525
+Players 1: 37769
+Players 4: 4604
+Turn 53
+Players 2: 548264
+Players 3: 65594
+Players 1: 35784
+Players 4: 3863
+Turn 54
+Players 2: 522090
+Players 1: 34019
+Players 3: 58326
+Players 4: 3286
+Turn 55
+Players 2: 497049
+Players 3: 51998
+Players 1: 31864
+Players 4: 2791
+Turn 56
+Players 2: 472771
+Players 3: 46439
+Players 1: 30282
+Players 4: 2346
+Turn 57
+Players 2: 449457
+Players 3: 41496
+Players 1: 28597
+Players 4: 2006
+Turn 58
+Players 1: 26953
+Players 2: 427192
+Players 3: 37094
+Players 4: 1720
+Turn 59
+Players 2: 405717
+Players 3: 33106
+Players 1: 25684
+Players 4: 1499
+Turn 60
+Players 2: 385302
+Players 3: 29707
+Players 1: 24010
+Players 4: 1303
+Turn 61
+Players 2: 365714
+Players 3: 26749
+Players 1: 22727
+Players 4: 1122
+Turn 62
+Players 2: 347466
+Players 1: 21145
+Players 3: 23989
+Players 4: 985
+Turn 63
+Players 2: 329954
+Players 3: 21532
+Players 1: 20105
+Players 4: 849
+Turn 64
+Players 2: 313359
+Players 3: 19280
+Players 1: 18940
+Players 4: 756
+Turn 65
+Players 2: 297320
+Players 3: 17402
+Players 1: 17999
+Players 4: 674
+Turn 66
+Players 2: 282177
+Players 1: 16901
+Players 3: 15719
+Players 4: 599
+Turn 67
+Players 2: 268116
+Players 3: 14245
+Players 1: 15620
+Players 4: 514
+Turn 68
+Players 1: 14861
+Players 2: 254644
+Players 3: 12917
+Players 4: 453
+Turn 69
+Players 2: 241875
+Players 3: 11705
+Players 1: 14024
+Players 4: 410
+Turn 70
+Players 2: 229709
+Players 3: 10655
+Players 1: 13263
+Players 4: 363
+Turn 71
+Players 2: 218013
+Players 3: 9785
+Players 1: 12610
+Players 4: 319
+Turn 72
+Players 2: 206966
+Players 3: 8954
+Players 1: 11908
+Players 4: 289
+Turn 73
+Players 2: 196630
+Players 3: 8196
+Players 1: 11127
+Players 4: 256
+Turn 74
+Players 2: 186837
+Players 3: 7527
+Players 1: 10500
+Players 4: 218
+Turn 75
+Players 2: 177774
+Players 3: 6869
+Players 1: 9739
+Players 4: 200
+Turn 76
+Players 2: 169136
+Players 3: 6297
+Players 1: 9227
+Players 4: 183
+Turn 77
+Players 2: 161031
+Players 3: 5769
+Players 1: 8645
+Players 4: 171
+Turn 78
+Players 2: 153341
+Players 3: 5324
+Players 1: 8155
+Players 4: 151
+Turn 79
+Players 2: 146056
+Players 1: 7718
+Players 3: 4904
+Players 4: 138
+Turn 80
+Players 2: 139132
+Players 3: 4525
+Players 1: 7313
+Players 4: 128
+Turn 81
+Players 2: 132686
+Players 3: 4211
+Players 1: 6769
+Players 4: 119
+Turn 82
+Players 2: 126349
+Players 3: 3883
+Players 1: 6674
+Players 4: 110
+Turn 83
+Players 2: 120423
+Players 3: 3599
+Players 1: 6218
+Players 4: 102
+Turn 84
+Players 2: 114829
+Players 3: 3356
+Players 1: 5842
+Players 4: 97
+Turn 85
+Players 2: 109512
+Players 3: 3121
+Players 1: 5562
+Players 4: 87
+Turn 86
+Players 2: 104621
+Players 1: 5103
+Players 3: 2918
+Players 4: 78
+Turn 87
+Players 2: 99862
+Players 3: 2726
+Players 1: 4955
+Players 4: 74
+Turn 88
+Players 2: 95398
+Players 3: 2521
+Players 1: 4674
+Players 4: 69
+Turn 89
+Players 2: 91158
+Players 3: 2373
+Players 1: 4392
+Players 4: 65
+Turn 90
+Players 2: 87044
+Players 3: 2212
+Players 1: 4278
+Players 4: 62
+Turn 91
+Players 1: 4050
+Players 2: 83149
+Players 3: 2061
+Players 4: 58
+Turn 92
+Players 2: 79524
+Players 3: 1942
+Players 1: 3748
+Players 4: 54
+Turn 93
+Players 2: 76131
+Players 1: 3518
+Players 3: 1818
+Players 4: 53
+Turn 94
+Players 2: 72806
+Players 1: 3423
+Players 3: 1723
+Players 4: 50
+Turn 95
+Players 2: 69594
+Players 3: 1636
+Players 1: 3307
+Players 4: 42
+Turn 96
+Players 2: 66589
+Players 3: 1545
+Players 1: 3096
+Players 4: 42
+Turn 97
+Players 2: 63816
+Players 3: 1470
+Players 1: 2850
+Players 4: 40
+Turn 98
+Players 2: 61152
+Players 1: 2742
+Players 3: 1397
+Players 4: 35
+Turn 99
+Players 2: 58685
+Players 1: 2571
+Players 3: 1293
+Players 4: 35
+Turn 100
+Players 2: 56245
+Players 1: 2528
+Players 3: 1207
+Players 4: 33
+Turn 101
+Players 2: 53930
+Players 3: 1141
+Players 1: 2381
+Players 4: 33
+Turn 102
+Players 2: 51789
+Players 1: 2195
+Players 3: 1090
+Players 4: 30
+Turn 103
+Players 1: 2151
+Players 2: 49691
+Players 3: 1040
+Players 4: 27
+Turn 104
+Players 2: 47642
+Players 1: 2105
+Players 3: 985
+Players 4: 26
+Turn 105
+Players 2: 45820
+Players 1: 1877
+Players 3: 931
+Players 4: 25
+Turn 106
+Players 2: 44018
+Players 1: 1837
+Players 3: 897
+Players 4: 24
+Turn 107
+Players 2: 42352
+Players 1: 1711
+Players 3: 852
+Players 4: 24
+Turn 108
+Players 2: 40695
+Players 1: 1692
+Players 3: 818
+Players 4: 23
+Turn 109
+Players 2: 39133
+Players 3: 774
+Players 1: 1609
+Players 4: 20
+Turn 110
+Players 2: 37624
+Players 3: 745
+Players 1: 1539
+Players 4: 19
+Turn 111
+Players 2: 36207
+Players 3: 710
+Players 1: 1452
+Players 4: 19
+Turn 112
+Players 2: 34886
+Players 3: 678
+Players 1: 1354
+Players 4: 18
+Turn 113
+Players 2: 33621
+Players 1: 1292
+Players 3: 652
+Players 4: 17
+Turn 114
+Players 2: 32422
+Players 1: 1224
+Players 3: 629
+Players 4: 15
+Turn 115
+Players 2: 31201
+Players 3: 601
+Players 1: 1249
+Players 4: 15
+Turn 116
+Players 2: 30018
+Players 1: 1217
+Players 3: 568
+Players 4: 14
+Turn 117
+Players 2: 28901
+Players 1: 1140
+Players 3: 546
+Players 4: 13
+Turn 118
+Players 2: 27826
+Players 3: 530
+Players 1: 1092
+Players 4: 12
+Turn 119
+Players 2: 26805
+Players 1: 1039
+Players 3: 512
+Players 4: 12
+Turn 120
+Players 2: 25869
+Players 3: 496
+Players 1: 952
+Players 4: 12
+Turn 121
+Players 2: 24965
+Players 3: 480
+Players 1: 921
+Players 4: 11
+Turn 122
+Players 2: 24016
+Players 1: 964
+Players 3: 465
+Players 4: 11
+Turn 123
+Players 2: 23255
+Players 3: 453
+Players 1: 777
+Players 4: 7
+Turn 124
+Players 2: 22452
+Players 1: 820
+Players 3: 436
+Players 4: 7
+Turn 125
+Players 2: 21661
+Players 1: 802
+Players 3: 425
+Players 4: 7
+Turn 126
+Players 2: 20957
+Players 3: 408
+Players 1: 721
+Players 4: 7
+Turn 127
+Players 2: 20220
+Players 1: 757
+Players 3: 388
+Players 4: 7
+Turn 128
+Players 2: 19571
+Players 3: 371
+Players 1: 666
+Players 4: 7
+Turn 129
+Players 1: 670
+Players 2: 18914
+Players 3: 359
+Players 4: 6
+Turn 130
+Players 2: 18341
+Players 1: 588
+Players 3: 344
+Players 4: 6
+Turn 131
+Players 2: 17774
+Players 3: 328
+Players 1: 583
+Players 4: 6
+Turn 132
+Players 2: 17212
+Players 3: 316
+Players 1: 574
+Players 4: 6
+Turn 133
+Players 2: 16653
+Players 1: 568
+Players 3: 307
+Players 4: 6
+Turn 134
+Players 2: 16123
+Players 1: 543
+Players 3: 294
+Players 4: 6
+Turn 135
+Players 2: 15588
+Players 3: 287
+Players 1: 542
+Players 4: 6
+Turn 136
+Players 2: 15103
+Players 1: 497
+Players 3: 276
+Players 4: 5
+Turn 137
+Players 2: 14591
+Players 3: 269
+Players 1: 519
+Players 4: 5
+Turn 138
+Players 2: 14124
+Players 3: 257
+Players 1: 479
+Players 4: 5
+Turn 139
+Players 2: 13736
+Players 1: 399
+Players 3: 246
+Players 4: 5
+Turn 140
+Players 2: 13331
+Players 3: 232
+Players 1: 419
+Players 4: 5
+Turn 141
+Players 2: 12962
+Players 3: 226
+Players 1: 375
+Players 4: 5
+Turn 142
+Players 2: 12575
+Players 3: 219
+Players 1: 394
+Players 4: 5
+Turn 143
+Players 2: 12238
+Players 1: 345
+Players 3: 211
+Players 4: 5
+Turn 144
+Players 2: 11893
+Players 3: 201
+Players 1: 355
+Players 4: 5
+Turn 145
+Players 2: 11548
+Players 3: 196
+Players 1: 350
+Players 4: 5
+Turn 146
+Players 2: 11209
+Players 1: 341
+Players 3: 194
+Players 4: 5
+Turn 147
+Players 2: 10903
+Players 3: 191
+Players 1: 309
+Players 4: 5
+Turn 148
+Players 2: 10598
+Players 3: 179
+Players 1: 317
+Players 4: 5
+Turn 149
+Players 2: 10295
+Players 1: 309
+Players 3: 173
+Players 4: 5
+Turn 150
+Players 2: 10021
+Players 1: 285
+Players 3: 162
+Players 4: 5
+Turn 151
+Players 2: 9730
+Players 3: 160
+Players 1: 293
+Players 4: 5
+Turn 152
+Players 2: 9453
+Players 3: 157
+Players 1: 280
+Players 4: 5
+Turn 153
+Players 2: 9179
+Players 3: 154
+Players 1: 278
+Players 4: 4
+Turn 154
+Players 2: 8905
+Players 3: 149
+Players 1: 279
+Players 4: 4
+Turn 155
+Players 2: 8678
+Players 3: 146
+Players 1: 230
+Players 4: 4
+Turn 156
+Players 2: 8452
+Players 1: 230
+Players 3: 142
+Players 4: 4
+Turn 157
+Players 2: 8222
+Players 3: 141
+Players 1: 231
+Players 4: 4
+Turn 158
+Players 2: 8001
+Players 3: 137
+Players 1: 225
+Players 4: 4
+Turn 159
+Players 2: 7792
+Players 3: 135
+Players 1: 211
+Players 4: 4
+Turn 160
+Players 2: 7569
+Players 3: 132
+Players 1: 226
+Players 4: 4
+Turn 161
+Players 2: 7383
+Players 3: 132
+Players 1: 186
+Players 4: 4
+Turn 162
+Players 2: 7174
+Players 3: 129
+Players 1: 212
+Players 4: 4
+Turn 163
+Players 2: 7013
+Players 3: 121
+Players 1: 169
+Players 4: 4
+Turn 164
+Players 2: 6846
+Players 3: 117
+Players 1: 171
+Players 4: 4
+Turn 165
+Players 2: 6676
+Players 1: 171
+Players 3: 116
+Players 4: 4
+Turn 166
+Players 2: 6525
+Players 3: 113
+Players 1: 154
+Players 4: 4
+Turn 167
+Players 2: 6347
+Players 3: 113
+Players 1: 178
+Players 4: 4
+Turn 168
+Players 2: 6187
+Players 3: 111
+Players 1: 163
+Players 4: 3
+Turn 169
+Players 2: 6037
+Players 3: 108
+Players 1: 153
+Players 4: 3
+Turn 170
+Players 2: 5900
+Players 1: 138
+Players 3: 107
+Players 4: 3
+Turn 171
+Players 2: 5751
+Players 3: 104
+Players 1: 152
+Players 4: 3
+Turn 172
+Players 2: 5631
+Players 3: 102
+Players 1: 122
+Players 4: 3
+Turn 173
+Players 2: 5500
+Players 3: 98
+Players 1: 135
+Players 4: 3
+Turn 174
+Players 2: 5385
+Players 3: 94
+Players 1: 119
+Players 4: 3
+Turn 175
+Players 2: 5261
+Players 3: 94
+Players 1: 124
+Players 4: 3
+Turn 176
+Players 2: 5144
+Players 3: 93
+Players 1: 118
+Players 4: 3
+Turn 177
+Players 2: 5016
+Players 3: 92
+Players 1: 129
+Players 4: 3
+Turn 178
+Players 2: 4895
+Players 3: 91
+Players 1: 122
+Players 4: 3
+Turn 179
+Players 2: 4787
+Players 3: 89
+Players 1: 110
+Players 4: 3
+Turn 180
+Players 2: 4688
+Players 3: 85
+Players 1: 103
+Players 4: 3
+Turn 181
+Players 2: 4600
+Players 3: 81
+Players 1: 92
+Players 4: 3
+Turn 182
+Players 2: 4515
+Players 3: 79
+Players 1: 87
+Players 4: 3
+Turn 183
+Players 2: 4421
+Players 3: 77
+Players 1: 96
+Players 4: 3
+Turn 184
+Players 2: 4321
+Players 3: 76
+Players 1: 101
+Players 4: 3
+Turn 185
+Players 2: 4230
+Players 1: 92
+Players 3: 75
+Players 4: 3
+Turn 186
+Players 2: 4146
+Players 3: 73
+Players 1: 86
+Players 4: 3
+Turn 187
+Players 2: 4066
+Players 3: 73
+Players 1: 80
+Players 4: 3
+Turn 188
+Players 2: 3973
+Players 3: 72
+Players 1: 94
+Players 4: 3
+Turn 189
+Players 2: 3880
+Players 1: 94
+Players 3: 71
+Players 4: 3
+Turn 190
+Players 2: 3804
+Players 3: 70
+Players 1: 77
+Players 4: 3
+Turn 191
+Players 2: 3720
+Players 3: 69
+Players 1: 85
+Players 4: 3
+Turn 192
+Players 2: 3636
+Players 3: 69
+Players 1: 84
+Players 4: 3
+Turn 193
+Players 2: 3556
+Players 3: 69
+Players 1: 80
+Players 4: 3
+Turn 194
+Players 2: 3483
+Players 3: 69
+Players 1: 73
+Players 4: 3
+Turn 195
+Players 2: 3422
+Players 3: 67
+Players 1: 63
+Players 4: 3
+Turn 196
+Players 2: 3358
+Players 3: 67
+Players 1: 64
+Players 4: 3
+Turn 197
+Players 2: 3287
+Players 1: 74
+Players 3: 64
+Players 4: 3
+Turn 198
+Players 2: 3215
+Players 3: 61
+Players 1: 75
+Players 4: 3
+Turn 199
+Players 2: 3149
+Players 3: 59
+Players 1: 68
+Players 4: 3
+Turn 200
+Players 2: 3096
+Players 3: 58
+Players 1: 54
+Players 4: 3
+Turn 201
+Players 2: 3032
+Players 1: 65
+Players 3: 57
+Players 4: 3
+Turn 202
+Players 2: 2977
+Players 1: 55
+Players 3: 57
+Players 4: 3
+Turn 203
+Players 2: 2919
+Players 1: 59
+Players 3: 56
+Players 4: 3
+Turn 204
+Players 2: 2879
+Players 1: 40
+Players 3: 56
+Players 4: 3
+Turn 205
+Players 2: 2841
+Players 3: 56
+Players 1: 38
+Players 4: 3
+Turn 206
+Players 2: 2785
+Players 1: 57
+Players 3: 56
+Players 4: 2
+Turn 207
+Players 2: 2720
+Players 3: 55
+Players 1: 66
+Players 4: 2
+Turn 208
+Players 2: 2658
+Players 3: 55
+Players 1: 62
+Players 4: 2
+Turn 209
+Players 2: 2621
+Players 3: 54
+Players 1: 39
+Players 4: 1
+Turn 210
+Players 2: 2563
+Players 1: 59
+Players 3: 53
+Players 4: 1
+Turn 211
+Players 2: 2508
+Players 3: 49
+Players 1: 59
+Players 4: 1
+Turn 212
+Players 2: 2455
+Players 1: 53
+Players 3: 49
+Players 4: 1
+Turn 213
+Players 2: 2414
+Players 3: 49
+Players 1: 41
+Players 4: 1
+Turn 214
+Players 2: 2368
+Players 3: 49
+Players 1: 46
+Players 4: 1
+Turn 215
+Players 2: 2319
+Players 3: 50
+Players 1: 49
+Turn 216
+Players 2: 2292
+Players 3: 49
+Players 1: 28
+Turn 217
+Players 2: 2251
+Players 1: 41
+Players 3: 49
+Turn 218
+Players 2: 2213
+Players 3: 48
+Players 1: 39
+Turn 219
+Players 2: 2177
+Players 3: 44
+Players 1: 40
+Turn 220
+Players 2: 2147
+Players 3: 42
+Players 1: 32
+Turn 221
+Players 2: 2107
+Players 1: 40
+Players 3: 42
+Turn 222
+Players 2: 2076
+Players 1: 31
+Players 3: 42
+Turn 223
+Players 2: 2043
+Players 3: 42
+Players 1: 33
+Turn 224
+Players 2: 2015
+Players 3: 42
+Players 1: 28
+Turn 225
+Players 2: 1985
+Players 1: 30
+Players 3: 42
+Turn 226
+Players 2: 1947
+Players 3: 42
+Players 1: 38
+Turn 227
+Players 2: 1934
+Players 3: 41
+Players 1: 14
+Turn 228
+Players 2: 1906
+Players 1: 28
+Players 3: 41
+Turn 229
+Players 2: 1881
+Players 3: 41
+Players 1: 25
+Turn 230
+Players 2: 1849
+Players 1: 33
+Players 3: 40
+Turn 231
+Players 2: 1823
+Players 3: 40
+Players 1: 26
+Turn 232
+Players 2: 1791
+Players 3: 39
+Players 1: 33
+Turn 233
+Players 2: 1762
+Players 3: 39
+Players 1: 29
+Turn 234
+Players 2: 1734
+Players 1: 28
+Players 3: 39
+Turn 235
+Players 2: 1709
+Players 3: 38
+Players 1: 26
+Turn 236
+Players 2: 1688
+Players 3: 38
+Players 1: 21
+Turn 237
+Players 2: 1653
+Players 3: 38
+Players 1: 35
+Turn 238
+Players 2: 1631
+Players 1: 22
+Players 3: 38
+Turn 239
+Players 2: 1605
+Players 1: 27
+Players 3: 37
+Turn 240
+Players 2: 1586
+Players 3: 36
+Players 1: 20
+Turn 241
+Players 2: 1556
+Players 1: 31
+Players 3: 35
+Turn 242
+Players 2: 1534
+Players 3: 35
+Players 1: 22
+Turn 243
+Players 2: 1501
+Players 3: 35
+Players 1: 33
+Turn 244
+Players 2: 1480
+Players 1: 21
+Players 3: 35
+Turn 245
+Players 2: 1455
+Players 3: 35
+Players 1: 25
+Turn 246
+Players 2: 1436
+Players 3: 34
+Players 1: 20
+Turn 247
+Players 2: 1409
+Players 3: 34
+Players 1: 27
+Turn 248
+Players 2: 1390
+Players 1: 21
+Players 3: 32
+Turn 249
+Players 2: 1368
+Players 1: 23
+Players 3: 31
+Turn 250
+Players 2: 1339
+Players 3: 31
+Players 1: 29
+Turn 251
+Players 2: 1323
+Players 1: 16
+Players 3: 31
+Turn 252
+Players 2: 1302
+Players 3: 30
+Players 1: 22
+Turn 253
+Players 2: 1274
+Players 1: 28
+Players 3: 30
+Turn 254
+Players 2: 1250
+Players 1: 25
+Players 3: 29
+Turn 255
+Players 2: 1237
+Players 3: 28
+Players 1: 14
+Turn 256
+Players 2: 1220
+Players 3: 28
+Players 1: 17
+Turn 257
+Players 2: 1203
+Players 1: 17
+Players 3: 28
+Turn 258
+Players 2: 1188
+Players 3: 28
+Players 1: 15
+Turn 259
+Players 2: 1171
+Players 1: 17
+Players 3: 28
+Turn 260
+Players 2: 1153
+Players 1: 18
+Players 3: 28
+Turn 261
+Players 2: 1144
+Players 3: 28
+Players 1: 9
+Turn 262
+Players 2: 1127
+Players 1: 17
+Players 3: 28
+Turn 263
+Players 2: 1114
+Players 3: 27
+Players 1: 14
+Turn 264
+Players 2: 1102
+Players 1: 12
+Players 3: 27
+Turn 265
+Players 2: 1097
+Players 1: 5
+Players 3: 27
+Turn 266
+Players 2: 1078
+Players 1: 19
+Players 3: 27
+Turn 267
+Players 2: 1067
+Players 3: 27
+Players 1: 11
+Turn 268
+Players 2: 1051
+Players 1: 17
+Players 3: 26
+Turn 269
+Players 2: 1043
+Players 1: 8
+Players 3: 26
+Turn 270
+Players 2: 1030
+Players 3: 24
+Players 1: 15
+Turn 271
+Players 2: 1016
+Players 3: 24
+Players 1: 14
+Turn 272
+Players 2: 1004
+Players 3: 24
+Players 1: 12
+Turn 273
+Players 2: 998
+Players 1: 6
+Players 3: 24
+Turn 274
+Players 2: 989
+Players 1: 9
+Players 3: 24
+Turn 275
+Players 2: 979
+Players 3: 24
+Players 1: 10
+Turn 276
+Players 2: 963
+Players 1: 16
+Players 3: 24
+Turn 277
+Players 2: 955
+Players 1: 8
+Players 3: 24
+Turn 278
+Players 2: 941
+Players 1: 16
+Players 3: 22
+Turn 279
+Players 2: 934
+Players 1: 9
+Players 3: 20
+Turn 280
+Players 2: 922
+Players 1: 12
+Players 3: 20
+Turn 281
+Players 2: 907
+Players 3: 20
+Players 1: 15
+Turn 282
+Players 2: 895
+Players 3: 20
+Players 1: 12
+Turn 283
+Players 2: 888
+Players 1: 7
+Players 3: 20
+Turn 284
+Players 2: 877
+Players 3: 19
+Players 1: 12
+Turn 285
+Players 2: 867
+Players 3: 19
+Players 1: 10
+Turn 286
+Players 2: 857
+Players 1: 10
+Players 3: 19
+Turn 287
+Players 2: 850
+Players 3: 19
+Players 1: 7
+Turn 288
+Players 2: 839
+Players 1: 11
+Players 3: 19
+Turn 289
+Players 2: 833
+Players 1: 6
+Players 3: 19
+Turn 290
+Players 2: 828
+Players 3: 19
+Players 1: 5
+Turn 291
+Players 2: 819
+Players 3: 19
+Players 1: 9
+Turn 292
+Players 1: 11
+Players 2: 808
+Players 3: 19
+Turn 293
+Players 2: 795
+Players 1: 14
+Players 3: 18
+Turn 294
+Players 2: 787
+Players 1: 9
+Players 3: 17
+Turn 295
+Players 2: 784
+Players 3: 17
+Players 1: 3
+Turn 296
+Players 2: 778
+Players 3: 17
+Players 1: 6
+Turn 297
+Players 2: 774
+Players 1: 5
+Players 3: 16
+Turn 298
+Players 2: 767
+Players 3: 16
+Players 1: 7
+Turn 299
+Players 2: 762
+Players 3: 16
+Players 1: 5
+Turn 300
+Players 2: 760
+Players 3: 16
+Players 1: 2
+Turn 301
+Players 2: 748
+Players 1: 12
+Players 3: 16
+Turn 302
+Players 2: 739
+Players 3: 16
+Players 1: 9
+Turn 303
+Players 2: 732
+Players 3: 15
+Players 1: 8
+Turn 304
+Players 2: 728
+Players 3: 15
+Players 1: 4
+Turn 305
+Players 2: 719
+Players 3: 15
+Players 1: 9
+Turn 306
+Players 2: 709
+Players 1: 10
+Players 3: 15
+Turn 307
+Players 2: 705
+Players 3: 15
+Players 1: 4
+Turn 308
+Players 2: 696
+Players 3: 15
+Players 1: 9
+Turn 309
+Players 2: 689
+Players 3: 15
+Players 1: 7
+Turn 310
+Players 2: 678
+Players 3: 15
+Players 1: 11
+Turn 311
+Players 2: 670
+Players 3: 15
+Players 1: 8
+Turn 312
+Players 2: 665
+Players 3: 15
+Players 1: 5
+Turn 313
+Players 1: 4
+Players 2: 661
+Players 3: 15
+Turn 314
+Players 2: 657
+Players 3: 15
+Players 1: 4
+Turn 315
+Players 2: 654
+Players 1: 3
+Players 3: 15
+Turn 316
+Players 2: 649
+Players 3: 15
+Players 1: 5
+Turn 317
+Players 2: 646
+Players 3: 15
+Players 1: 3
+Turn 318
+Players 2: 639
+Players 3: 15
+Players 1: 7
+Turn 319
+Players 2: 634
+Players 3: 15
+Players 1: 5
+Turn 320
+Players 2: 630
+Players 3: 15
+Players 1: 4
+Turn 321
+Players 2: 623
+Players 1: 7
+Players 3: 15
+Turn 322
+Players 2: 616
+Players 1: 7
+Players 3: 15
+Turn 323
+Players 2: 612
+Players 3: 15
+Players 1: 4
+Turn 324
+Players 2: 607
+Players 3: 15
+Players 1: 5
+Turn 325
+Players 2: 596
+Players 3: 15
+Players 1: 11
+Turn 326
+Players 2: 593
+Players 3: 15
+Players 1: 3
+Turn 327
+Players 2: 585
+Players 3: 15
+Players 1: 8
+Turn 328
+Players 2: 583
+Players 3: 15
+Players 1: 2
+Turn 329
+Players 2: 582
+Players 3: 15
+Players 1: 1
+Turn 330
+Players 2: 579
+Players 3: 15
+Players 1: 3
+Turn 331
+Players 2: 573
+Players 1: 7
+Players 3: 14
+Turn 332
+Players 2: 562
+Players 3: 14
+Players 1: 11
+Turn 333
+Players 2: 558
+Players 3: 14
+Players 1: 4
+Turn 334
+Players 2: 551
+Players 3: 14
+Players 1: 7
+Turn 335
+Players 2: 543
+Players 3: 14
+Players 1: 8
+Turn 336
+Players 2: 541
+Players 1: 3
+Players 3: 13
+Turn 337
+Players 2: 538
+Players 3: 13
+Players 1: 3
+Turn 338
+Players 2: 534
+Players 3: 13
+Players 1: 4
+Turn 339
+Players 2: 528
+Players 3: 13
+Players 1: 6
+Turn 340
+Players 2: 521
+Players 1: 7
+Players 3: 13
+Turn 341
+Players 2: 515
+Players 3: 13
+Players 1: 6
+Turn 342
+Players 2: 513
+Players 3: 13
+Players 1: 2
+Turn 343
+Players 2: 506
+Players 3: 13
+Players 1: 7
+Turn 344
+Players 2: 504
+Players 3: 13
+Players 1: 2
+Turn 345
+Players 2: 503
+Players 3: 13
+Players 1: 1
+Turn 346
+Players 2: 500
+Players 3: 13
+Players 1: 3
+Turn 347
+Players 2: 498
+Players 3: 13
+Players 1: 2
+Turn 348
+Players 2: 496
+Players 1: 2
+Players 3: 13
+Turn 349
+Players 2: 491
+Players 1: 5
+Players 3: 13
+Turn 350
+Players 2: 486
+Players 1: 5
+Players 3: 13
+Turn 351
+Players 2: 484
+Players 3: 13
+Players 1: 2
+Turn 352
+Players 2: 477
+Players 3: 13
+Players 1: 7
+Turn 353
+Players 2: 471
+Players 3: 13
+Players 1: 6
+Turn 354
+Players 2: 467
+Players 3: 13
+Players 1: 4
+Turn 355
+Players 2: 465
+Players 3: 12
+Players 1: 3
+Turn 356
+Players 2: 464
+Players 3: 12
+Players 1: 1
+Turn 357
+Players 2: 462
+Players 3: 12
+Players 1: 2
+Turn 358
+Players 2: 459
+Players 3: 12
+Players 1: 3
+Turn 359
+Players 2: 454
+Players 3: 12
+Players 1: 5
+Turn 360
+Players 2: 450
+Players 3: 12
+Players 1: 4
+Turn 361
+Players 2: 446
+Players 1: 4
+Players 3: 12
+Turn 362
+Players 2: 440
+Players 3: 12
+Players 1: 6
+Turn 363
+Players 2: 433
+Players 3: 12
+Players 1: 7
+Turn 364
+Players 2: 433
+Players 3: 12
+Turn 365
+Players 2: 432
+Players 1: 1
+Players 3: 12
+Turn 366
+Players 2: 428
+Players 3: 12
+Players 1: 4
+Turn 367
+Players 2: 424
+Players 3: 12
+Players 1: 4
+Turn 368
+Players 2: 423
+Players 3: 12
+Players 1: 1
+Turn 369
+Players 2: 420
+Players 1: 3
+Players 3: 12
+Turn 370
+Players 2: 414
+Players 3: 12
+Players 1: 6
+Turn 371
+Players 2: 412
+Players 3: 12
+Players 1: 2
+Turn 372
+Players 2: 408
+Players 3: 12
+Players 1: 4
+Turn 373
+Players 2: 404
+Players 3: 12
+Players 1: 4
+Turn 374
+Players 2: 401
+Players 1: 3
+Players 3: 12
+Turn 375
+Players 2: 398
+Players 1: 3
+Players 3: 12
+Turn 376
+Players 2: 398
+Players 3: 12
+Turn 377
+Players 2: 395
+Players 3: 12
+Players 1: 3
+Turn 378
+Players 2: 392
+Players 3: 12
+Players 1: 3
+Turn 379
+Players 2: 387
+Players 1: 5
+Players 3: 12
+Turn 380
+Players 2: 383
+Players 3: 12
+Players 1: 4
+Turn 381
+Players 2: 380
+Players 3: 12
+Players 1: 3
+Turn 382
+Players 2: 377
+Players 3: 12
+Players 1: 3
+Turn 383
+Players 2: 375
+Players 3: 11
+Players 1: 3
+Turn 384
+Players 2: 371
+Players 3: 11
+Players 1: 4
+Turn 385
+Players 2: 371
+Players 3: 11
+Turn 386
+Players 2: 370
+Players 3: 11
+Players 1: 1
+Turn 387
+Players 2: 367
+Players 3: 11
+Players 1: 3
+Turn 388
+Players 2: 364
+Players 3: 11
+Players 1: 3
+Turn 389
+Players 2: 362
+Players 1: 2
+Players 3: 11
+Turn 390
+Players 2: 358
+Players 1: 4
+Players 3: 11
+Turn 391
+Players 2: 356
+Players 3: 11
+Players 1: 2
+Turn 392
+Players 2: 356
+Players 3: 10
+Players 1: 1
+Turn 393
+Players 2: 354
+Players 3: 10
+Players 1: 2
+Turn 394
+Players 2: 350
+Players 3: 10
+Players 1: 4
+Turn 395
+Players 2: 346
+Players 1: 4
+Players 3: 10
+Turn 396
+Players 2: 344
+Players 3: 10
+Players 1: 2
+Turn 397
+Players 2: 341
+Players 3: 10
+Players 1: 3
+Turn 398
+Players 2: 339
+Players 3: 10
+Players 1: 2
+Turn 399
+Players 2: 335
+Players 3: 10
+Players 1: 4
+Turn 400
+Players 2: 332
+Players 3: 10
+Players 1: 3
+Turn 401
+Players 2: 331
+Players 3: 10
+Players 1: 1
+Turn 402
+Players 2: 330
+Players 3: 10
+Players 1: 1
+Turn 403
+Players 2: 327
+Players 1: 3
+Players 3: 10
+Turn 404
+Players 2: 325
+Players 3: 10
+Players 1: 2
+Turn 405
+Players 2: 321
+Players 3: 10
+Players 1: 4
+Turn 406
+Players 2: 318
+Players 3: 10
+Players 1: 3
+Turn 407
+Players 2: 317
+Players 3: 10
+Players 1: 1
+Turn 408
+Players 2: 313
+Players 3: 10
+Players 1: 4
+Turn 409
+Players 2: 311
+Players 3: 10
+Players 1: 2
+Turn 410
+Players 2: 311
+Players 3: 9
+Players 1: 1
+Turn 411
+Players 2: 309
+Players 3: 9
+Players 1: 2
+Turn 412
+Players 2: 306
+Players 3: 9
+Players 1: 3
+Turn 413
+Players 2: 304
+Players 3: 9
+Players 1: 2
+Turn 414
+Players 2: 303
+Players 1: 1
+Players 3: 9
+Turn 415
+Players 2: 302
+Players 3: 9
+Players 1: 1
+Turn 416
+Players 2: 298
+Players 1: 4
+Players 3: 9
+Turn 417
+Players 2: 295
+Players 3: 9
+Players 1: 3
+Turn 418
+Players 2: 292
+Players 1: 3
+Players 3: 9
+Turn 419
+Players 2: 292
+Players 3: 9
+Turn 420
+Players 2: 290
+Players 3: 9
+Players 1: 2
+Turn 421
+Players 2: 286
+Players 3: 9
+Players 1: 4
+Turn 422
+Players 2: 285
+Players 3: 9
+Players 1: 1
+Turn 423
+Players 2: 284
+Players 3: 9
+Players 1: 1
+Turn 424
+Players 2: 284
+Players 3: 9
+Turn 425
+Players 2: 280
+Players 3: 9
+Players 1: 4
+Turn 426
+Players 2: 277
+Players 3: 9
+Players 1: 3
+Turn 427
+Players 2: 276
+Players 3: 9
+Players 1: 1
+Turn 428
+Players 2: 276
+Players 3: 9
+Turn 429
+Players 2: 275
+Players 1: 2
+Players 3: 8
+Turn 430
+Players 2: 274
+Players 3: 8
+Players 1: 1
+Turn 431
+Players 2: 270
+Players 3: 8
+Players 1: 4
+Turn 432
+Players 2: 267
+Players 1: 3
+Players 3: 8
+Turn 433
+Players 2: 264
+Players 1: 3
+Players 3: 8
+Turn 434
+Players 2: 261
+Players 1: 3
+Players 3: 8
+Turn 435
+Players 2: 261
+Players 3: 8
+Turn 436
+Players 2: 260
+Players 1: 1
+Players 3: 8
+Turn 437
+Players 2: 258
+Players 1: 2
+Players 3: 8
+Turn 438
+Players 2: 256
+Players 1: 2
+Players 3: 8
+Turn 439
+Players 2: 254
+Players 3: 8
+Players 1: 2
+Turn 440
+Players 2: 252
+Players 3: 8
+Players 1: 2
+Turn 441
+Players 2: 250
+Players 1: 2
+Players 3: 8
+Turn 442
+Players 2: 249
+Players 3: 8
+Players 1: 1
+Turn 443
+Players 2: 247
+Players 1: 2
+Players 3: 8
+Turn 444
+Players 2: 246
+Players 3: 8
+Players 1: 1
+Turn 445
+Players 2: 244
+Players 1: 2
+Players 3: 8
+Turn 446
+Players 2: 241
+Players 1: 3
+Players 3: 8
+Turn 447
+Players 2: 239
+Players 3: 8
+Players 1: 2
+Turn 448
+Players 2: 238
+Players 1: 1
+Players 3: 8
+Turn 449
+Players 2: 237
+Players 1: 1
+Players 3: 8
+Turn 450
+Players 2: 236
+Players 3: 8
+Players 1: 1
+Turn 451
+Players 2: 235
+Players 3: 8
+Players 1: 1
+Turn 452
+Players 2: 235
+Players 3: 8
+Turn 453
+Players 2: 234
+Players 1: 1
+Players 3: 8
+Turn 454
+Players 2: 231
+Players 1: 3
+Players 3: 8
+Turn 455
+Players 2: 230
+Players 1: 1
+Players 3: 8
+Turn 456
+Players 2: 229
+Players 3: 8
+Players 1: 1
+Turn 457
+Players 2: 226
+Players 1: 3
+Players 3: 8
+Turn 458
+Players 2: 224
+Players 1: 2
+Players 3: 8
+Turn 459
+Players 2: 221
+Players 1: 3
+Players 3: 8
+Turn 460
+Players 2: 219
+Players 3: 8
+Players 1: 2
+Turn 461
+Players 2: 217
+Players 3: 8
+Players 1: 2
+Turn 462
+Players 2: 216
+Players 1: 1
+Players 3: 8
+Turn 463
+Players 2: 215
+Players 3: 8
+Players 1: 1
+Turn 464
+Players 2: 215
+Players 3: 8
+Turn 465
+Players 2: 213
+Players 3: 8
+Players 1: 2
+Turn 466
+Players 2: 212
+Players 3: 8
+Players 1: 1
+Turn 467
+Players 2: 211
+Players 3: 8
+Players 1: 1
+Turn 468
+Players 2: 211
+Players 3: 8
+Turn 469
+Players 2: 210
+Players 1: 1
+Players 3: 8
+Turn 470
+Players 2: 209
+Players 1: 1
+Players 3: 8
+Turn 471
+Players 2: 207
+Players 3: 8
+Players 1: 2
+Turn 472
+Players 2: 206
+Players 3: 8
+Players 1: 1
+Turn 473
+Players 2: 205
+Players 1: 1
+Players 3: 8
+Turn 474
+Players 2: 204
+Players 3: 8
+Players 1: 1
+Turn 475
+Players 2: 202
+Players 3: 8
+Players 1: 2
+Turn 476
+Players 1: 2
+Players 2: 200
+Players 3: 8
+Turn 477
+Players 2: 198
+Players 3: 8
+Players 1: 2
+Turn 478
+Players 2: 198
+Players 3: 8
+Turn 479
+Players 2: 195
+Players 1: 3
+Players 3: 8
+Turn 480
+Players 2: 195
+Players 3: 8
+Turn 481
+Players 2: 195
+Players 3: 8
+Turn 482
+Players 2: 195
+Players 3: 8
+Turn 483
+Players 2: 194
+Players 3: 8
+Players 1: 1
+Turn 484
+Players 2: 193
+Players 3: 8
+Players 1: 1
+Turn 485
+Players 2: 189
+Players 1: 4
+Players 3: 8
+Turn 486
+Players 2: 187
+Players 3: 8
+Players 1: 2
+Turn 487
+Players 2: 187
+Players 3: 8
+Turn 488
+Players 2: 187
+Players 3: 8
+Turn 489
+Players 2: 187
+Players 3: 8
+Turn 490
+Players 2: 187
+Players 3: 8
+Turn 491
+Players 2: 186
+Players 3: 8
+Players 1: 1
+Turn 492
+Players 2: 186
+Players 3: 8
+Turn 493
+Players 2: 186
+Players 3: 8
+Turn 494
+Players 2: 186
+Players 3: 8
+Turn 495
+Players 2: 184
+Players 1: 2
+Players 3: 8
+Turn 496
+Players 2: 182
+Players 1: 2
+Players 3: 8
+Turn 497
+Players 2: 182
+Players 3: 8
+Turn 498
+Players 2: 181
+Players 1: 1
+Players 3: 8
+Turn 499
+Players 2: 179
+Players 3: 8
+Players 1: 2
+Turn 500
+Players 2: 179
+Players 3: 8
+Turn 501
+Players 2: 178
+Players 3: 8
+Players 1: 1
+Turn 502
+Players 2: 178
+Players 3: 8
+Turn 503
+Players 2: 178
+Players 3: 8
+Turn 504
+Players 2: 177
+Players 1: 1
+Players 3: 8
+Turn 505
+Players 2: 176
+Players 3: 8
+Players 1: 1
+Turn 506
+Players 2: 176
+Players 3: 8
+Turn 507
+Players 2: 176
+Players 3: 8
+Turn 508
+Players 2: 175
+Players 3: 8
+Players 1: 1
+Turn 509
+Players 2: 175
+Players 3: 8
+Turn 510
+Players 2: 174
+Players 1: 1
+Players 3: 8
+Turn 511
+Players 2: 172
+Players 3: 8
+Players 1: 2
+Turn 512
+Players 2: 172
+Players 3: 8
+Turn 513
+Players 2: 171
+Players 3: 8
+Players 1: 1
+Turn 514
+Players 2: 170
+Players 3: 8
+Players 1: 1
+Turn 515
+Players 2: 170
+Players 3: 8
+Turn 516
+Players 2: 169
+Players 3: 8
+Players 1: 1
+Turn 517
+Players 2: 169
+Players 3: 8
+Turn 518
+Players 2: 169
+Players 3: 8
+Turn 519
+Players 2: 168
+Players 1: 1
+Players 3: 8
+Turn 520
+Players 2: 167
+Players 1: 1
+Players 3: 8
+Turn 521
+Players 2: 167
+Players 3: 8
+Turn 522
+Players 2: 165
+Players 3: 8
+Players 1: 2
+Turn 523
+Players 2: 164
+Players 3: 8
+Players 1: 1
+Turn 524
+Players 2: 164
+Players 3: 8
+Turn 525
+Players 2: 164
+Players 3: 8
+Turn 526
+Players 2: 164
+Players 3: 8
+Turn 527
+Players 2: 164
+Players 3: 8
+Turn 528
+Players 2: 164
+Players 3: 8
+Turn 529
+Players 2: 164
+Players 3: 8
+Turn 530
+Players 2: 162
+Players 1: 2
+Players 3: 8
+Turn 531
+Players 2: 161
+Players 3: 8
+Players 1: 1
+Turn 532
+Players 2: 160
+Players 3: 8
+Players 1: 1
+Turn 533
+Players 2: 159
+Players 3: 8
+Players 1: 1
+Turn 534
+Players 2: 159
+Players 3: 8
+Turn 535
+Players 2: 158
+Players 1: 1
+Players 3: 8
+Turn 536
+Players 2: 157
+Players 1: 1
+Players 3: 8
+Turn 537
+Players 2: 157
+Players 3: 8
+Turn 538
+Players 2: 155
+Players 3: 8
+Players 1: 2
+Turn 539
+Players 2: 155
+Players 3: 8
+Turn 540
+Players 2: 155
+Players 3: 8
+Turn 541
+Players 2: 154
+Players 1: 1
+Players 3: 8
+Turn 542
+Players 2: 154
+Players 3: 8
+Turn 543
+Players 2: 152
+Players 3: 8
+Players 1: 2
+Turn 544
+Players 2: 151
+Players 3: 8
+Players 1: 1
+Turn 545
+Players 2: 151
+Players 3: 8
+Turn 546
+Players 2: 151
+Players 3: 8
+Turn 547
+Players 2: 150
+Players 3: 8
+Players 1: 1
+Turn 548
+Players 2: 150
+Players 3: 8
+Turn 549
+Players 2: 150
+Players 3: 8
+Turn 550
+Players 2: 150
+Players 3: 8
+Turn 551
+Players 2: 149
+Players 3: 8
+Players 1: 1
+Turn 552
+Players 2: 147
+Players 3: 8
+Players 1: 2
+Turn 553
+Players 2: 146
+Players 1: 1
+Players 3: 8
+Turn 554
+Players 2: 145
+Players 1: 1
+Players 3: 8
+Turn 555
+Players 2: 145
+Players 3: 8
+Turn 556
+Players 2: 145
+Players 3: 8
+Turn 557
+Players 2: 144
+Players 3: 8
+Players 1: 1
+Turn 558
+Players 2: 144
+Players 3: 8
+Turn 559
+Players 2: 143
+Players 1: 1
+Players 3: 8
+Turn 560
+Players 2: 143
+Players 3: 8
+Turn 561
+Players 2: 143
+Players 3: 8
+Turn 562
+Players 2: 143
+Players 3: 8
+Turn 563
+Players 2: 142
+Players 3: 8
+Players 1: 1
+Turn 564
+Players 2: 141
+Players 3: 8
+Players 1: 1
+Turn 565
+Players 2: 141
+Players 3: 8
+Turn 566
+Players 2: 137
+Players 1: 4
+Players 3: 8
+Turn 567
+Players 2: 137
+Players 3: 8
+Turn 568
+Players 2: 135
+Players 1: 2
+Players 3: 8
+Turn 569
+Players 2: 135
+Players 3: 8
+Turn 570
+Players 2: 135
+Players 3: 8
+Turn 571
+Players 2: 134
+Players 3: 8
+Players 1: 1
+Turn 572
+Players 2: 132
+Players 3: 8
+Players 1: 2
+Turn 573
+Players 2: 130
+Players 3: 8
+Players 1: 2
+Turn 574
+Players 2: 129
+Players 3: 8
+Players 1: 1
+Turn 575
+Players 2: 129
+Players 3: 8
+Turn 576
+Players 2: 129
+Players 3: 8
+Turn 577
+Players 2: 128
+Players 3: 8
+Players 1: 1
+Turn 578
+Players 2: 128
+Players 3: 8
+Turn 579
+Players 2: 128
+Players 3: 8
+Turn 580
+Players 2: 127
+Players 3: 8
+Players 1: 1
+Turn 581
+Players 2: 127
+Players 3: 8
+Turn 582
+Players 2: 127
+Players 3: 8
+Turn 583
+Players 2: 127
+Players 3: 8
+Turn 584
+Players 2: 127
+Players 3: 8
+Turn 585
+Players 2: 127
+Players 3: 8
+Turn 586
+Players 2: 127
+Players 3: 8
+Turn 587
+Players 2: 127
+Players 3: 8
+Turn 588
+Players 2: 126
+Players 3: 8
+Players 1: 1
+Turn 589
+Players 2: 125
+Players 3: 8
+Players 1: 1
+Turn 590
+Players 2: 125
+Players 3: 8
+Turn 591
+Players 2: 124
+Players 3: 8
+Players 1: 1
+Turn 592
+Players 2: 124
+Players 3: 8
+Turn 593
+Players 2: 124
+Players 3: 8
+Turn 594
+Players 2: 124
+Players 3: 8
+Turn 595
+Players 2: 124
+Players 3: 8
+Turn 596
+Players 2: 123
+Players 3: 8
+Players 1: 1
+Turn 597
+Players 2: 122
+Players 1: 1
+Players 3: 8
+Turn 598
+Players 2: 121
+Players 3: 8
+Players 1: 1
+Turn 599
+Players 2: 120
+Players 3: 8
+Players 1: 1
+Turn 600
+Players 2: 120
+Players 3: 8
+Turn 601
+Players 2: 119
+Players 1: 1
+Players 3: 8
+Turn 602
+Players 2: 119
+Players 3: 8
+Turn 603
+Players 2: 119
+Players 3: 8
+Turn 604
+Players 2: 119
+Players 3: 8
+Turn 605
+Players 2: 119
+Players 3: 8
+Turn 606
+Players 2: 119
+Players 3: 8
+Turn 607
+Players 2: 119
+Players 3: 8
+Turn 608
+Players 2: 118
+Players 1: 1
+Players 3: 8
+Turn 609
+Players 2: 118
+Players 3: 8
+Turn 610
+Players 2: 118
+Players 3: 8
+Turn 611
+Players 2: 118
+Players 3: 8
+Turn 612
+Players 2: 118
+Players 3: 8
+Turn 613
+Players 2: 118
+Players 3: 8
+Turn 614
+Players 2: 118
+Players 3: 8
+Turn 615
+Players 2: 117
+Players 3: 8
+Players 1: 1
+Turn 616
+Players 2: 117
+Players 3: 8
+Turn 617
+Players 2: 115
+Players 1: 2
+Players 3: 8
+Turn 618
+Players 2: 115
+Players 3: 8
+Turn 619
+Players 2: 115
+Players 3: 8
+Turn 620
+Players 2: 115
+Players 3: 8
+Turn 621
+Players 2: 115
+Players 3: 8
+Turn 622
+Players 2: 115
+Players 3: 8
+Turn 623
+Players 2: 115
+Players 3: 8
+Turn 624
+Players 2: 115
+Players 3: 8
+Turn 625
+Players 2: 115
+Players 3: 8
+Turn 626
+Players 2: 115
+Players 3: 8
+Turn 627
+Players 2: 115
+Players 3: 8
+Turn 628
+Players 2: 114
+Players 3: 8
+Players 1: 1
+Turn 629
+Players 2: 114
+Players 3: 8
+Turn 630
+Players 2: 114
+Players 3: 8
+Turn 631
+Players 2: 114
+Players 3: 8
+Turn 632
+Players 2: 114
+Players 3: 8
+Turn 633
+Players 2: 114
+Players 3: 8
+Turn 634
+Players 2: 113
+Players 1: 1
+Players 3: 8
+Turn 635
+Players 2: 112
+Players 3: 8
+Players 1: 1
+Turn 636
+Players 2: 112
+Players 3: 8
+Turn 637
+Players 2: 111
+Players 1: 1
+Players 3: 8
+Turn 638
+Players 2: 111
+Players 3: 8
+Turn 639
+Players 2: 110
+Players 1: 1
+Players 3: 8
+Turn 640
+Players 2: 110
+Players 3: 8
+Turn 641
+Players 2: 111
+Players 3: 7
+Turn 642
+Players 2: 111
+Players 3: 7
+Turn 643
+Players 2: 111
+Players 3: 7
+Turn 644
+Players 2: 111
+Players 3: 7
+Turn 645
+Players 2: 111
+Players 3: 7
+Turn 646
+Players 2: 111
+Players 3: 7
+Turn 647
+Players 2: 111
+Players 3: 7
+Turn 648
+Players 2: 111
+Players 3: 7
+Turn 649
+Players 2: 111
+Players 3: 7
+Turn 650
+Players 2: 111
+Players 3: 7
+Turn 651
+Players 2: 111
+Players 3: 7
+Turn 652
+Players 2: 111
+Players 3: 7
+Turn 653
+Players 2: 111
+Players 3: 7
+Turn 654
+Players 2: 110
+Players 3: 7
+Players 1: 1
+Turn 655
+Players 2: 110
+Players 3: 7
+Turn 656
+Players 2: 110
+Players 3: 7
+Turn 657
+Players 2: 110
+Players 3: 7
+Turn 658
+Players 2: 110
+Players 3: 7
+Turn 659
+Players 2: 110
+Players 3: 7
+Turn 660
+Players 2: 110
+Players 3: 7
+Turn 661
+Players 2: 109
+Players 3: 7
+Players 1: 1
+Turn 662
+Players 2: 109
+Players 3: 7
+Turn 663
+Players 2: 109
+Players 3: 7
+Turn 664
+Players 2: 109
+Players 3: 7
+Turn 665
+Players 2: 109
+Players 3: 7
+Turn 666
+Players 2: 108
+Players 3: 7
+Players 1: 1
+Turn 667
+Players 2: 108
+Players 3: 7
+Turn 668
+Players 2: 108
+Players 3: 7
+Turn 669
+Players 2: 108
+Players 3: 7
+Turn 670
+Players 2: 107
+Players 3: 7
+Players 1: 1
+Turn 671
+Players 2: 107
+Players 3: 7
+Turn 672
+Players 2: 107
+Players 3: 7
+Turn 673
+Players 2: 107
+Players 3: 7
+Turn 674
+Players 2: 107
+Players 3: 7
+Turn 675
+Players 2: 107
+Players 3: 7
+Turn 676
+Players 2: 107
+Players 3: 7
+Turn 677
+Players 2: 106
+Players 3: 7
+Players 1: 1
+Turn 678
+Players 2: 105
+Players 1: 1
+Players 3: 7
+Turn 679
+Players 2: 105
+Players 3: 7
+Turn 680
+Players 2: 104
+Players 3: 7
+Players 1: 1
+Turn 681
+Players 2: 104
+Players 3: 7
+Turn 682
+Players 2: 103
+Players 3: 7
+Players 1: 1
+Turn 683
+Players 2: 103
+Players 3: 7
+Turn 684
+Players 2: 103
+Players 3: 7
+Turn 685
+Players 2: 103
+Players 3: 7
+Turn 686
+Players 2: 103
+Players 3: 7
+Turn 687
+Players 2: 103
+Players 3: 7
+Turn 688
+Players 2: 102
+Players 1: 1
+Players 3: 7
+Turn 689
+Players 2: 102
+Players 3: 7
+Turn 690
+Players 2: 102
+Players 3: 7
+Turn 691
+Players 2: 102
+Players 3: 7
+Turn 692
+Players 2: 102
+Players 3: 7
+Turn 693
+Players 2: 102
+Players 3: 7
+Turn 694
+Players 2: 100
+Players 1: 2
+Players 3: 7
+Turn 695
+Players 2: 100
+Players 3: 7
+Turn 696
+Players 2: 100
+Players 3: 7
+Turn 697
+Players 2: 100
+Players 3: 7
+Turn 698
+Players 2: 100
+Players 3: 7
+Turn 699
+Players 2: 100
+Players 3: 7
+Turn 700
+Players 2: 99
+Players 3: 7
+Players 1: 1
+Turn 701
+Players 2: 99
+Players 3: 7
+Turn 702
+Players 2: 99
+Players 3: 7
+Turn 703
+Players 2: 97
+Players 1: 2
+Players 3: 7
+Turn 704
+Players 2: 97
+Players 3: 7
+Turn 705
+Players 2: 97
+Players 3: 7
+Turn 706
+Players 2: 97
+Players 3: 7
+Turn 707
+Players 2: 96
+Players 1: 1
+Players 3: 7
+Turn 708
+Players 2: 95
+Players 3: 7
+Players 1: 1
+Turn 709
+Players 2: 95
+Players 3: 7
+Turn 710
+Players 2: 95
+Players 3: 7
+Turn 711
+Players 2: 95
+Players 3: 7
+Turn 712
+Players 2: 95
+Players 3: 7
+Turn 713
+Players 2: 95
+Players 3: 7
+Turn 714
+Players 2: 95
+Players 3: 7
+Turn 715
+Players 2: 95
+Players 3: 7
+Turn 716
+Players 2: 95
+Players 3: 7
+Turn 717
+Players 2: 95
+Players 3: 7
+Turn 718
+Players 2: 95
+Players 3: 7
+Turn 719
+Players 2: 95
+Players 3: 7
+Turn 720
+Players 2: 95
+Players 3: 7
+Turn 721
+Players 2: 95
+Players 3: 7
+Turn 722
+Players 2: 94
+Players 3: 7
+Players 1: 1
+Turn 723
+Players 2: 93
+Players 1: 1
+Players 3: 7
+Turn 724
+Players 2: 92
+Players 3: 7
+Players 1: 1
+Turn 725
+Players 2: 92
+Players 3: 7
+Turn 726
+Players 2: 91
+Players 3: 7
+Players 1: 1
+Turn 727
+Players 2: 91
+Players 3: 7
+Turn 728
+Players 2: 91
+Players 3: 7
+Turn 729
+Players 2: 91
+Players 3: 7
+Turn 730
+Players 2: 91
+Players 3: 7
+Turn 731
+Players 2: 91
+Players 3: 7
+Turn 732
+Players 2: 91
+Players 3: 7
+Turn 733
+Players 2: 91
+Players 3: 7
+Turn 734
+Players 2: 91
+Players 3: 7
+Turn 735
+Players 2: 90
+Players 3: 7
+Players 1: 1
+Turn 736
+Players 2: 90
+Players 3: 7
+Turn 737
+Players 2: 90
+Players 3: 7
+Turn 738
+Players 2: 90
+Players 3: 7
+Turn 739
+Players 2: 90
+Players 3: 7
+Turn 740
+Players 2: 90
+Players 3: 7
+Turn 741
+Players 2: 90
+Players 3: 7
+Turn 742
+Players 2: 90
+Players 3: 7
+Turn 743
+Players 2: 89
+Players 1: 1
+Players 3: 7
+Turn 744
+Players 2: 88
+Players 3: 7
+Players 1: 1
+Turn 745
+Players 2: 88
+Players 3: 7
+Turn 746
+Players 2: 88
+Players 3: 7
+Turn 747
+Players 2: 88
+Players 3: 7
+Turn 748
+Players 2: 88
+Players 3: 7
+Turn 749
+Players 2: 88
+Players 3: 7
+Turn 750
+Players 2: 87
+Players 3: 7
+Players 1: 1
+Turn 751
+Players 2: 87
+Players 3: 7
+Turn 752
+Players 2: 85
+Players 3: 7
+Players 1: 2
+Turn 753
+Players 2: 85
+Players 3: 7
+Turn 754
+Players 2: 85
+Players 3: 7
+Turn 755
+Players 2: 85
+Players 3: 7
+Turn 756
+Players 2: 85
+Players 3: 7
+Turn 757
+Players 2: 85
+Players 3: 7
+Turn 758
+Players 2: 85
+Players 3: 7
+Turn 759
+Players 2: 85
+Players 3: 7
+Turn 760
+Players 2: 84
+Players 3: 7
+Players 1: 1
+Turn 761
+Players 2: 84
+Players 3: 7
+Turn 762
+Players 2: 84
+Players 3: 7
+Turn 763
+Players 2: 84
+Players 3: 7
+Turn 764
+Players 2: 84
+Players 3: 7
+Turn 765
+Players 2: 84
+Players 3: 7
+Turn 766
+Players 2: 84
+Players 3: 7
+Turn 767
+Players 2: 84
+Players 3: 7
+Turn 768
+Players 2: 84
+Players 3: 7
+Turn 769
+Players 2: 84
+Players 3: 7
+Turn 770
+Players 2: 84
+Players 3: 7
+Turn 771
+Players 2: 84
+Players 3: 7
+Turn 772
+Players 2: 83
+Players 3: 7
+Players 1: 1
+Turn 773
+Players 2: 83
+Players 3: 7
+Turn 774
+Players 2: 83
+Players 3: 7
+Turn 775
+Players 2: 83
+Players 3: 7
+Turn 776
+Players 2: 83
+Players 3: 7
+Turn 777
+Players 2: 83
+Players 3: 7
+Turn 778
+Players 2: 83
+Players 3: 7
+Turn 779
+Players 2: 83
+Players 3: 7
+Turn 780
+Players 2: 83
+Players 3: 7
+Turn 781
+Players 2: 82
+Players 3: 7
+Players 1: 1
+Turn 782
+Players 2: 82
+Players 3: 7
+Turn 783
+Players 2: 82
+Players 3: 7
+Turn 784
+Players 2: 82
+Players 3: 7
+Turn 785
+Players 2: 82
+Players 3: 7
+Turn 786
+Players 2: 81
+Players 1: 1
+Players 3: 7
+Turn 787
+Players 2: 81
+Players 3: 7
+Turn 788
+Players 2: 81
+Players 3: 7
+Turn 789
+Players 2: 81
+Players 3: 7
+Turn 790
+Players 2: 81
+Players 3: 7
+Turn 791
+Players 2: 80
+Players 3: 7
+Players 1: 1
+Turn 792
+Players 2: 80
+Players 3: 7
+Turn 793
+Players 2: 80
+Players 3: 7
+Turn 794
+Players 2: 79
+Players 3: 7
+Players 1: 1
+Turn 795
+Players 2: 79
+Players 3: 7
+Turn 796
+Players 2: 79
+Players 3: 7
+Turn 797
+Players 2: 78
+Players 3: 7
+Players 1: 1
+Turn 798
+Players 2: 78
+Players 3: 7
+Turn 799
+Players 2: 78
+Players 3: 7
+Turn 800
+Players 2: 78
+Players 3: 7
+Turn 801
+Players 2: 78
+Players 3: 7
+Turn 802
+Players 2: 78
+Players 3: 7
+Turn 803
+Players 2: 78
+Players 3: 7
+Turn 804
+Players 2: 78
+Players 3: 7
+Turn 805
+Players 2: 78
+Players 3: 7
+Turn 806
+Players 2: 78
+Players 3: 7
+Turn 807
+Players 2: 78
+Players 3: 7
+Turn 808
+Players 2: 78
+Players 3: 7
+Turn 809
+Players 2: 78
+Players 3: 7
+Turn 810
+Players 2: 78
+Players 3: 7
+Turn 811
+Players 2: 78
+Players 3: 7
+Turn 812
+Players 2: 78
+Players 3: 7
+Turn 813
+Players 2: 78
+Players 3: 7
+Turn 814
+Players 2: 78
+Players 3: 7
+Turn 815
+Players 2: 78
+Players 3: 7
+Turn 816
+Players 2: 78
+Players 3: 7
+Turn 817
+Players 2: 78
+Players 3: 7
+Turn 818
+Players 2: 78
+Players 3: 7
+Turn 819
+Players 2: 78
+Players 3: 7
+Turn 820
+Players 2: 78
+Players 3: 7
+Turn 821
+Players 2: 77
+Players 3: 7
+Players 1: 1
+Turn 822
+Players 2: 77
+Players 3: 7
+Turn 823
+Players 2: 77
+Players 3: 7
+Turn 824
+Players 2: 77
+Players 3: 7
+Turn 825
+Players 2: 77
+Players 3: 7
+Turn 826
+Players 2: 77
+Players 3: 7
+Turn 827
+Players 2: 77
+Players 3: 7
+Turn 828
+Players 2: 77
+Players 3: 7
+Turn 829
+Players 2: 77
+Players 3: 7
+Turn 830
+Players 2: 77
+Players 3: 7
+Turn 831
+Players 2: 77
+Players 3: 7
+Turn 832
+Players 2: 77
+Players 3: 7
+Turn 833
+Players 2: 77
+Players 3: 7
+Turn 834
+Players 2: 77
+Players 3: 7
+Turn 835
+Players 2: 77
+Players 3: 7
+Turn 836
+Players 2: 77
+Players 3: 7
+Turn 837
+Players 2: 77
+Players 3: 7
+Turn 838
+Players 2: 77
+Players 3: 7
+Turn 839
+Players 2: 77
+Players 3: 7
+Turn 840
+Players 2: 77
+Players 3: 7
+Turn 841
+Players 2: 77
+Players 3: 7
+Turn 842
+Players 2: 77
+Players 3: 7
+Turn 843
+Players 2: 77
+Players 3: 7
+Turn 844
+Players 2: 77
+Players 3: 7
+Turn 845
+Players 2: 77
+Players 3: 7
+Turn 846
+Players 2: 76
+Players 3: 7
+Players 1: 1
+Turn 847
+Players 2: 76
+Players 3: 7
+Turn 848
+Players 2: 76
+Players 3: 7
+Turn 849
+Players 2: 75
+Players 3: 7
+Players 1: 1
+Turn 850
+Players 2: 75
+Players 3: 7
+Turn 851
+Players 2: 75
+Players 3: 7
+Turn 852
+Players 2: 75
+Players 3: 7
+Turn 853
+Players 2: 75
+Players 3: 7
+Turn 854
+Players 2: 75
+Players 3: 7
+Turn 855
+Players 2: 75
+Players 3: 7
+Turn 856
+Players 2: 75
+Players 3: 7
+Turn 857
+Players 2: 75
+Players 3: 7
+Turn 858
+Players 2: 75
+Players 3: 7
+Turn 859
+Players 2: 75
+Players 3: 7
+Turn 860
+Players 2: 74
+Players 3: 7
+Players 1: 1
+Turn 861
+Players 2: 74
+Players 3: 7
+Turn 862
+Players 2: 74
+Players 3: 7
+Turn 863
+Players 2: 74
+Players 3: 7
+Turn 864
+Players 2: 74
+Players 3: 7
+Turn 865
+Players 2: 74
+Players 3: 7
+Turn 866
+Players 2: 74
+Players 3: 7
+Turn 867
+Players 2: 74
+Players 3: 7
+Turn 868
+Players 2: 74
+Players 3: 7
+Turn 869
+Players 2: 74
+Players 3: 7
+Turn 870
+Players 2: 74
+Players 3: 7
+Turn 871
+Players 2: 74
+Players 3: 7
+Turn 872
+Players 2: 74
+Players 3: 7
+Turn 873
+Players 2: 74
+Players 3: 7
+Turn 874
+Players 2: 74
+Players 3: 7
+Turn 875
+Players 2: 74
+Players 3: 7
+Turn 876
+Players 2: 73
+Players 1: 1
+Players 3: 7
+Turn 877
+Players 2: 73
+Players 3: 7
+Turn 878
+Players 2: 73
+Players 3: 7
+Turn 879
+Players 2: 72
+Players 1: 1
+Players 3: 7
+Turn 880
+Players 2: 72
+Players 3: 7
+Turn 881
+Players 2: 72
+Players 3: 7
+Turn 882
+Players 2: 72
+Players 3: 7
+Turn 883
+Players 2: 72
+Players 3: 7
+Turn 884
+Players 2: 72
+Players 3: 7
+Turn 885
+Players 2: 72
+Players 3: 7
+Turn 886
+Players 2: 72
+Players 3: 7
+Turn 887
+Players 2: 72
+Players 3: 7
+Turn 888
+Players 2: 72
+Players 3: 7
+Turn 889
+Players 2: 72
+Players 3: 7
+Turn 890
+Players 2: 72
+Players 3: 7
+Turn 891
+Players 2: 72
+Players 3: 7
+Turn 892
+Players 2: 72
+Players 3: 7
+Turn 893
+Players 2: 72
+Players 3: 7
+Turn 894
+Players 2: 72
+Players 3: 7
+Turn 895
+Players 2: 72
+Players 3: 7
+Turn 896
+Players 2: 72
+Players 3: 7
+Turn 897
+Players 2: 72
+Players 3: 7
+Turn 898
+Players 2: 72
+Players 3: 7
+Turn 899
+Players 2: 72
+Players 3: 7
+Turn 900
+Players 2: 72
+Players 3: 7
+Turn 901
+Players 2: 72
+Players 3: 7
+Turn 902
+Players 2: 72
+Players 3: 7
+Turn 903
+Players 2: 72
+Players 3: 7
+Turn 904
+Players 2: 72
+Players 3: 7
+Turn 905
+Players 2: 72
+Players 3: 7
+Turn 906
+Players 2: 72
+Players 3: 7
+Turn 907
+Players 2: 72
+Players 3: 7
+Turn 908
+Players 2: 72
+Players 3: 7
+Turn 909
+Players 2: 72
+Players 3: 7
+Turn 910
+Players 2: 72
+Players 3: 7
+Turn 911
+Players 2: 72
+Players 3: 7
+Turn 912
+Players 2: 72
+Players 3: 7
+Turn 913
+Players 2: 72
+Players 3: 7
+Turn 914
+Players 2: 71
+Players 1: 1
+Players 3: 7
+Turn 915
+Players 2: 71
+Players 3: 7
+Turn 916
+Players 2: 71
+Players 3: 7
+Turn 917
+Players 2: 71
+Players 3: 7
+Turn 918
+Players 2: 70
+Players 3: 7
+Players 1: 1
+Turn 919
+Players 2: 69
+Players 1: 1
+Players 3: 7
+Turn 920
+Players 2: 69
+Players 3: 7
+Turn 921
+Players 2: 69
+Players 3: 7
+Turn 922
+Players 2: 69
+Players 3: 7
+Turn 923
+Players 2: 69
+Players 3: 7
+Turn 924
+Players 2: 69
+Players 3: 7
+Turn 925
+Players 2: 69
+Players 3: 7
+Turn 926
+Players 2: 69
+Players 3: 7
+Turn 927
+Players 2: 69
+Players 3: 7
+Turn 928
+Players 2: 68
+Players 3: 7
+Players 1: 1
+Turn 929
+Players 2: 68
+Players 3: 7
+Turn 930
+Players 2: 68
+Players 3: 7
+Turn 931
+Players 2: 68
+Players 3: 7
+Turn 932
+Players 2: 68
+Players 3: 7
+Turn 933
+Players 2: 68
+Players 3: 7
+Turn 934
+Players 2: 68
+Players 3: 7
+Turn 935
+Players 2: 68
+Players 3: 7
+Turn 936
+Players 2: 68
+Players 3: 7
+Turn 937
+Players 2: 68
+Players 3: 7
+Turn 938
+Players 2: 68
+Players 3: 7
+Turn 939
+Players 2: 68
+Players 3: 7
+Turn 940
+Players 2: 68
+Players 3: 7
+Turn 941
+Players 2: 68
+Players 3: 7
+Turn 942
+Players 2: 68
+Players 3: 7
+Turn 943
+Players 2: 68
+Players 3: 7
+Turn 944
+Players 2: 68
+Players 3: 7
+Turn 945
+Players 2: 68
+Players 3: 7
+Turn 946
+Players 2: 68
+Players 3: 7
+Turn 947
+Players 2: 68
+Players 3: 7
+Turn 948
+Players 2: 68
+Players 3: 7
+Turn 949
+Players 2: 68
+Players 3: 7
+Turn 950
+Players 2: 68
+Players 3: 7
+Turn 951
+Players 2: 67
+Players 3: 7
+Players 1: 1
+Turn 952
+Players 2: 67
+Players 3: 7
+Turn 953
+Players 2: 67
+Players 3: 7
+Turn 954
+Players 2: 67
+Players 3: 7
+Turn 955
+Players 2: 67
+Players 3: 7
+Turn 956
+Players 2: 67
+Players 3: 7
+Turn 957
+Players 2: 67
+Players 3: 7
+Turn 958
+Players 2: 67
+Players 3: 7
+Turn 959
+Players 2: 67
+Players 3: 7
+Turn 960
+Players 2: 67
+Players 3: 7
+Turn 961
+Players 2: 67
+Players 3: 7
+Turn 962
+Players 2: 67
+Players 3: 7
+Turn 963
+Players 2: 67
+Players 3: 7
+Turn 964
+Players 2: 66
+Players 1: 1
+Players 3: 7
+Turn 965
+Players 2: 66
+Players 3: 7
+Turn 966
+Players 2: 66
+Players 3: 7
+Turn 967
+Players 2: 66
+Players 3: 7
+Turn 968
+Players 2: 66
+Players 3: 7
+Turn 969
+Players 2: 66
+Players 3: 7
+Turn 970
+Players 2: 66
+Players 3: 7
+Turn 971
+Players 2: 66
+Players 3: 7
+Turn 972
+Players 2: 66
+Players 3: 7
+Turn 973
+Players 2: 66
+Players 3: 7
+Turn 974
+Players 2: 66
+Players 3: 7
+Turn 975
+Players 2: 66
+Players 3: 7
+Turn 976
+Players 2: 66
+Players 3: 7
+Turn 977
+Players 2: 66
+Players 3: 7
+Turn 978
+Players 2: 66
+Players 3: 7
+Turn 979
+Players 2: 65
+Players 3: 7
+Players 1: 1
+Turn 980
+Players 2: 65
+Players 3: 7
+Turn 981
+Players 2: 64
+Players 3: 7
+Players 1: 1
+Turn 982
+Players 2: 64
+Players 3: 7
+Turn 983
+Players 2: 64
+Players 3: 7
+Turn 984
+Players 2: 64
+Players 3: 7
+Turn 985
+Players 2: 64
+Players 3: 7
+Turn 986
+Players 2: 64
+Players 3: 7
+Turn 987
+Players 2: 64
+Players 3: 7
+Turn 988
+Players 2: 64
+Players 3: 7
+Turn 989
+Players 2: 64
+Players 3: 7
+Turn 990
+Players 2: 64
+Players 3: 7
+Turn 991
+Players 2: 64
+Players 3: 7
+Turn 992
+Players 2: 64
+Players 3: 7
+Turn 993
+Players 2: 64
+Players 3: 7
+Turn 994
+Players 2: 64
+Players 3: 7
+Turn 995
+Players 2: 63
+Players 1: 1
+Players 3: 7
+Turn 996
+Players 2: 63
+Players 3: 7
+Turn 997
+Players 2: 63
+Players 3: 7
+Turn 998
+Players 2: 63
+Players 3: 7
+Turn 999
+Players 2: 62
+Players 3: 7
+Players 1: 1
+Spaces owned by winning player:
+boardwalk: 579397
+kentucky: 1268734
+ventnor: 585338
+illinois: 629303
+park_place: 589084
+vermont: 638000
+water_works: 713025
+pennsylvania_ave: 532312
+pacific_ave: 548998
+st_charles: 642590
+states_ave: 646310
+virginia: 651260
+north_carolina: 548599
+atlantic: 584687
+marvin_gardens: 572367
+baltic: 646877
+electric_company: 695107
+pennsylvania_railroad: 702599
+BandO_railroad: 711181
+st_james: 736100
+tennessee: 736691
+reading_railroad: 684970
+short_line: 703515
+new_york: 734095
+oriental: 638010
+mediterranean: 639937
+connectiut: 645771
