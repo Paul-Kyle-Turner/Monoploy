@@ -6,7 +6,7 @@ from Player import Player
 from Space import *
 import random
 
-DEFAULT_ROUNDS_RULE = 1000
+DEFAULT_ROUNDS_RULE = 100
 
 
 class Game:

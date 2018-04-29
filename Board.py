@@ -148,7 +148,7 @@ class Board:
                                      house3=700, house4=875, hotel=1050, mortgage=110, house_cost=150, color=red)
         spaces.append(kentucky)
         spaces.append(chance1)
-        indiana = Property(name="kentucky", cost=220, house0=18, house1=90, house2=250,
+        indiana = Property(name="indiana", cost=220, house0=18, house1=90, house2=250,
                                     house3=700, house4=875, hotel=1050, mortgage=110, house_cost=150, color=red)
         spaces.append(indiana)
         illinois = Property(name="illinois", cost=240, house0=20, house1=100, house2=300,

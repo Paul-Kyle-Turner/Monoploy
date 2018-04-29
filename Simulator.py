@@ -19,7 +19,7 @@ def main():
         player_win.append(0)
         j += 1
     sim = Simulator(num_space, num_turns, player_win, space_elim, players_left, win_spaces)
-    sim.simulate_for(2000000, num_space, num_turns, player_win, space_elim, players_left, win_spaces)
+    sim.simulate_for(1000, num_space, num_turns, player_win, space_elim, players_left, win_spaces)
     time_final = time()
     print(time_final-time_start)
     print("Number of times each space was landed on:")
@@ -42,9 +42,10 @@ def main():
         n += 1
     print("Number of players left on a given turn:")
     for key in players_left:
-        print("Turn " + str(key))
+        s = "Turn " + str(key)
         for key2, val in players_left.get(key).items():
-            print("Players " + str(key2) + ": " + str(val))
+            s += ", Players " + str(key2) + ": " + str(val)
+        print(s)
     print("Spaces owned by winning player:")
     for key, val in win_spaces.items():
         print(key + ": " + str(val))
