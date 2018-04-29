@@ -4,17 +4,24 @@
 from Board import Board
 from Player import Player
 from Space import *
+import random
 
 DEFAULT_ROUNDS_RULE = 1000
 
 
 class Game:
 
-    def __init__(self, num_players=4):
+    def __init__(self, num_space, num_turns, player_win, space_elim, players_left, win_spaces, num_players=4):
         self.round_count = 0
         self.board = Board(game=self)
         self.players = self.create_players(num_players)
         self.game_end = False
+        self.num_space = num_space
+        self.num_turns = num_turns
+        self.player_win = player_win
+        self.space_elim = space_elim
+        self.players_left = players_left
+        self.win_spaces = win_spaces
 
     @staticmethod
     def create_players(num_players):
@@ -26,19 +33,39 @@ class Game:
 
     def game_play(self):
         for round in range(DEFAULT_ROUNDS_RULE):
+            if round in self.players_left:
+                if len(self.players) in self.players_left[round]:
+                    self.players_left[round][len(self.players)] = self.players_left.get(round).get(len(self.players)) + 1
+                else:
+                    self.players_left[round][len(self.players)] = 1
+            else:
+                self.players_left[round] = {len(self.players): 1}
             if len(self.players) > 1:
-                player = self.game_round()
+                self.game_round()
             else:
                 print("The winner is")
                 print(self.players)
+                self.player_win[self.players[0].get_player_number()] += 1
                 self.game_end = True
+                for space in self.players[0].get_owned_spaces():
+                    if space.get_name() in self.win_spaces:
+                        self.win_spaces[space.get_name()] = self.win_spaces.get(space.get_name()) + 1
+                    else:
+                        self.win_spaces[space.get_name()] = 1
+                if round in self.num_turns:
+                    self.num_turns[round] = self.num_turns.get(round) + 1
+                else:
+                    self.num_turns[round] = 1
             if self.game_end:
                 return
 
     def game_round(self):
         self.round_count += 1
         for player in self.players:
-            if player.jailed():
+            for player2 in self.players:
+                if player != player2:
+                    self.trade(player, player2)
+            if player.jailed:
                 self.jail_turn(player=player)
             else:
                 doubles = self.game_turn(player=player)
@@ -77,16 +104,19 @@ class Game:
                 self.board.get_jail_space().get_out_of_jail_free_release(player, board=self.board, game=self)
 
     def game_turn(self, player):
-        print("PLAYER " + str(player.get_player_number()) + " TURN")
+        print("PLAYER " + str(player.get_player_number()) + " TURN $" + str(player.get_funds()))
         print(self.board.get_jail_space().get_jail_list())
         position = player.get_position()
-        space = self.board.change_position_dice(player=player)
+        space = self.board.change_position_dice(player, self.num_space)
         if isinstance(space, Buyablespace):
             print(space)
             if space.get_ownership(player=player):
                 print("Thanks for visiting sir")
             elif space.owned:
-                print("You have been charged" + str(space.rent(player=player)))
+                rent = space.rent(player)
+                player.remove_funds(rent)
+                space.get_owner().add_funds(rent)
+                print("You have been charged" + str(rent))
             else:
                 print("Would you like to purchase?")
                 if player.funds > space.get_cost():
@@ -110,10 +140,22 @@ class Game:
             if choice is None :
                 self.players.remove(player)
                 print("Player " + str(player.get_player_number()) + " has been eliminated.")
+                self.space_elim[player.get_position()] += 1
+                return False
             elif choice:
-                player.mortgage_till_value(difference)
+                if not player.mortgage_till_value(difference):
+                    if not player.sell_house_till_value(difference, self.board):
+                        self.players.remove(player)
+                        print("Player " + str(player.get_player_number()) + " has been eliminated.")
+                        self.space_elim[player.get_position()] += 1
+                        return False
             else:
-                #sell house
+                if not player.sell_house_till_value(difference, self.board):
+                    if not player.mortgage_till_value(difference):
+                        self.players.remove(player)
+                        print("Player " + str(player.get_player_number()) + " has been eliminated.")
+                        self.space_elim[player.get_position()] += 1
+                        return False
         elif player.does_player_purchase_house():
             self.board.purchase_house(player.random_house_purchase())
         print("PLAYER TURN END")
@@ -127,3 +169,126 @@ class Game:
 
     def get_num_players(self):
         return len(self.players)
+
+    def trade(self, player1, player2):
+        print("Would you like to trade with PLAYER " + str(player2.get_player_number()))
+        if len(player1.get_owned_spaces()) > 0 and len(player2.get_owned_spaces()) > 0:
+            spacesWanted = []
+            colors = []
+            for space1 in player1.get_owned_spaces():
+                for space2 in player2.get_owned_spaces():
+                    check = True
+                    for color in colors:
+                        if isinstance(space1, Property) and color.equals(space1.get_color()):
+                            check = False
+                    if check:
+                        if isinstance(space1, Property) and isinstance(space2, Property):
+                            if(space1.get_color() == space2.get_color()):
+                                spacesWanted.append(space2)
+                            colors.append(space1.get_color())
+            numColors = random.randint(0, len(colors))
+            for color in colors:
+                if random.randint(0, len(colors)) < numColors:
+                    colors.remove(color)
+            for space in spacesWanted:
+                keep = False
+                for color in colors:
+                    if space.get_color().equals(color):
+                        keep = True
+                if not keep:
+                    spacesWanted.remove(space)
+            spacesOffered = []
+            for space1 in player1.get_owned_spaces():
+                for space2 in spacesWanted:
+                    if not isinstance(space1, Property) or space1.get_color() != space2.get_color():
+                        spacesOffered.append(space1)
+            if len(spacesOffered) > 0 and len(spacesWanted) > 0:
+                wantedAmount = 0
+                for space in spacesWanted:
+                    wantedAmount += space.get_mortgage()
+                offeredAmount = 0
+                for space in spacesOffered:
+                    offeredAmount += space.get_mortgage()
+                if player1.get_funds() > 0:
+                    moneyOffered = random.randint(0, int(player1.get_funds()))
+                else:
+                    moneyOffered = 0
+                offeredAmount += moneyOffered
+                offeredAmount = random.randint(0, offeredAmount)
+                wantedAmount = random.randint(0, wantedAmount)
+                if wantedAmount > offeredAmount:
+                    if player1.get_funds() > 0:
+                        moneyOffered = random.randint(0, int(player1.get_funds()))
+                    else:
+                        moneyOffered = 0
+                    offeredAmount += moneyOffered
+                    if offeredAmount > wantedAmount:
+                        highest = spacesOffered[0]
+                        for space in spacesOffered:
+                            if space.get_mortgage() > highest.get_mortgage():
+                                highest = space
+                        spacesOffered.remove(highest)
+                    elif wantedAmount > offeredAmount:
+                        highest = spacesWanted[0]
+                        for space in spacesWanted:
+                            if space.get_mortgage() > highest.get_mortgage():
+                                highest = space
+                        spacesWanted.remove(highest)
+                if offeredAmount > wantedAmount:
+                    count = 0
+                    while offeredAmount > wantedAmount and len(spacesOffered) > 0 and count < 5:
+                        highest = spacesOffered[0]
+                        if random.randint(0, 1) == 0:
+                            for space in spacesOffered:
+                                if space.get_mortgage() > highest.get_mortgage():
+                                    highest = space
+                            spacesOffered.remove(highest)
+                        else:
+                            wanted = True
+                            count2 = 0
+                            space = player2.get_property_of_lowest_value()
+                            while wanted and count2 < 5:
+                                space = player2.get_owned_spaces()[random.randint(0, len(player2.get_owned_spaces()) - 1)]
+                                wanted = False
+                                for space2 in spacesWanted:
+                                    if space == space2:
+                                        wanted = True
+                                count2 += 1
+                            if not wanted:
+                                spacesWanted.append(space)
+                        wantedAmount = 0
+                        for space in spacesWanted:
+                            wantedAmount += space.get_mortgage()
+                        offeredAmount = 0
+                        for space in spacesOffered:
+                            offeredAmount += space.get_mortgage()
+                        if player1.get_funds() > 0:
+                            moneyOffered = random.randint(0, int(player1.get_funds()))
+                        else:
+                            moneyOffered = 0
+                        offeredAmount += moneyOffered
+                        offeredAmount = random.randint(0, offeredAmount)
+                        wantedAmount = random.randint(0, wantedAmount)
+                        count += 1
+                if player2.trade(spacesWanted, spacesOffered, moneyOffered):
+                    print("PLAYER " + str(player1.get_player_number()) + " recieves")
+                    for space in spacesWanted:
+                        player2.remove_space(space)
+                        player1.add_owned_space(space)
+                        space.change_owner(player1)
+                        print(space)
+                        if isinstance(space, Property):
+                            player1.has_monopoly_from_space(space)
+                            print("You bought a monoploy, great job!")
+                    print("PLAYER " + str(player2.get_player_number()) + " recieves")
+                    for space in spacesOffered:
+                        player1.remove_space(space)
+                        player2.add_owned_space(space)
+                        space.change_owner(player2)
+                        print(space)
+                        if isinstance(space, Property):
+                            player2.has_monopoly_from_space(space)
+                            print("You bought a monoploy, great job!")
+                    print("PLAYER " + str(player2.get_player_number()) + " recieves $" + str(moneyOffered))
+                    player2.add_funds(moneyOffered)
+                    player1.remove_funds(moneyOffered)

@@ -189,10 +189,16 @@ class Buyablespace(Space):
         else:
             return False
 
+    def get_owner(self):
+        return self.owner
+
+    def change_owner(self, player):
+        self.owner = player
+
     def fix(self):
         self.mortgaged = False
 
-    def mortgaged(self):
+    def set_mortgaged(self):
         self.mortgaged = True
         return self.mortgage
 
@@ -343,7 +349,8 @@ class Property(Buyablespace):
             self.house_level += 1
 
     def decrease_house_level(self):
-        self.house_level -= 1
+        if self.house_level > 0:
+            self.house_level -= 1
 
     def change_house_level(self, house_level):
         self.house_level = house_level
@@ -371,6 +378,9 @@ class Property(Buyablespace):
 
     def get_color(self):
         return self.color
+
+    def get_house_cost(self):
+        return self.house_cost
 
     def __str__(self):
         return "Nice property here in " + self.get_name() + ". " + super().__str__()
