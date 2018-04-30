@@ -59,6 +59,16 @@ def main():
         temp = []
         for space in spaces:
             temp.append(space.get_name())
+
+        total = 0
+        for i in num_space:
+            total += i
+
+        print("Space percentage:")
+        for i in range(len(num_space)):
+            tempnum = (num_space[i] / total)
+            print(temp[i] + " " + str(tempnum))
+
         plt.figure(1)
 
         plt.subplot(221)
