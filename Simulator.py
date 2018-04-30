@@ -1,5 +1,7 @@
+from Board import Board
 from Game import Game
 from time import time
+import matplotlib.pyplot as plt
 
 def main():
     time_start = time()
@@ -19,36 +21,69 @@ def main():
         player_win.append(0)
         j += 1
     sim = Simulator(num_space, num_turns, player_win, space_elim, players_left, win_spaces)
-    sim.simulate_for(1000, num_space, num_turns, player_win, space_elim, players_left, win_spaces)
+    sim.simulate_for(100, num_space, num_turns, player_win, space_elim, players_left, win_spaces)
     time_final = time()
     print(time_final-time_start)
-    print("Number of times each space was landed on:")
-    k = 0
-    while k < 40:
-        print("Space " + str(k) + ": " + str(num_space[k]))
-        k += 1
-    print("Number of Times Each Player Won:")
-    m = 0
-    while m < 4:
-        print("Player " + str(m) + " won " + str(player_win[m]) + " times")
-        m += 1
-    print("Length of Games:")
-    for key, val in num_turns.items():
-        print("Turn " + str(key) + ": " + str(val))
-    print("Number of times each space eliminated a player:")
-    n = 0
-    while n < 40:
-        print("Space " + str(n) + ": " + str(space_elim[n]))
-        n += 1
-    print("Number of players left on a given turn:")
-    for key in players_left:
-        s = "Turn " + str(key)
-        for key2, val in players_left.get(key).items():
-            s += ", Players " + str(key2) + ": " + str(val)
-        print(s)
-    print("Spaces owned by winning player:")
-    for key, val in win_spaces.items():
-        print(key + ": " + str(val))
+    print_setting = False
+    if print_setting:
+        print("Number of times each space was landed on:")
+        k = 0
+        while k < 40:
+            print("Space " + str(k) + ": " + str(num_space[k]))
+            k += 1
+        print("Number of Times Each Player Won:")
+        m = 0
+        while m < 4:
+            print("Player " + str(m) + " won " + str(player_win[m]) + " times")
+            m += 1
+        print("Length of Games:")
+        for key, val in num_turns.items():
+            print("Turn " + str(key) + ": " + str(val))
+        print("Number of times each space eliminated a player:")
+        n = 0
+        while n < 40:
+            print("Space " + str(n) + ": " + str(space_elim[n]))
+            n += 1
+        print("Number of players left on a given turn:")
+        for key in players_left:
+            s = "Turn " + str(key)
+            for key2, val in players_left.get(key).items():
+                s += ", Players " + str(key2) + ": " + str(val)
+            print(s)
+        print("Spaces owned by winning player:")
+        for key, val in win_spaces.items():
+            print(key + ": " + str(val))
+    else:
+        board = Board()
+        spaces = board.get_board()
+        temp = []
+        for space in spaces:
+            temp.append(space.get_name())
+        plt.figure(1)
+
+        plt.subplot(221)
+        plt.title("Number of times space has been landed on")
+        plt.plot(num_space)
+
+        plt.subplot(222)
+        plt.title("Number of times each space eliminated a player")
+        plt.plot(space_elim)
+
+        plt.subplot(223)
+        plt.title("Player number of wins")
+        plt.plot(player_win)
+
+        temp = []
+        dict = []
+        for key, value in win_spaces.items():
+            temp.append(key)
+            dict.append(value)
+
+        plt.subplot(224)
+        plt.title("Space and frequency of landing")
+        plt.plot(dict)
+
+        plt.show()
 
 
 class Simulator:

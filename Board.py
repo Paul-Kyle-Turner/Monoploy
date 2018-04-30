@@ -12,7 +12,7 @@ DEFAULT_NUM_HOTELS = 12
 
 class Board:
 
-    def __init__(self, game):
+    def __init__(self, game=None):
         self.houses = 32
         self.hotels = 12
         self.chance = Chance()
@@ -77,6 +77,9 @@ class Board:
 
     def set_community_chest(self, community):
         self.community_chest = community
+
+    def get_board(self):
+        return self.spaces
 
     def create_board(self):
         spaces = []
